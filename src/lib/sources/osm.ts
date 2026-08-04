@@ -1,11 +1,21 @@
 import { centroid } from "../geo";
 import type { BBox, GeoNode, Line, NodeKind, Source } from "../types";
 
-/** Mirrors are interchangeable; kumi is noticeably faster and less rate-limited. */
+/**
+ * Mirrors are interchangeable, tried in order. The main instance is first
+ * because kumi rate-limits shared cloud IPs hard (observed 429 from a Netlify
+ * function while the main instance answered fine).
+ */
 const ENDPOINTS = [
-  "https://overpass.kumi.systems/api/interpreter",
   "https://overpass-api.de/api/interpreter",
+  "https://overpass.kumi.systems/api/interpreter",
 ];
+
+/**
+ * Overpass rejects anonymous requests with 406 — an identifying User-Agent is
+ * required by its usage policy, not optional.
+ */
+const USER_AGENT = "NexusAI/0.1 (physical infrastructure analysis)";
 
 const OSM_SOURCE = (id: string): Source => ({
   name: "OpenStreetMap",
@@ -51,30 +61,42 @@ export async function fetchOsm(
   bbox: BBox,
 ): Promise<{ nodes: GeoNode[]; gaps: { dataset: string; reason: string }[] }> {
   const body = query(bbox);
-  let lastErr = "";
+  // Every mirror's failure is recorded — reporting only the last one hides
+  // which mirror actually rate-limited us.
+  const failures: string[] = [];
 
   for (const url of ENDPOINTS) {
     try {
       const res = await fetch(url, {
         method: "POST",
-        headers: { "content-type": "application/x-www-form-urlencoded" },
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+          "user-agent": USER_AGENT,
+        },
         body: `data=${encodeURIComponent(body)}`,
         signal: AbortSignal.timeout(55_000),
       });
       if (!res.ok) {
-        lastErr = `${res.status} from ${new URL(url).host}`;
+        failures.push(`${new URL(url).host} returned ${res.status}`);
         continue;
       }
       const json = (await res.json()) as { elements?: OverpassElement[] };
       return { nodes: toNodes(json.elements ?? []), gaps: [] };
     } catch (e) {
-      lastErr = e instanceof Error ? e.message : String(e);
+      failures.push(
+        `${new URL(url).host}: ${e instanceof Error ? e.message : String(e)}`,
+      );
     }
   }
 
   return {
     nodes: [],
-    gaps: [{ dataset: "OpenStreetMap (Overpass)", reason: lastErr || "all mirrors unreachable" }],
+    gaps: [
+      {
+        dataset: "OpenStreetMap (Overpass)",
+        reason: failures.length ? failures.join("; ") : "all mirrors unreachable",
+      },
+    ],
   };
 }
 
