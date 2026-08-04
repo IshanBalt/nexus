@@ -171,6 +171,12 @@ export default function MapView({
     map.current = m;
     m.addControl(new NavigationControl({ showCompass: false }), "bottom-right");
 
+    // Without this, a rejected style, a bad expression, or a failed tile fetch
+    // is swallowed and the map simply renders nothing with no explanation.
+    m.on("error", (e) => {
+      console.error("[nexus/map]", (e as { error?: Error }).error?.message ?? e);
+    });
+
     m.on("load", () => {
       m.addSource("sat", { type: "raster", tiles: [SATELLITE_TILES], tileSize: 256, maxzoom: 19 });
       m.addLayer({
@@ -216,7 +222,7 @@ export default function MapView({
         paint: {
           "line-color": ["get", "color"],
           "line-width": ["interpolate", ["linear"], ["zoom"], 10, 1, 16, 4.5],
-          "line-opacity": ["case", [">", ["get", "sev"], 0], 0.95, 0.55],
+          "line-opacity": ["case", [">", ["to-number", ["get", "sev"]], 0], 0.95, 0.55],
         },
       });
 
@@ -227,10 +233,12 @@ export default function MapView({
         source: "points",
         paint: {
           "circle-color": ["get", "color"],
+          // to-number is required: interpolate's input must be typed number,
+          // and a bare `get` is type `value`, which throws at addLayer.
           "circle-radius": [
             "interpolate",
             ["linear"],
-            ["get", "criticality"],
+            ["to-number", ["get", "criticality"]],
             0.3,
             7,
             1,
@@ -238,7 +246,11 @@ export default function MapView({
           ],
           "circle-opacity": [
             "case",
-            ["any", ["==", ["get", "traced"], 1], [">", ["get", "sev"], 0]],
+            [
+              "any",
+              ["==", ["get", "traced"], 1],
+              [">", ["to-number", ["get", "sev"]], 0],
+            ],
             0.28,
             0.07,
           ],
@@ -255,7 +267,7 @@ export default function MapView({
           "circle-radius": [
             "interpolate",
             ["linear"],
-            ["get", "criticality"],
+            ["to-number", ["get", "criticality"]],
             0.3,
             3,
             1,
@@ -288,9 +300,9 @@ export default function MapView({
         minzoom: 12.5,
         filter: [
           "any",
-          [">", ["get", "criticality"], 0.74],
+          [">", ["to-number", ["get", "criticality"]], 0.74],
           ["==", ["get", "traced"], 1],
-          [">", ["get", "sev"], 0],
+          [">", ["to-number", ["get", "sev"]], 0],
         ],
         layout: {
           "text-field": ["get", "name"],
