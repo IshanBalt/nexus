@@ -4,12 +4,29 @@ import {
   Map as MapLibreMap,
   Marker,
   NavigationControl,
+  setWorkerUrl,
   type GeoJSONSource,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { useEffect, useMemo, useRef } from "react";
 import { KIND_COLOR, LINEAR, severityColor } from "@/lib/display";
 import type { CascadeResult, KnowledgeGraph } from "@/lib/types";
+
+/*
+ * MapLibre 6 ships its worker as a separate ES module that imports a sibling,
+ * `./maplibre-gl-shared.mjs`, by that literal name. Turbopack emits both files
+ * but content-hashes them — `maplibre-gl-shared.<hash>.mjs` — without rewriting
+ * the import inside the worker. The worker then 404s on the unhashed name, the
+ * dispatcher never initialises, and the symptom is a map that looks broken in a
+ * way that points nowhere near the real cause: style.json loads, attribution
+ * fills in, `load` never fires, not one tile is requested, and the canvas stays
+ * black with no error on the map's own error event.
+ *
+ * So serve the pair ourselves, under their real names, out of public/ — see the
+ * copy:maplibre script in package.json. Both files must sit in the same
+ * directory for the relative import to resolve.
+ */
+setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
 
 const BASEMAP = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
 
