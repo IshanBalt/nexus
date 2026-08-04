@@ -6,10 +6,20 @@ import type { AnalyzeResult } from "./analyze";
 import type { GeoNode, KnowledgeGraph } from "./types";
 
 /**
- * gpt-oss-120b is the strongest tool-calling model Groq serves; llama-3.3-70b-versatile
- * is the tested fallback if it is ever rate-limited.
+ * gpt-oss-120b handles chained tool calls reliably; llama-3.3-70b was observed
+ * inventing a placeholder node_id rather than reading one from the previous
+ * result, then emitting malformed tool JSON. gpt-oss has the tighter free-tier
+ * budget (8k TPM vs 12k), which is why the tool payloads below are kept lean.
+ * Set NEXUS_MODEL=llama-3.3-70b-versatile to trade accuracy for headroom.
  */
 const MODEL = process.env.NEXUS_MODEL ?? "openai/gpt-oss-120b";
+
+/**
+ * Groq counts prompt + max_completion_tokens against the per-minute token
+ * budget, so an oversized ceiling gets the request rejected before it runs.
+ * Answers are meant to be a few short paragraphs; this is ample for that.
+ */
+const MAX_COMPLETION_TOKENS = 1600;
 
 export const SYSTEM = `You are Nexus, an analyst of physical infrastructure. You reason about how places actually work: what depends on what, where the load-bearing failure points are, and what breaks next when one of them goes down.
 
@@ -27,7 +37,10 @@ Every causal claim traces to an edge rationale or a Mireye field. Carry the conf
 
 State what you do not know. If the graph has no mapped substation, say the electrical picture is unavailable here rather than guessing one exists. Missing data is a finding — report it. Do not invent asset names, capacities, populations, or distances; every number you give comes from a tool result.
 
-When a question is about consequences, call simulate_failure rather than reasoning about the cascade in your head — the tool applies severity decay and onset timing you cannot estimate by eye.`;
+When a question is about consequences, call simulate_failure rather than reasoning about the cascade in your head — the tool applies severity decay and onset timing you cannot estimate by eye.
+
+USING NODE IDs
+A node_id is only ever a literal string copied from a tool result, such as "osm:way/12345678". Never invent one, never use a placeholder, and never guess. If you do not yet hold the exact ID you need, call survey_area, find_nodes, or weakest_points first, read the id field from what comes back, and only then call the tool that needs it. Do not issue a tool call whose argument depends on the result of another call you are making in the same turn — that result does not exist yet.`;
 
 type Fn = Groq.Chat.Completions.ChatCompletionTool;
 
@@ -174,6 +187,18 @@ function parseArgs(raw: string | undefined): Record<string, unknown> {
   }
 }
 
+/** Groq's raw errors are JSON blobs; the panel needs a sentence a human can act on. */
+function friendlyError(e: unknown): string {
+  const raw = e instanceof Error ? e.message : String(e);
+  if (/rate_limit|tokens per minute|TPM/i.test(raw)) {
+    return "Groq's free-tier rate limit was hit (tokens per minute). Wait about a minute and ask again, or set NEXUS_MODEL to a model with more headroom.";
+  }
+  if (/401|invalid_api_key|Unauthorized/i.test(raw)) {
+    return "Groq rejected the API key. Check GROQ_API_KEY.";
+  }
+  return raw;
+}
+
 async function runTool(
   name: string,
   input: Record<string, unknown>,
@@ -188,6 +213,18 @@ async function runTool(
     }
   };
 
+  /*
+   * If asset retrieval failed, every graph tool would otherwise return an empty
+   * string — and an empty tool result is exactly what invites a model to invent
+   * an answer. Say so explicitly instead. site_context and ask_mireye still work
+   * without a graph, so they are exempt.
+   */
+  const assets = g.nodes.filter((n) => n.kind !== "population" && n.kind !== "county");
+  if (assets.length === 0 && name !== "site_context" && name !== "ask_mireye") {
+    const why = g.gaps.map((x) => `${x.dataset}: ${x.reason}`).join("; ");
+    return `The infrastructure graph for this location is EMPTY — no assets were retrieved, so no dependency question can be answered from it. Cause: ${why || "unknown"}. Tell the user the infrastructure data failed to load and that this is a retrieval failure, not a finding about the place. Do not describe, name, or characterise any asset.`;
+  }
+
   switch (name) {
     case "survey_area": {
       const counts = new Map<string, number>();
@@ -195,7 +232,9 @@ async function runTool(
       const top = [...g.nodes]
         .filter((n) => n.kind !== "population")
         .sort((a, b) => b.criticality - a.criticality)
-        .slice(0, 12);
+        // Kept short on purpose: tool results ride in the prompt on every
+        // subsequent turn, and the token budget is per minute.
+        .slice(0, 8);
       for (const r of rulesUsed(g)) evidence.rules.push(r.rule);
 
       return JSON.stringify(
@@ -208,7 +247,7 @@ async function runTool(
           counts_by_kind: Object.fromEntries(counts),
           most_critical_assets: top.map(brief),
           inference_rules_applied: rulesUsed(g),
-          data_gaps: g.gaps.slice(0, 20),
+          data_gaps: g.gaps.slice(0, 6),
         },
         null,
         1,
@@ -225,7 +264,7 @@ async function runTool(
       if (!hits.length) {
         return `No assets match${kind ? ` kind=${kind}` : ""}${q ? ` name~"${q}"` : ""}. This means none are mapped in the queried area — not that none exist.`;
       }
-      return hits.slice(0, 40).map(brief).join("\n");
+      return hits.slice(0, 25).map(brief).join("\n");
     }
 
     case "what_depends_on": {
@@ -272,13 +311,15 @@ async function runTool(
           total_population_affected: res.totalPopulationAffected,
           notes: res.notes,
           timeline: res.timeline,
-          impacts: res.impacts.slice(0, 20).map((i) => ({
+          impacts: res.impacts.slice(0, 12).map((i) => ({
             asset: i.name,
             kind: i.kind,
             severity: i.severity,
             onset_hours: i.onsetHours,
             hops: i.depth,
-            why: i.reasoning,
+            // Only the final hop's rationale: the full chain repeats the
+            // upstream text on every impact and dominates the payload.
+            why: i.reasoning[i.reasoning.length - 1] ?? null,
           })),
         },
         null,
@@ -289,12 +330,27 @@ async function runTool(
     case "weakest_points": {
       const ranked = weakestPoints(g, Number(input.limit) || 8);
       touch(ranked.map((r) => r.node.id));
-      return ranked
-        .map(
-          (r, i) =>
-            `${i + 1}. ${r.node.id} | ${r.node.name} (${r.node.kind}) — blast-radius score ${r.score}, ${r.reachCount} downstream assets, ~${r.populationAtRisk.toLocaleString()} residents affected`,
-        )
-        .join("\n");
+      if (!ranked.length) {
+        return "No asset in this graph has any modelled downstream dependents, so no weakest point can be ranked. Report that, rather than describing one.";
+      }
+      // JSON, not prose: node_id has to be copyable verbatim into the next
+      // call, and models misread IDs embedded in a formatted sentence.
+      return JSON.stringify(
+        {
+          ranked_by: "blast radius — how much of the local system fails with this asset",
+          results: ranked.map((r, i) => ({
+            rank: i + 1,
+            node_id: r.node.id,
+            name: r.node.name,
+            kind: r.node.kind,
+            score: r.score,
+            downstream_assets: r.reachCount,
+            population_at_risk: r.populationAtRisk,
+          })),
+        },
+        null,
+        1,
+      );
     }
 
     case "site_context": {
@@ -408,10 +464,10 @@ export async function* runAgent(
         messages: convo,
         tools: TOOLS,
         stream: true,
-        max_completion_tokens: 8000,
+        max_completion_tokens: MAX_COMPLETION_TOKENS,
       });
     } catch (e) {
-      yield { type: "error", message: e instanceof Error ? e.message : String(e) };
+      yield { type: "error", message: friendlyError(e) };
       return;
     }
 
@@ -438,7 +494,7 @@ export async function* runAgent(
         }
       }
     } catch (e) {
-      yield { type: "error", message: e instanceof Error ? e.message : String(e) };
+      yield { type: "error", message: friendlyError(e) };
       return;
     }
 

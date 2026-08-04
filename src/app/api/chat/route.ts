@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getOrAnalyze, resolvePlace } from "@/lib/analyze";
+import { DEFAULT_RADIUS, getOrAnalyze, resolvePlace } from "@/lib/analyze";
 import { runAgent } from "@/lib/agent";
 
 export const runtime = "nodejs";
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
   const place = await resolvePlace(`${body.lat},${body.lng}`);
   place.lat = body.lat;
   place.lng = body.lng;
-  const result = await getOrAnalyze(place, body.radius ?? 5000);
+  const result = await getOrAnalyze(place, body.radius ?? DEFAULT_RADIUS);
 
   const messages = body.messages
     .filter((m) => m.content.trim())

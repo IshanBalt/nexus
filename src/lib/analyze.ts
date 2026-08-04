@@ -100,7 +100,16 @@ export interface AnalyzeResult {
 }
 
 /** Radius in metres of the analysis window around the query point. */
-const DEFAULT_RADIUS = 5000;
+/**
+ * Every caller must agree on this: the radius is part of the analysis cache
+ * key, so a route using a different default would silently rebuild the graph
+ * instead of reusing the one the map is already showing.
+ *
+ * 3.5 km keeps a dense metro under Overpass's element cap and the whole request
+ * inside a 60s serverless ceiling, while still spanning enough ground to catch
+ * real cross-asset dependencies.
+ */
+export const DEFAULT_RADIUS = 3500;
 
 export async function analyze(
   place: ResolvedPlace,

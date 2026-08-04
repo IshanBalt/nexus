@@ -9,7 +9,20 @@ import type { BBox, GeoNode, Line, NodeKind, Source } from "../types";
 const ENDPOINTS = [
   "https://overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
+  "https://overpass.private.coffee/api/interpreter",
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
 ];
+
+/**
+ * Public Overpass instances fail independently and unpredictably — in one
+ * sample the main instance returned 504 while two mirrors timed out and a
+ * fourth answered in 13s. So try several, but bound the *total* rather than
+ * each attempt: four sequential 22s timeouts would be 88s, well past the 60s
+ * serverless ceiling, and a slow success is worthless if the function is
+ * already dead.
+ */
+const TOTAL_BUDGET_MS = 34_000;
+const PER_ATTEMPT_MS = 15_000;
 
 /**
  * Overpass rejects anonymous requests with 406 — an identifying User-Agent is
@@ -40,7 +53,7 @@ interface OverpassElement {
  */
 function query(b: BBox): string {
   const bbox = `${b[1]},${b[0]},${b[3]},${b[2]}`; // Overpass wants S,W,N,E
-  return `[out:json][timeout:50];
+  return `[out:json][timeout:20];
 (
   nw["amenity"~"^(hospital|fire_station|police)$"](${bbox});
   nw["amenity"="school"](${bbox});
@@ -54,7 +67,7 @@ function query(b: BBox): string {
   way["waterway"~"^(river|stream|canal)$"](${bbox});
   nw["man_made"="communications_tower"](${bbox});
 );
-out geom 900;`;
+out geom 600;`;
 }
 
 export async function fetchOsm(
@@ -64,8 +77,16 @@ export async function fetchOsm(
   // Every mirror's failure is recorded — reporting only the last one hides
   // which mirror actually rate-limited us.
   const failures: string[] = [];
+  const deadline = Date.now() + TOTAL_BUDGET_MS;
 
   for (const url of ENDPOINTS) {
+    const host = new URL(url).host;
+    const remaining = deadline - Date.now();
+    // Not worth opening a connection we cannot afford to wait on.
+    if (remaining < 4000) {
+      failures.push(`${host}: skipped, time budget exhausted`);
+      continue;
+    }
     try {
       const res = await fetch(url, {
         method: "POST",
@@ -74,18 +95,16 @@ export async function fetchOsm(
           "user-agent": USER_AGENT,
         },
         body: `data=${encodeURIComponent(body)}`,
-        signal: AbortSignal.timeout(55_000),
+        signal: AbortSignal.timeout(Math.min(PER_ATTEMPT_MS, remaining)),
       });
       if (!res.ok) {
-        failures.push(`${new URL(url).host} returned ${res.status}`);
+        failures.push(`${host} returned ${res.status}`);
         continue;
       }
       const json = (await res.json()) as { elements?: OverpassElement[] };
       return { nodes: toNodes(json.elements ?? []), gaps: [] };
     } catch (e) {
-      failures.push(
-        `${new URL(url).host}: ${e instanceof Error ? e.message : String(e)}`,
-      );
+      failures.push(`${host}: ${e instanceof Error ? e.message : String(e)}`);
     }
   }
 

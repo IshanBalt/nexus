@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getOrAnalyze, resolvePlace, type ResolvedPlace } from "@/lib/analyze";
+import { DEFAULT_RADIUS, getOrAnalyze, resolvePlace, type ResolvedPlace } from "@/lib/analyze";
 
 export const runtime = "nodejs";
 // Overpass alone can take 30s on a dense metro.
@@ -60,7 +60,8 @@ export async function POST(req: Request) {
 }
 
 function clampRadius(r: unknown): number {
-  const n = typeof r === "number" && Number.isFinite(r) ? r : 5000;
-  // Below 1 km the graph is too sparse to reason over; above 15 km Overpass times out.
-  return Math.min(15_000, Math.max(1000, n));
+  const n = typeof r === "number" && Number.isFinite(r) ? r : DEFAULT_RADIUS;
+  // Below 1 km the graph is too sparse to reason over; above 8 km a dense metro
+  // blows past Overpass's element cap and the serverless time budget.
+  return Math.min(8000, Math.max(1000, n));
 }

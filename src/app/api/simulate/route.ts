@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getOrAnalyze, resolvePlace } from "@/lib/analyze";
+import { DEFAULT_RADIUS, getOrAnalyze, resolvePlace } from "@/lib/analyze";
 import { simulate, weakestPoints } from "@/lib/cascade";
 
 export const runtime = "nodejs";
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
   const place = await resolvePlace(`${body.lat},${body.lng}`);
   place.lat = body.lat;
   place.lng = body.lng;
-  const { graph } = await getOrAnalyze(place, body.radius ?? 5000);
+  const { graph } = await getOrAnalyze(place, body.radius ?? DEFAULT_RADIUS);
 
   if (!body.nodeId) {
     return NextResponse.json({
