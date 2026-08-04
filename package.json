@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "copy:maplibre": "mkdir -p public/maplibre && cp node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs node_modules/maplibre-gl/dist/maplibre-gl-shared.mjs public/maplibre/",
+    "postinstall": "npm run copy:maplibre",
     "dev": "npm run copy:maplibre && next dev",
     "build": "npm run copy:maplibre && next build",
     "start": "next start",
