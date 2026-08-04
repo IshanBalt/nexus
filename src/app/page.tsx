@@ -110,6 +110,12 @@ export default function Home() {
           body: JSON.stringify({
             lat: result.place.lat,
             lng: result.place.lng,
+            // Send the analysis back rather than making the server rebuild it.
+            // On a cold serverless instance that rebuild is another Overpass
+            // round trip plus three Mireye calls, spent before the model has
+            // seen the question — and it guarantees the agent reasons about
+            // precisely the graph on screen.
+            analysis: result,
             messages: history.map((m) => ({ role: m.role, content: m.content })),
           }),
         });
@@ -149,6 +155,19 @@ export default function Home() {
         }
       } catch (e) {
         error = e instanceof Error ? e.message : "Request failed";
+      }
+
+      /*
+       * A stream that ends cleanly with steps but no prose is what a serverless
+       * execution-limit kill looks like from here: the connection just stops.
+       * Without this the turn renders as an answerless list of tool calls, which
+       * reads as the agent having nothing to say rather than having been cut off.
+       */
+      if (!acc && !error) {
+        error =
+          steps.length > 0
+            ? "The analysis was cut off before an answer was written — the request ran past the server's time limit. Ask again; the graph is cached now, so the retry is much faster."
+            : "No response was returned.";
       }
 
       setMessages([...history, { role: "assistant", content: acc, steps, error }]);

@@ -5,25 +5,55 @@ import * as mireye from "./mireye";
 import type { AnalyzeResult } from "./analyze";
 import type { GeoNode, KnowledgeGraph } from "./types";
 
-/**
- * gpt-oss-120b handles chained tool calls reliably; llama-3.3-70b was observed
- * inventing a placeholder node_id rather than reading one from the previous
- * result, then emitting malformed tool JSON. gpt-oss has the tighter free-tier
- * budget (8k TPM vs 12k), which is why the tool payloads below are kept lean.
- * Set NEXUS_MODEL=llama-3.3-70b-versatile to trade accuracy for headroom.
+/*
+ * Two models, because on Groq's free tier neither one alone is both reliable and
+ * fast enough.
+ *
+ * The tier meters tokens per minute and charges `prompt + max_completion_tokens`
+ * up front, used or not. A question costs two or three model calls, and three
+ * calls do not fit in 8000 TPM. When the bucket runs dry the SDK backs off and
+ * retries, which is invisible from the outside and simply looks like a hang:
+ * measured 32s and 53s for a single question, against a platform that kills the
+ * request at about 20s. That was the whole reason the chat produced no answer.
+ *
+ * Measured over the same four questions, with identical prompts:
+ *
+ *   openai/gpt-oss-20b        8000 TPM   4/4 correct, one call throttled to 41s
+ *   llama-3.3-70b-versatile  12000 TPM   2/4 correct, 0.8-5.1s, malformed tool JSON
+ *
+ * gpt-oss leads because a wrong answer is worse than a slow one. The buckets are
+ * metered per model, so when gpt-oss is throttled the same call is retried once
+ * against llama's separate allowance rather than waiting for a refill. Tool-call
+ * accuracy matters least on exactly the call most likely to be throttled — the
+ * last one, which only has to write prose from evidence already gathered.
  */
-const MODEL = process.env.NEXUS_MODEL ?? "openai/gpt-oss-120b";
+const MODEL = process.env.NEXUS_MODEL ?? "openai/gpt-oss-20b";
+const FALLBACK_MODEL = process.env.NEXUS_FALLBACK_MODEL ?? "llama-3.3-70b-versatile";
 
 /**
- * Groq counts prompt + max_completion_tokens against the per-minute token
- * budget, so an oversized ceiling gets the request rejected before it runs.
- * Answers are meant to be a few short paragraphs; this is ample for that.
+ * Wall-clock budget for tool calling. Past it, the model is asked to answer with
+ * what it already has instead of gathering more. Serverless platforms kill a
+ * long function mid-stream and the user sees the reasoning steps followed by
+ * silence, which is the worst possible failure: it looks like a wrong answer
+ * rather than a truncated one. Netlify was measured cutting this route off at
+ * ~20s, so the default leaves room to write the answer inside that.
  */
-const MAX_COMPLETION_TOKENS = 1600;
+const TOOL_BUDGET_MS = Number(process.env.NEXUS_TOOL_BUDGET_MS ?? 11_000);
+
+/** Model turns per question. Each is a round trip, so this bounds latency too. */
+const MAX_TURNS = 6;
+
+/**
+ * Reserved up front against the per-minute token budget on every call, used or
+ * not, so this is a cost paid per round trip rather than per word written. The
+ * answers are a few short paragraphs — about 400 tokens — and this leaves room
+ * for a long one without spending the budget on headroom nothing will use.
+ */
+const MAX_COMPLETION_TOKENS = 900;
 
 export const SYSTEM = `You are Nexus, an analyst of physical infrastructure. You reason about how places actually work: what depends on what, where the load-bearing failure points are, and what breaks next when one of them goes down.
 
-You are given a knowledge graph built for one location. Its nodes are real mapped assets; its edges are dependencies inferred by named rules, each carrying a plain-language rationale and a confidence level. Use the tools to traverse it. Never answer infrastructure questions from general knowledge when a tool can tell you what is actually there. Call survey_area first when you do not yet know what is in the area.
+You are given a knowledge graph built for one location, and an inventory of it below. Its nodes are real mapped assets; its edges are dependencies inferred by named rules, each carrying a plain-language rationale and a confidence level. Use the tools to traverse it. Never answer infrastructure questions from general knowledge when a tool can tell you what is actually there.
 
 HOW TO ANSWER
 Do not list data. Observe, then infer, then explain the consequence.
@@ -40,20 +70,19 @@ State what you do not know. If the graph has no mapped substation, say the elect
 When a question is about consequences, call simulate_failure rather than reasoning about the cascade in your head — the tool applies severity decay and onset timing you cannot estimate by eye.
 
 USING NODE IDs
-A node_id is only ever a literal string copied from a tool result, such as "osm:way/12345678". Never invent one, never use a placeholder, and never guess. If you do not yet hold the exact ID you need, call survey_area, find_nodes, or weakest_points first, read the id field from what comes back, and only then call the tool that needs it. Do not issue a tool call whose argument depends on the result of another call you are making in the same turn — that result does not exist yet.`;
+A node_id is only ever a literal string copied from a tool result or from the inventory below, such as "osm:way/12345678". Never invent one, never use a placeholder, and never guess. If you do not yet hold the exact ID you need, call find_nodes or weakest_points first, read the id field from what comes back, and only then call the tool that needs it. Do not issue a tool call whose argument depends on the result of another call you are making in the same turn — that result does not exist yet.`;
 
 type Fn = Groq.Chat.Completions.ChatCompletionTool;
 
+/*
+ * survey_area is deliberately absent: its result is handed to the model in the
+ * opening messages instead. Leaving the schema in place had every model spend a
+ * round trip re-fetching what it had already been told, and each round trip is
+ * both a second of latency and a full prompt charged against a per-minute token
+ * budget. It stays implemented in runTool because that is what produces the
+ * pre-injected inventory.
+ */
 const TOOLS: Fn[] = [
-  {
-    type: "function",
-    function: {
-      name: "survey_area",
-      description:
-        "Inventory of what is in the graph: counts by kind, the most critical assets, administrative context, and the datasets that returned nothing. Call this first for any new location.",
-      parameters: { type: "object", properties: {}, required: [] },
-    },
-  },
   {
     type: "function",
     function: {
@@ -191,10 +220,13 @@ function parseArgs(raw: string | undefined): Record<string, unknown> {
 function friendlyError(e: unknown): string {
   const raw = e instanceof Error ? e.message : String(e);
   if (/rate_limit|tokens per minute|TPM/i.test(raw)) {
-    return "Groq's free-tier rate limit was hit (tokens per minute). Wait about a minute and ask again, or set NEXUS_MODEL to a model with more headroom.";
+    return "Groq's free tier allows 8,000 tokens a minute, and this question needed more. Wait about a minute and ask again — the graph stays loaded, so nothing is recomputed.";
   }
   if (/401|invalid_api_key|Unauthorized/i.test(raw)) {
     return "Groq rejected the API key. Check GROQ_API_KEY.";
+  }
+  if (/tool_use_failed|Failed to call a function/i.test(raw)) {
+    return "The model emitted a malformed tool call and the request was rejected. Ask again — this is usually transient.";
   }
   return raw;
 }
@@ -439,7 +471,14 @@ export async function* runAgent(
     return;
   }
 
-  const client = new Groq({ apiKey });
+  /*
+   * No SDK-level retrying. Its backoff for a 429 is a silent sleep of tens of
+   * seconds, which outlives the serverless request and turns a recoverable rate
+   * limit into a blank answer. Rate limits are handled below instead, by moving
+   * the call to a model with its own token allowance.
+   */
+  const client = new Groq({ apiKey, maxRetries: 0 });
+  const rateLimited = (e: unknown) => /rate.?limit|429|tokens per minute|TPM/i.test(String(e));
   const evidence: TurnEvidence = {
     touchedNodeIds: [],
     citations: result.graph.sources.map((s) => ({
@@ -450,25 +489,89 @@ export async function* runAgent(
     rules: [],
   };
 
+  /*
+   * The inventory is handed over up front rather than left for the model to
+   * fetch. survey_area was the model's first call on essentially every question,
+   * and a round trip that always has the same answer is a round trip worth
+   * deleting — it cost a second or more of the budget and taught the model
+   * nothing it could not be told.
+   */
   const convo: Groq.Chat.Completions.ChatCompletionMessageParam[] = [
     { role: "system", content: SYSTEM },
+    {
+      role: "system",
+      content: `Inventory of the graph you are working with:\n${await runTool("survey_area", {}, result, evidence)}`,
+    },
     ...messages,
   ];
 
+  const deadline = Date.now() + TOOL_BUDGET_MS;
+  let sawText = false;
+
   // Each iteration is one model turn; the loop ends when the model stops calling tools.
-  for (let turn = 0; turn < 8; turn++) {
-    let stream;
-    try {
-      stream = await client.chat.completions.create({
-        model: MODEL,
-        messages: convo,
-        tools: TOOLS,
+  for (let turn = 0; turn < MAX_TURNS; turn++) {
+    /*
+     * Out of time, or out of turns: keep the tools visible so the transcript
+     * stays coherent, but forbid calling them. The model then has to write its
+     * answer from what it already gathered, which is always better than being
+     * cut off mid-investigation with nothing to show.
+     */
+    const mustAnswer = turn === MAX_TURNS - 1 || Date.now() > deadline;
+
+    const messagesFor = (): Groq.Chat.Completions.ChatCompletionMessageParam[] =>
+      mustAnswer
+        ? [
+            ...convo,
+            {
+              role: "system",
+              content:
+                "You are out of time for gathering data. Write your answer now, using only what the tool results above already contain. Do not call any more tools. If the evidence is not enough to answer fully, say plainly what you could not establish.",
+            },
+          ]
+        : convo;
+
+    const call = (model: string, withTools: boolean) =>
+      client.chat.completions.create({
+        model,
+        messages: messagesFor(),
+        ...(withTools ? { tools: TOOLS, tool_choice: mustAnswer ? "none" : "auto" } : {}),
         stream: true,
         max_completion_tokens: MAX_COMPLETION_TOKENS,
       });
+
+    let stream;
+    try {
+      stream = await call(MODEL, true);
     } catch (e) {
-      yield { type: "error", message: friendlyError(e) };
-      return;
+      /*
+       * Retry only on the wrap-up turn, and only there. That turn writes prose
+       * from evidence already gathered, so it is the one place the weaker
+       * fallback model is a fair substitute — putting it on a tool-calling turn
+       * was measured trading a clear "rate limited, wait a minute" message for a
+       * confusing malformed-tool-call one, which is a worse answer, not a better.
+       *
+       * Two rejections are worth retrying there:
+       *
+       * Rate limit — the per-minute allowance is metered per model, so the same
+       * call against the fallback model has a full budget of its own.
+       *
+       * tool_use_failed — Groq rejects the entire request when the model tries
+       * to call a tool that tool_choice forbade. This is exactly where that
+       * happens, because most of the system prompt is instructions to use tools.
+       * Dropping the schemas removes the temptation and shortens the prompt.
+       */
+      const recoverable =
+        mustAnswer && (rateLimited(e) || /tool_use_failed|Tool choice is none/i.test(String(e)));
+      if (!recoverable) {
+        yield { type: "error", message: friendlyError(e) };
+        return;
+      }
+      try {
+        stream = await call(rateLimited(e) ? FALLBACK_MODEL : MODEL, false);
+      } catch (retry) {
+        yield { type: "error", message: friendlyError(retry) };
+        return;
+      }
     }
 
     let content = "";
@@ -481,6 +584,7 @@ export async function* runAgent(
 
         if (delta.content) {
           content += delta.content;
+          sawText = true;
           yield { type: "text", text: delta.content };
         }
 
@@ -500,6 +604,16 @@ export async function* runAgent(
 
     const calls = partials.filter((c): c is PartialCall => Boolean(c?.name));
     if (calls.length === 0) {
+      // No tools and no prose means the turn produced nothing usable — usually
+      // the completion budget went entirely on reasoning tokens. Saying so beats
+      // rendering an empty answer bubble.
+      if (!sawText) {
+        yield {
+          type: "error",
+          message:
+            "The model returned an empty response. Ask again, or rephrase the question more narrowly.",
+        };
+      }
       yield { type: "done", evidence };
       return;
     }

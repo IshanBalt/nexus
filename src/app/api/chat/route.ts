@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { DEFAULT_RADIUS, getOrAnalyze, resolvePlace } from "@/lib/analyze";
+import { type AnalyzeResult, DEFAULT_RADIUS, getOrAnalyze, resolvePlace } from "@/lib/analyze";
 import { runAgent } from "@/lib/agent";
 
 export const runtime = "nodejs";
@@ -10,6 +10,33 @@ interface Body {
   lng: number;
   radius?: number;
   messages: { role: "user" | "assistant"; content: string }[];
+  /** The analysis the client is already displaying. See `usable` below. */
+  analysis?: AnalyzeResult;
+}
+
+/**
+ * The in-process analysis cache only helps a warm instance, and chat is exactly
+ * where a cold one hurts: rebuilding the graph costs an Overpass round trip plus
+ * three Mireye calls — eight to eleven seconds — before the model gets its first
+ * token, on a platform that kills the function about twenty seconds in.
+ *
+ * The client already holds the graph the map is drawing, so it sends it back and
+ * the agent answers about exactly what the user is looking at. This is trusted
+ * input, so keep it to what it is: public infrastructure data the client just
+ * received from us, read-only, never persisted. A shape check is enough to stop
+ * a malformed body from throwing deep inside a tool.
+ */
+function usable(a: unknown): a is AnalyzeResult {
+  const r = a as AnalyzeResult | undefined;
+  return Boolean(
+    r &&
+      Array.isArray(r.graph?.nodes) &&
+      Array.isArray(r.graph?.edges) &&
+      Array.isArray(r.graph?.sources) &&
+      Array.isArray(r.graph?.gaps) &&
+      typeof r.place?.lat === "number" &&
+      typeof r.place?.lng === "number",
+  );
 }
 
 export async function POST(req: Request) {
@@ -27,10 +54,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "messages is required" }, { status: 400 });
   }
 
-  const place = await resolvePlace(`${body.lat},${body.lng}`);
-  place.lat = body.lat;
-  place.lng = body.lng;
-  const result = await getOrAnalyze(place, body.radius ?? DEFAULT_RADIUS);
+  let result: AnalyzeResult;
+  if (usable(body.analysis)) {
+    result = body.analysis;
+    result.radiusM ??= body.radius ?? DEFAULT_RADIUS;
+  } else {
+    const place = await resolvePlace(`${body.lat},${body.lng}`);
+    place.lat = body.lat;
+    place.lng = body.lng;
+    result = await getOrAnalyze(place, body.radius ?? DEFAULT_RADIUS);
+  }
 
   const messages = body.messages
     .filter((m) => m.content.trim())
