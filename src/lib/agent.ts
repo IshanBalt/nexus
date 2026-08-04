@@ -241,7 +241,7 @@ async function runTool(
         {
           location: result.place.label,
           county: g.nodes.find((n) => n.kind === "population")?.name ?? null,
-          radius: "5 km around the query point",
+          radius: `${(result.radiusM / 1000).toFixed(1)} km around the query point`,
           node_count: g.nodes.length,
           edge_count: g.edges.length,
           counts_by_kind: Object.fromEntries(counts),

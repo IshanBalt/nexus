@@ -97,6 +97,8 @@ export interface AnalyzeResult {
   /** Raw Mireye field values, surfaced verbatim in the evidence panel. */
   mireyeFields: Record<string, unknown>;
   timings: Record<string, number>;
+  /** Radius actually analysed. Carried so nothing downstream has to assume it. */
+  radiusM: number;
 }
 
 /** Radius in metres of the analysis window around the query point. */
@@ -251,7 +253,7 @@ export async function analyze(
   });
 
   timings.total = Date.now() - started;
-  return { place, graph, mireyeFields, timings };
+  return { place, graph, mireyeFields, timings, radiusM };
 }
 
 /**
