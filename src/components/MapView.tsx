@@ -331,7 +331,19 @@ export default function MapView({
       m.getCanvas().style.cursor = hits.length ? "pointer" : "crosshair";
     });
 
+    /*
+     * MapLibre measures its container once, at construction. This component is
+     * loaded via next/dynamic, so on first paint the grid cell frequently has
+     * no layout yet — the map then latches its 400x300 fallback, requests no
+     * tiles, and renders nothing forever, because nothing tells it otherwise.
+     * Observing the container covers that race and every later resize (window,
+     * panel, devtools) for free.
+     */
+    const ro = new ResizeObserver(() => m.resize());
+    ro.observe(container.current);
+
     return () => {
+      ro.disconnect();
       m.remove();
       map.current = null;
       ready.current = false;
