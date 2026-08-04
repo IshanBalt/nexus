@@ -14,15 +14,25 @@ const ENDPOINTS = [
 ];
 
 /**
- * Public Overpass instances fail independently and unpredictably — in one
- * sample the main instance returned 504 while two mirrors timed out and a
- * fourth answered in 13s. So try several, but bound the *total* rather than
- * each attempt: four sequential 22s timeouts would be 88s, well past the 60s
- * serverless ceiling, and a slow success is worthless if the function is
- * already dead.
+ * Public Overpass instances fail independently and unpredictably — in one sample
+ * the main instance returned 504 while two mirrors timed out and a fourth
+ * answered in 13s.
+ *
+ * Trying them strictly in sequence does not work inside a serverless time limit.
+ * Observed: the first two mirrors each hung until their own timeout, which spent
+ * the entire shared budget, so the remaining two were skipped and the request
+ * returned an empty graph after 30s. Sequential attempts make the worst case the
+ * *sum* of the timeouts, and the worst case is the one that matters.
+ *
+ * So hedge instead. Start with one mirror; if it has not answered within
+ * STAGGER_MS, leave it running and start the next one alongside it. First
+ * success wins and the rest are aborted. A healthy mirror answers in five to
+ * eight seconds and is never hedged against, which keeps the extra load off
+ * volunteer-run infrastructure; a hung one costs a few seconds, not fifteen.
  */
-const TOTAL_BUDGET_MS = 34_000;
-const PER_ATTEMPT_MS = 15_000;
+const TOTAL_BUDGET_MS = 15_000;
+const PER_ATTEMPT_MS = 13_000;
+const STAGGER_MS = 3_500;
 
 /**
  * Overpass rejects anonymous requests with 406 — an identifying User-Agent is
@@ -48,45 +58,83 @@ interface OverpassElement {
 }
 
 /**
- * One query for every infrastructure class we model. A single round trip beats
- * a dozen, and Overpass charges by wall-clock time, not by clause count.
+ * Two queries, not one, and not a dozen.
+ *
+ * Splitting on point-like assets versus the linear network buys two things.
+ * Overpass allows two concurrent slots per client, so the halves run at the same
+ * time and cost the slower of the two rather than their sum — measured over a
+ * dense metro, 13.0s as one query became 4.7s and 2.4s side by side. And each
+ * half gets its own element cap: as a single query the cap was reached by the
+ * road and rail geometry alone, silently truncating away the hospitals and
+ * substations that the dependency rules care about most.
  */
-function query(b: BBox): string {
-  const bbox = `${b[1]},${b[0]},${b[3]},${b[2]}`; // Overpass wants S,W,N,E
+const CAP = 600;
+
+function bboxOf(b: BBox) {
+  return `${b[1]},${b[0]},${b[3]},${b[2]}`; // Overpass wants S,W,N,E
+}
+
+/** Sited facilities and structures. Small geometries, cheap to evaluate. */
+function assetQuery(b: BBox): string {
+  const bbox = bboxOf(b);
   return `[out:json][timeout:20];
 (
-  nw["amenity"~"^(hospital|fire_station|police)$"](${bbox});
-  nw["amenity"="school"](${bbox});
+  nw["amenity"~"^(hospital|fire_station|police|school)$"](${bbox});
   nw["power"~"^(plant|substation)$"](${bbox});
-  way["power"~"^(line|minor_line)$"](${bbox});
-  nw["man_made"~"^(water_works|wastewater_plant|pumping_station)$"](${bbox});
-  way["highway"~"^(motorway|trunk|primary|secondary)$"](${bbox});
-  way["bridge"]["highway"](${bbox});
-  way["railway"="rail"](${bbox});
+  nw["man_made"~"^(water_works|wastewater_plant|pumping_station|communications_tower)$"](${bbox});
   nw["aeroway"="aerodrome"](${bbox});
-  way["waterway"~"^(river|stream|canal)$"](${bbox});
-  nw["man_made"="communications_tower"](${bbox});
+  way["bridge"]["highway"](${bbox});
 );
-out geom 600;`;
+out geom ${CAP};`;
+}
+
+/** The linear network. Long ways, large geometries, the expensive half. */
+function networkQuery(b: BBox): string {
+  const bbox = bboxOf(b);
+  return `[out:json][timeout:20];
+(
+  way["highway"~"^(motorway|trunk|primary|secondary)$"](${bbox});
+  way["railway"="rail"](${bbox});
+  way["waterway"~"^(river|stream|canal)$"](${bbox});
+  way["power"~"^(line|minor_line)$"](${bbox});
+);
+out geom ${CAP};`;
 }
 
 export async function fetchOsm(
   bbox: BBox,
 ): Promise<{ nodes: GeoNode[]; gaps: { dataset: string; reason: string }[] }> {
-  const body = query(bbox);
+  const halves = await Promise.all([
+    hedge(assetQuery(bbox), "sited assets"),
+    hedge(networkQuery(bbox), "road, rail and water network"),
+  ]);
+
+  const elements = halves.flatMap((h) => h.elements);
+  const gaps = halves.flatMap((h) => h.gaps);
+
+  // One half succeeding is a partial answer, not a failure: report the missing
+  // half as a gap and build the graph from what did arrive.
+  return { nodes: toNodes(elements), gaps };
+}
+
+/**
+ * Run one query against the mirrors, hedging as described above, and report the
+ * failure rather than throwing — a half that fails is a data gap.
+ */
+async function hedge(
+  body: string,
+  label: string,
+): Promise<{ elements: OverpassElement[]; gaps: { dataset: string; reason: string }[] }> {
   // Every mirror's failure is recorded — reporting only the last one hides
   // which mirror actually rate-limited us.
   const failures: string[] = [];
-  const deadline = Date.now() + TOTAL_BUDGET_MS;
+  // Aborts the losers the moment one mirror answers, so we never hold open
+  // connections to three Overpass instances whose results we will discard.
+  const done = new AbortController();
+  const started = Date.now();
 
-  for (const url of ENDPOINTS) {
+  const attempt = async (url: string): Promise<OverpassElement[]> => {
     const host = new URL(url).host;
-    const remaining = deadline - Date.now();
-    // Not worth opening a connection we cannot afford to wait on.
-    if (remaining < 4000) {
-      failures.push(`${host}: skipped, time budget exhausted`);
-      continue;
-    }
     try {
       const res = await fetch(url, {
         method: "POST",
@@ -95,28 +143,60 @@ export async function fetchOsm(
           "user-agent": USER_AGENT,
         },
         body: `data=${encodeURIComponent(body)}`,
-        signal: AbortSignal.timeout(Math.min(PER_ATTEMPT_MS, remaining)),
+        signal: AbortSignal.any([
+          done.signal,
+          AbortSignal.timeout(Math.min(PER_ATTEMPT_MS, TOTAL_BUDGET_MS - (Date.now() - started))),
+        ]),
       });
-      if (!res.ok) {
-        failures.push(`${host} returned ${res.status}`);
-        continue;
-      }
+      if (!res.ok) throw new Error(`returned ${res.status}`);
       const json = (await res.json()) as { elements?: OverpassElement[] };
-      return { nodes: toNodes(json.elements ?? []), gaps: [] };
+      return json.elements ?? [];
     } catch (e) {
-      failures.push(`${host}: ${e instanceof Error ? e.message : String(e)}`);
+      const reason = `${host}: ${e instanceof Error ? e.message : String(e)}`;
+      failures.push(reason);
+      throw new Error(reason);
     }
-  }
-
-  return {
-    nodes: [],
-    gaps: [
-      {
-        dataset: "OpenStreetMap (Overpass)",
-        reason: failures.length ? failures.join("; ") : "all mirrors unreachable",
-      },
-    ],
   };
+
+  const hedged = ENDPOINTS.map(async (url, i) => {
+    if (i > 0) {
+      await sleep(Math.min(i * STAGGER_MS, TOTAL_BUDGET_MS), done.signal);
+      // A mirror that already won means this one was never needed.
+      if (done.signal.aborted) throw new Error("not needed");
+    }
+    return attempt(url);
+  });
+
+  try {
+    return { elements: await Promise.any(hedged), gaps: [] };
+  } catch {
+    return {
+      elements: [],
+      gaps: [
+        {
+          dataset: `OpenStreetMap (Overpass) — ${label}`,
+          reason: failures.length ? failures.join("; ") : "all mirrors unreachable",
+        },
+      ],
+    };
+  } finally {
+    done.abort();
+  }
+}
+
+/** Resolves after `ms`, or immediately once `signal` aborts. */
+function sleep(ms: number, signal: AbortSignal): Promise<void> {
+  return new Promise((resolve) => {
+    const t = setTimeout(resolve, ms);
+    signal.addEventListener(
+      "abort",
+      () => {
+        clearTimeout(t);
+        resolve();
+      },
+      { once: true },
+    );
+  });
 }
 
 function toNodes(elements: OverpassElement[]): GeoNode[] {

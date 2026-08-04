@@ -278,8 +278,18 @@ export async function getOrAnalyze(
   if (hit) return hit;
 
   const result = await analyze(place, radiusM);
-  analyses.set(key, result);
-  if (analyses.size > 24) analyses.delete(analyses.keys().next().value!);
+
+  /*
+   * Only cache a result that actually has assets in it. Overpass times out often
+   * enough that caching an empty graph turns one bad minute into a permanently
+   * broken location for the life of the process: every retry returns the cached
+   * emptiness in two milliseconds without ever going back to the network, and
+   * the agent correctly but uselessly reports a retrieval failure forever.
+   */
+  if (result.graph.nodes.some((n) => n.kind !== "population" && n.kind !== "county")) {
+    analyses.set(key, result);
+    if (analyses.size > 24) analyses.delete(analyses.keys().next().value!);
+  }
   return result;
 }
 
