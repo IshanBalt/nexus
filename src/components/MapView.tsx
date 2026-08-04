@@ -391,5 +391,13 @@ export default function MapView({
     else m.once("load", apply);
   }, [basemap]);
 
-  return <div ref={container} className="absolute inset-0" />;
+  /*
+   * Sized with h-full/w-full rather than `absolute inset-0`: MapLibre's own
+   * stylesheet applies `.maplibregl-map { position: relative }` to this very
+   * element, which beats the utility class. The element then stops being
+   * positioned, `inset-0` no longer sizes it, and its height collapses to zero
+   * — MapLibre reads clientHeight 0, falls back to a 300px canvas, and never
+   * requests a single tile. Explicit sizing is immune to that override.
+   */
+  return <div ref={container} className="h-full w-full" />;
 }
