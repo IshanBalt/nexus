@@ -112,6 +112,9 @@ export default function MapView({
         sev,
         traced: traced.has(n.id) ? 1 : 0,
         selected: n.id === selectedId ? 1 : 0,
+        // An amber ring on the bridges the NTSB flagged, so a listed structure
+        // is visible before anything is clicked.
+        ntsb: n.ntsbListed ? 1 : 0,
       };
 
       if (n.geometry && n.geometry.length > 1 && LINEAR.includes(n.kind)) {
@@ -128,7 +131,11 @@ export default function MapView({
             properties: { ...props, handle: 1 },
           });
         }
-      } else {
+      } else if (n.kind !== "waterway") {
+        // Waterways are never drawn as dots, with or without a centreline. The
+        // channel R10 materialises for a navigable strait OSM maps as an area
+        // sits on its bridge's own coordinates, so a point for it would render
+        // on top of the structure and take the click meant for it.
         pointFeatures.push({
           type: "Feature",
           geometry: { type: "Point", coordinates: [n.lng, n.lat] },
@@ -294,6 +301,8 @@ export default function MapView({
             "case",
             ["==", ["get", "selected"], 1],
             2.2,
+            ["==", ["get", "ntsb"], 1],
+            2,
             ["==", ["get", "traced"], 1],
             1.4,
             0.5,
@@ -302,6 +311,8 @@ export default function MapView({
             "case",
             ["==", ["get", "selected"], 1],
             "#ffffff",
+            ["==", ["get", "ntsb"], 1],
+            "#ffb020",
             ["==", ["get", "traced"], 1],
             "#4dd0e1",
             "#0a0d11",
@@ -319,6 +330,7 @@ export default function MapView({
           "any",
           [">", ["to-number", ["get", "criticality"]], 0.74],
           ["==", ["get", "traced"], 1],
+          ["==", ["get", "ntsb"], 1],
           [">", ["to-number", ["get", "sev"]], 0],
         ],
         layout: {

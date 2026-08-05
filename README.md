@@ -44,12 +44,15 @@ npm test
 | `R7` | Watercourse–road intersections are computed geometrically, not by proximity — these are where roads overtop first. |
 | `R8` | Flood exposure, flagged only when the query point falls in a mapped FEMA zone. |
 | `R9` | Everything terminates in population, which is what makes a cascade matter. |
+| `R10` | Vessel-strike exposure. A bridge matched against the 68 spans the NTSB named in MIR-25-10 — designed before AASHTO's vessel-collision guidance, spanning a navigable channel, no assessment on record — gains a `THREATENS` edge from the water it crosses. Matching is gated on state and refuses single-word substrings, because a false positive here is a federal claim about a real structure. |
 
 Every edge carries a plain-language rationale and a confidence level, and both travel with it into the agent's answer.
 
 **4 — Reason.** The agent (Groq, `openai/gpt-oss-120b`) gets eight tools over the graph: `survey_area`, `find_nodes`, `what_depends_on`, `what_this_needs`, `simulate_failure`, `weakest_points`, `site_context`, `ask_mireye`. It is instructed never to list data — observe, infer, explain the consequence.
 
-**5 — Simulate.** Breadth-first propagation with severity decay: each hop multiplies by the edge weight, so a sole-access road carries impact far while a redundant one dies out. Onset timing is modelled per dependency type — a severed route fails instantly, a hospital on generator fuel degrades at ~72 hours, water distribution drains at ~12. Scrub the bottom timeline to watch the cascade spread.
+**5 — Look at the water.** On any bridge, *Check live vessel traffic* opens a short subscription to aisstream.io and returns the ships broadcasting under the structure right now — name, class, length, draught, speed, destination. It runs outside the agent's tool budget and is handed to the model as context, so one answer can carry both halves: the cascade on land and the 229 m loaded ship approaching the pier. On a bridge the NTSB flagged, *Generate exposure brief* asks for exactly that, in the form an owner or an underwriter would want it.
+
+**6 — Simulate.** Breadth-first propagation with severity decay: each hop multiplies by the edge weight, so a sole-access road carries impact far while a redundant one dies out. Onset timing is modelled per dependency type — a severed route fails instantly, a hospital on generator fuel degrades at ~72 hours, water distribution drains at ~12. Scrub the bottom timeline to watch the cascade spread.
 
 ---
 
@@ -72,4 +75,6 @@ The graph is a few hundred nodes built fresh per query and thrown away, so it li
 
 ## Data sources
 
-Mireye (terrain, flood, soil, utilities, parcel, county market) · OpenStreetMap / Overpass · FEMA NFHL and USGS elevation via Mireye · Nominatim · CARTO basemaps · Esri World Imagery and Hillshade.
+Mireye (terrain, flood, soil, utilities, parcel, county market) · OpenStreetMap / Overpass · [NTSB MIR-25-10](https://www.ntsb.gov/investigations/AccidentReports/Reports/MIR2510.pdf) (bridges needing a vessel-strike assessment) · [aisstream.io](https://aisstream.io) (live AIS) · FEMA NFHL and USGS elevation via Mireye · Nominatim · CARTO basemaps · Esri World Imagery and Hillshade.
+
+`AISSTREAM_API_KEY` is optional. Without it the vessel check reports that it is not configured, and nothing else changes.

@@ -7,6 +7,7 @@ import EvidencePanel from "@/components/EvidencePanel";
 import type { Basemap } from "@/components/MapView";
 import { fmtHours, fmtInt } from "@/lib/display";
 import type { AnalyzeResult } from "@/lib/analyze";
+import type { VesselTraffic } from "@/lib/sources/ais";
 import type { CascadeResult, GeoNode } from "@/lib/types";
 
 // MapLibre touches `window` at import time, so it can never render on the server.
@@ -43,6 +44,16 @@ export default function Home() {
   const [simulating, setSimulating] = useState(false);
   const [timelineHours, setTimelineHours] = useState<number | null>(null);
 
+  /*
+   * One check at a time, tagged with the structure it was run on. A map keyed by
+   * node would let a stale window for one bridge be shown against another, and
+   * "what is on the water" is only ever asked about the bridge in front of you.
+   */
+  const [vesselCheck, setVesselCheck] = useState<{ nodeId: string; traffic: VesselTraffic } | null>(
+    null,
+  );
+  const [checkingVessels, setCheckingVessels] = useState(false);
+
   const stageTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const graph = result?.graph ?? null;
@@ -66,6 +77,7 @@ export default function Home() {
     setCascade(null);
     setSelectedId(null);
     setTimelineHours(null);
+    setVesselCheck(null);
 
     stageTimer.current = setInterval(
       () => setStage((s) => Math.min(s + 1, STAGES.length - 1)),
@@ -116,6 +128,9 @@ export default function Home() {
             // seen the question — and it guarantees the agent reasons about
             // precisely the graph on screen.
             analysis: result,
+            // Fetched out of band by /api/vessels so the collection window
+            // never eats the agent's tool budget; the agent gets it as context.
+            vesselTraffic: vesselCheck?.traffic,
             messages: history.map((m) => ({ role: m.role, content: m.content })),
           }),
         });
@@ -175,8 +190,46 @@ export default function Home() {
       setLiveSteps([]);
       setBusy(false);
     },
-    [messages, result],
+    [messages, result, vesselCheck],
   );
+
+  const checkVessels = useCallback(async (node: GeoNode) => {
+    setCheckingVessels(true);
+    try {
+      const res = await fetch("/api/vessels", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ lat: node.lat, lng: node.lng, near: node.name }),
+      });
+      const json = (await res.json()) as VesselTraffic & { error?: string };
+      setVesselCheck({
+        nodeId: node.id,
+        // A failed request is still a finding: keep the shape and say why.
+        traffic: res.ok
+          ? json
+          : {
+              vessels: [],
+              windowSeconds: 0,
+              fetchedAt: new Date().toISOString(),
+              gap: json.error ?? `Vessel check failed (${res.status}).`,
+              near: node.name,
+            },
+      });
+    } catch (e) {
+      setVesselCheck({
+        nodeId: node.id,
+        traffic: {
+          vessels: [],
+          windowSeconds: 0,
+          fetchedAt: new Date().toISOString(),
+          gap: e instanceof Error ? e.message : "Vessel check failed.",
+          near: node.name,
+        },
+      });
+    } finally {
+      setCheckingVessels(false);
+    }
+  }, []);
 
   const simulate = useCallback(
     async (nodeId: string) => {
@@ -350,7 +403,11 @@ export default function Home() {
             cascade={cascade}
             simulating={simulating}
             timelineHours={timelineHours}
+            vessels={vesselCheck && vesselCheck.nodeId === selectedId ? vesselCheck.traffic : null}
+            checkingVessels={checkingVessels}
             onSimulate={simulate}
+            onCheckVessels={checkVessels}
+            onAsk={send}
             onClearCascade={() => {
               setCascade(null);
               setTimelineHours(null);

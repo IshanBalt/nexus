@@ -81,6 +81,16 @@ export interface GeoNode {
   criticality: number;
   /** Population directly served, where derivable. */
   servesPopulation?: number;
+  /**
+   * Set by R10 when this bridge is one of the 68 the NTSB named in MIR-25-10 as
+   * needing a vessel-collision vulnerability assessment.
+   */
+  ntsbListed?: {
+    /** Name as the NTSB list gives it, which is often not the local one. */
+    matchedName: string;
+    state: string;
+    waterway: string;
+  };
 }
 
 export interface GraphEdge {

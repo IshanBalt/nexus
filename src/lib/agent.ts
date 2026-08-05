@@ -3,6 +3,7 @@ import { dependencies, dependents, simulate, weakestPoints } from "./cascade";
 import { rulesUsed } from "./graph";
 import * as mireye from "./mireye";
 import type { AnalyzeResult } from "./analyze";
+import type { VesselTraffic } from "./sources/ais";
 import type { GeoNode, KnowledgeGraph } from "./types";
 
 /*
@@ -59,6 +60,7 @@ HOW TO ANSWER
 Do not list data. Observe, then infer, then explain the consequence.
 Weak: "There are two hospitals nearby."
 Strong: "Both hospitals reach the arterial network only through the Cedar Street bridge. If it closes, ambulance routing falls back to a 6 km detour, and the effect lands hardest on the 40,000 residents south of the river."
+That example is about a place that does not exist. Its names, distances and population are illustrations of the shape of a good answer, never facts about the location you are analysing — reusing any of them is a fabrication.
 
 Lead with the answer. Your first sentence states the finding, not your method. Supporting detail comes after. Keep it tight — a few short paragraphs, not an essay. Write prose, not bullet dumps; reserve lists for genuinely enumerable things. Never describe the tools you called or narrate your process — the interface already shows the user which tools ran.
 
@@ -195,6 +197,44 @@ export interface TurnEvidence {
   touchedNodeIds: string[];
   citations: { name: string; url: string; confidence: string }[];
   rules: string[];
+}
+
+/**
+ * Live vessel traffic, written for the model rather than for the panel.
+ *
+ * Handed over as context instead of behind a tool, for the same reason
+ * `survey_area` is: the user has already asked for this data by pressing the
+ * button, so a tool would only add a round trip and a schema in every prompt to
+ * fetch something already in hand. The honesty caveats ride along with the data
+ * because that is where they cannot be forgotten — a zero-vessel window means
+ * "nothing heard", never "nothing there".
+ */
+function vesselBriefing(v: VesselTraffic): string {
+  const where = v.near ? ` around ${v.near}` : "";
+  const head = `Live vessel traffic was checked${where} at ${v.fetchedAt}, listening for ${v.windowSeconds} seconds.`;
+
+  const body = v.vessels.length
+    ? `${v.vessels.length} vessel${v.vessels.length === 1 ? "" : "s"} broadcasting:\n${v.vessels
+        .map((s) =>
+          [
+            s.name,
+            s.type,
+            s.lengthM ? `${s.lengthM} m LOA` : null,
+            s.draughtM ? `draught ${s.draughtM} m` : null,
+            s.speedKn == null ? null : `${s.speedKn.toFixed(1)} kn`,
+            s.destination ? `bound ${s.destination}` : null,
+            `${s.distanceM} m from the structure`,
+          ]
+            .filter(Boolean)
+            .join(" · "),
+        )
+        .join("\n")}`
+    : "No vessel broadcast during the window.";
+
+  return `${head}
+${body}
+${v.gap ? `${v.gap}\n` : ""}
+How to use this: it is a snapshot of one short window from crowd-sourced shore receivers, not a census and not a traffic study — a moored ship broadcasts only every few minutes and may be missing. It applies only to the structure named above; say so plainly if asked about any other. A large vessel under way near a bridge with no current AASHTO assessment is the exposure worth naming: displacement and speed are what a pier has to absorb. Draught is depth below the waterline and says nothing about clearance under the deck, which is not in this data at all. Do not turn a single window into a rate, a frequency, or an annual figure.`;
 }
 
 const brief = (n: GeoNode) =>
@@ -464,6 +504,8 @@ interface PartialCall {
 export async function* runAgent(
   messages: { role: "user" | "assistant"; content: string }[],
   result: AnalyzeResult,
+  /** Out-of-band vessel check the user already ran, if any. See vesselBriefing. */
+  vesselTraffic?: VesselTraffic | null,
 ): AsyncGenerator<AgentEvent> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
@@ -502,6 +544,7 @@ export async function* runAgent(
       role: "system",
       content: `Inventory of the graph you are working with:\n${await runTool("survey_area", {}, result, evidence)}`,
     },
+    ...(vesselTraffic ? [{ role: "system" as const, content: vesselBriefing(vesselTraffic) }] : []),
     ...messages,
   ];
 

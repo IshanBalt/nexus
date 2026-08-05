@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { type AnalyzeResult, DEFAULT_RADIUS, getOrAnalyze, resolvePlace } from "@/lib/analyze";
 import { runAgent } from "@/lib/agent";
+import type { VesselTraffic } from "@/lib/sources/ais";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -12,6 +13,8 @@ interface Body {
   messages: { role: "user" | "assistant"; content: string }[];
   /** The analysis the client is already displaying. See `usable` below. */
   analysis?: AnalyzeResult;
+  /** A vessel check from /api/vessels, if the user ran one. Same trust model. */
+  vesselTraffic?: VesselTraffic;
 }
 
 /**
@@ -37,6 +40,12 @@ function usable(a: unknown): a is AnalyzeResult {
       typeof r.place?.lat === "number" &&
       typeof r.place?.lng === "number",
   );
+}
+
+/** Same reasoning as `usable`: our own public data coming back, shape-checked. */
+function usableTraffic(v: unknown): v is VesselTraffic {
+  const t = v as VesselTraffic | undefined;
+  return Boolean(t && Array.isArray(t.vessels) && typeof t.fetchedAt === "string");
 }
 
 export async function POST(req: Request) {
@@ -77,7 +86,8 @@ export async function POST(req: Request) {
       const send = (obj: unknown) =>
         controller.enqueue(encoder.encode(`${JSON.stringify(obj)}\n`));
       try {
-        for await (const event of runAgent(messages, result)) send(event);
+        const traffic = usableTraffic(body.vesselTraffic) ? body.vesselTraffic : null;
+        for await (const event of runAgent(messages, result, traffic)) send(event);
       } catch (e) {
         send({ type: "error", message: e instanceof Error ? e.message : String(e) });
       } finally {

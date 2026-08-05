@@ -265,6 +265,109 @@ function testFloodHazardOnlyWhenInMappedZone() {
   );
 }
 
+/**
+ * R10 fires off a name match, which is the part most likely to go quietly
+ * wrong: too loose and every bridge in Louisiana looks federally flagged, too
+ * tight and the one bridge that is flagged reads as ordinary.
+ */
+function testNtsbMatchingIsNeitherTooLooseNorTooTight() {
+  const ntsbInput = (bridgeName: string, state: string | null) => {
+    const b = { ...bridge, name: bridgeName };
+    const input = baseInput([hospital, road1, b, river, substation]);
+    input.context = { ...input.context, state };
+    return buildGraph(input);
+  };
+
+  // Exact, on the local name OSM actually uses rather than the federal one.
+  const exact = ntsbInput("Crescent City Connection", "Louisiana");
+  const listed = exact.nodes.find((n) => n.id === "b1");
+  assert.ok(listed?.ntsbListed, "an alias on the NTSB list must match");
+  assert.equal(listed.ntsbListed.matchedName, "Greater New Orleans");
+  assert.equal(listed.ntsbListed.waterway, "Mississippi River");
+
+  const flag = edge(exact, "w1", "b1", "THREATENS");
+  assert.ok(flag, "R10 must run from the water to the structure");
+  assert.equal(flag.rule, "R10:vessel_strike_exposure");
+  assert.equal(flag.confidence, "high", "an exact name match is not a guess");
+
+  // The R2 edge for the same pair must survive R10 being added. Both are keyed
+  // on from|to|rel, so this is the regression guard against a silent collision.
+  assert.ok(
+    edge(exact, "b1", "w1", "CROSSES"),
+    "R2's crossing edge must not be clobbered by R10",
+  );
+
+  assert.ok(
+    exact.sources.some((s) => /NTSB/.test(s.name)),
+    "a match must cite the report it came from",
+  );
+
+  // Partial name, carrying route junk the way OSM does.
+  const loose = ntsbInput("I 10; Horace Wilkinson Bridge", "LA");
+  const partial = loose.nodes.find((n) => n.id === "b1");
+  assert.ok(partial?.ntsbListed, "a substring of a multi-word entry must still match");
+  assert.equal(
+    edge(loose, "w1", "b1", "THREATENS")?.confidence,
+    "medium",
+    "a partial match must not claim the confidence of an exact one",
+  );
+
+  // Right name, wrong state. The list has a Veterans Memorial in Texas and
+  // Louisiana both; the state gate is what keeps them apart.
+  const wrongState = ntsbInput("Crescent City Connection", "Texas");
+  assert.ok(
+    !wrongState.nodes.find((n) => n.id === "b1")?.ntsbListed,
+    "the state gate must reject a name from another state's list",
+  );
+
+  // An ordinary bridge stays ordinary.
+  const plain = ntsbInput("River Street Bridge", "Louisiana");
+  assert.ok(!plain.nodes.find((n) => n.id === "b1")?.ntsbListed);
+  assert.ok(
+    !plain.edges.some((e) => e.rule === "R10:vessel_strike_exposure"),
+    "an unlisted bridge must produce no vessel-strike edge",
+  );
+  assert.ok(
+    !plain.sources.some((s) => /NTSB/.test(s.name)),
+    "no match means no citation — the panel records what was used, not what exists",
+  );
+
+  // Saint/St. differs between the two sources in both directions. Observed
+  // live: OSM tags the Portland crossing "Saint Johns Bridge", the NTSB list
+  // calls it "St. Johns".
+  const spelledOut = ntsbInput("Saint Johns Bridge", "Oregon");
+  assert.equal(
+    spelledOut.nodes.find((n) => n.id === "b1")?.ntsbListed?.matchedName,
+    "St. Johns",
+    "Saint and St. must fold to the same name",
+  );
+
+  // The walkways over a big span are their own named ways in OSM and match the
+  // list just as well as the roadway does. Observed live: the Golden Gate came
+  // back as three flagged structures, two of them sidewalks.
+  const spansInput = baseInput([
+    hospital,
+    road1,
+    { ...bridge, id: "b1", name: "Golden Gate Bridge", criticality: 0.92 },
+    { ...bridge, id: "b2", name: "Golden Gate Bridge East Sidewalk", criticality: 0.62 },
+    river,
+    substation,
+  ]);
+  spansInput.context = { ...spansInput.context, state: "California" };
+  const spans = buildGraph(spansInput);
+  const flagged = spans.nodes.filter((n) => n.ntsbListed);
+  assert.equal(flagged.length, 1, "one NTSB entry must flag one structure, not every way named after it");
+  assert.equal(flagged[0].id, "b1", "the flagged structure is the one carrying the roadway");
+
+  // Single-word entries are real ("Summit", "Rainbow", "Memorial") and are also
+  // words that turn up in unrelated bridge names. They match exactly or not at all.
+  const generic = ntsbInput("Memorial Park Footbridge", "New Hampshire");
+  assert.ok(
+    !generic.nodes.find((n) => n.id === "b1")?.ntsbListed,
+    "a one-word entry must not substring-match its way onto unrelated structures",
+  );
+}
+
 function testGapsAreReportedNotHidden() {
   const input = baseInput([hospital, substation]); // no roads at all
   const g = buildGraph(input);
@@ -285,6 +388,7 @@ const tests = [
   testNoInfiniteLoopOnCycles,
   testWeakestPointsRanksConnectors,
   testFloodHazardOnlyWhenInMappedZone,
+  testNtsbMatchingIsNeitherTooLooseNorTooTight,
   testGapsAreReportedNotHidden,
 ];
 

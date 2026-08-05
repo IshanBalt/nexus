@@ -1,3 +1,4 @@
+import { matchNtsbBridge, type NtsbMatch, NTSB_SOURCE_URL } from "./data/ntsb-bridges";
 import { distanceToLine, haversine, linesIntersect, metres } from "./geo";
 import type {
   BBox,
@@ -187,6 +188,105 @@ export function buildGraph(input: BuildInput): KnowledgeGraph {
         rationale: `${b.name} spans ${overWater.node.name}, putting the structure directly in the path of high-water and debris loading.`,
       });
     }
+  }
+
+  // -------------------------------------------------------------------------
+  // R10 — Vessel-strike exposure, for the bridges the NTSB named after the Key
+  // Bridge collapse.
+  //
+  // Deliberately not folded into R2's `overWater` branch, which was the first
+  // thing tried and was wrong for a structural reason. R2 only sees water that
+  // OSM maps as a `waterway` centreline — rivers, streams, canals. The 68 are
+  // the bridges over *navigable* water, and navigable water is wide enough that
+  // OSM maps it as an area instead: San Francisco Bay, the East River and the
+  // Houston Ship Channel carry no waterway line at all. Nesting the rule there
+  // silently dropped it for most of the list — Golden Gate and Brooklyn both
+  // matched by name and produced nothing.
+  //
+  // The list itself is the evidence that these structures span a navigable
+  // channel; that is the criterion the NTSB selected on. So the channel is
+  // taken from the federal record rather than inferred from OSM's geometry, and
+  // materialised as a node so a strike has something to propagate from.
+  // -------------------------------------------------------------------------
+  /*
+   * One flagged node per NTSB entry, and it has to be the structure a ship would
+   * actually hit.
+   *
+   * OSM maps the walkways over a big span as their own named ways — the Golden
+   * Gate's two sidewalks are separately tagged `bridge` and match the list by
+   * name, so a straight loop put three vessel-strike warnings on one crossing.
+   * Filtering on `highway=footway` is not enough either: osm.ts merges ways
+   * sharing a kind and name, and the surviving node keeps whichever tags arrived
+   * first, so in Portland the whole Saint Johns Bridge carries the sidewalk's
+   * tags. Criticality survives that merge as a maximum, so it is the reliable
+   * discriminator — the way carrying the roadway always outscores the footpath.
+   */
+  const best = new Map<string, { node: GeoNode; listed: NtsbMatch }>();
+  for (const b of bridges) {
+    const listed = matchNtsbBridge(b.name, input.context.state);
+    if (!listed) continue;
+    const held = best.get(listed.name);
+    if (!held || b.criticality > held.node.criticality) best.set(listed.name, { node: b, listed });
+  }
+
+  const channels = new Map<string, GeoNode>();
+  for (const { node: b, listed } of best.values()) {
+    b.ntsbListed = {
+      matchedName: listed.name,
+      state: listed.state,
+      waterway: listed.waterway,
+    };
+
+    // Prefer a real mapped watercourse where OSM has one; fall back to a node
+    // standing for the channel the NTSB record names.
+    const mapped = nearest(b, waterways, ["waterway"], 150);
+    let channel: GeoNode;
+    if (mapped) {
+      channel = mapped.node;
+    } else {
+      const key = listed.waterway.toLowerCase();
+      const existing = channels.get(key);
+      if (existing) {
+        channel = existing;
+      } else {
+        channel = {
+          id: `channel:${key.replace(/[^a-z0-9]+/g, "-")}`,
+          kind: "waterway",
+          name: listed.waterway,
+          lat: b.lat,
+          lng: b.lng,
+          tags: { navigable: true, source: "NTSB MIR-25-10" },
+          sources: input.sources,
+          criticality: 0.3,
+        };
+        channels.set(key, channel);
+        nodes.push(channel);
+      }
+    }
+
+    push({
+      /*
+       * THREATENS, from the water to the structure — deliberately not CROSSES.
+       * `push` dedupes on `from|to|rel`, and R2 above may already have claimed
+       * bridge|waterway|CROSSES for this exact pair. Reusing that relation here
+       * would collide on the key and silently discard whichever edge had the
+       * lower weight, losing one of the two rationales with no error. The
+       * direction is also the honest one: the hazard originates on the water and
+       * acts on the bridge, which is how R8 already models flood exposure, and
+       * it puts the edge in the cascade's propagating set.
+       */
+      from: channel.id,
+      to: b.id,
+      rel: "THREATENS",
+      weight: 0.75,
+      confidence: listed.confidence,
+      rule: "R10:vessel_strike_exposure",
+      rationale: `${b.name} matches "${listed.name}" on the NTSB's list of 68 bridges (MIR-25-10, March 2025) recommended for a vessel-collision vulnerability assessment. Those 68 were selected for having been designed before AASHTO's vessel-collision guidance existed and for having no current assessment on record — the position the Francis Scott Key Bridge was in when the Dali struck it, at roughly thirty times AASHTO's acceptable annual frequency of collapse. The structure spans ${listed.waterway}${
+        listed.confidence === "medium"
+          ? ", and the name match here is partial, so confirm the structure against the NTSB list before relying on it"
+          : ""
+      }.`,
+    });
   }
 
   // -------------------------------------------------------------------------
@@ -407,12 +507,26 @@ export function buildGraph(input: BuildInput): KnowledgeGraph {
     }
   }
 
+  // The NTSB report only earns a citation if it actually produced a finding
+  // here — listing every dataset we *could* have consulted would make the
+  // evidence panel a bibliography instead of a record of what was used.
+  const sources = [...input.sources];
+  if (nodes.some((n) => n.ntsbListed)) {
+    sources.push({
+      name: "NTSB MIR-25-10 — bridges needing vessel-strike assessment",
+      url: NTSB_SOURCE_URL,
+      fetchedAt: now,
+      confidence: "high",
+      vintage: "2025-03-20",
+    });
+  }
+
   return {
     nodes,
     edges,
     center: input.center,
     bbox: input.bbox,
-    sources: input.sources,
+    sources,
     gaps,
     builtAt: now,
   };

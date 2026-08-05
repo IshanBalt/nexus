@@ -1,6 +1,7 @@
 "use client";
 
 import { CONFIDENCE_COLOR, KIND_COLOR, KIND_LABEL, fmtHours, fmtInt, severityColor } from "@/lib/display";
+import type { VesselTraffic } from "@/lib/sources/ais";
 import type { CascadeResult, GeoNode, KnowledgeGraph } from "@/lib/types";
 
 interface Props {
@@ -10,9 +11,17 @@ interface Props {
   cascade: CascadeResult | null;
   simulating: boolean;
   timelineHours: number | null;
+  /** The last vessel check, shown only against the structure it was run on. */
+  vessels: VesselTraffic | null;
+  checkingVessels: boolean;
   onSimulate: (nodeId: string) => void;
+  onCheckVessels: (node: GeoNode) => void;
+  /** Puts a question to the agent, the same path the chat suggestions use. */
+  onAsk: (question: string) => void;
   onClearCascade: () => void;
 }
+
+const NTSB_URL = "https://www.ntsb.gov/investigations/AccidentReports/Reports/MIR2510.pdf";
 
 const RULE_LABEL: Record<string, string> = {
   "R1:road_access": "Arterial road access",
@@ -27,6 +36,7 @@ const RULE_LABEL: Record<string, string> = {
   "R8:flood_exposure": "Flood exposure",
   "R9:hospital_serves": "Hospital catchment",
   "R9:lifeline_serves": "Lifeline service area",
+  "R10:vessel_strike_exposure": "Vessel-strike exposure (NTSB)",
 };
 
 export default function EvidencePanel({
@@ -36,7 +46,11 @@ export default function EvidencePanel({
   cascade,
   simulating,
   timelineHours,
+  vessels,
+  checkingVessels,
   onSimulate,
+  onCheckVessels,
+  onAsk,
   onClearCascade,
 }: Props) {
   return (
@@ -78,6 +92,32 @@ export default function EvidencePanel({
                     </div>
                   </div>
                 </div>
+                {selected.ntsbListed && (
+                  <div
+                    className="mb-2.5 border-l-2 pl-2.5"
+                    style={{ borderColor: "var(--signal)" }}
+                  >
+                    <div className="text-[11px]" style={{ color: "var(--signal)" }}>
+                      NTSB vessel-strike list
+                    </div>
+                    <p className="text-[10.5px] leading-snug" style={{ color: "var(--ink-dim)" }}>
+                      Listed as “{selected.ntsbListed.matchedName}” ({selected.ntsbListed.state}),
+                      spanning {selected.ntsbListed.waterway}. One of the 68 spans recommended for
+                      an AASHTO Method II vulnerability assessment after the Key Bridge collapse,
+                      with none on record.
+                    </p>
+                    <a
+                      href={NTSB_URL}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="mt-1 block truncate text-[10px] underline underline-offset-2"
+                      style={{ color: "var(--ink-faint)" }}
+                    >
+                      NTSB MIR-25-10, 20 March 2025 ↗
+                    </a>
+                  </div>
+                )}
+
                 <button
                   onClick={() => onSimulate(selected.id)}
                   disabled={simulating}
@@ -86,6 +126,36 @@ export default function EvidencePanel({
                 >
                   {simulating ? "Simulating…" : "Simulate failure"}
                 </button>
+
+                {/* Offered on any bridge, not only a listed one: a judge clicking
+                    somewhere unplanned should still see the water side work. */}
+                {selected.kind === "bridge" && (
+                  <button
+                    onClick={() => onCheckVessels(selected)}
+                    disabled={checkingVessels}
+                    className="mt-1.5 w-full cursor-pointer border py-1.5 text-[11px] tracking-wide uppercase transition-colors disabled:cursor-wait disabled:opacity-50"
+                    style={{ borderColor: "var(--trace)", color: "var(--trace)" }}
+                  >
+                    {checkingVessels ? "Listening…" : "Check live vessel traffic"}
+                  </button>
+                )}
+
+                {selected.ntsbListed && (
+                  <button
+                    onClick={() =>
+                      onAsk(
+                        // The node id is handed over rather than left to be
+                        // looked up: a find_nodes turn the panel can save is a
+                        // whole round trip against an 8000-token minute.
+                        `Write a vessel-strike exposure brief for ${selected.name} (node id "${selected.id}"). Call simulate_failure on it once, then write — the NTSB finding and the water are already in front of you, and every extra tool call spends a minute of the token budget. Set the land-side cascade against what the NTSB found and whatever is on the water right now, then say who carries the exposure and what they should do about it. State the NTSB finding only as the edge rationale states it — it is a listing, not an investigation of this structure. Under 250 words.`,
+                      )
+                    }
+                    className="mt-1.5 w-full cursor-pointer border py-1.5 text-[11px] tracking-wide uppercase transition-colors"
+                    style={{ borderColor: "var(--signal)", color: "var(--signal)" }}
+                  >
+                    Generate exposure brief
+                  </button>
+                )}
                 {selected.sources[0] && (
                   <a
                     href={selected.sources[0].url}
@@ -97,6 +167,71 @@ export default function EvidencePanel({
                     {selected.sources[0].name} ↗
                   </a>
                 )}
+              </Section>
+            )}
+
+            {vessels && (
+              <Section title="Live vessel traffic">
+                <div className="mb-2 text-[10.5px]" style={{ color: "var(--ink-faint)" }}>
+                  {vessels.windowSeconds > 0
+                    ? `${vessels.windowSeconds}s window · ${new Date(vessels.fetchedAt).toLocaleTimeString()}`
+                    : "not collected"}
+                </div>
+
+                <ul className="space-y-2">
+                  {vessels.vessels.map((v) => (
+                    <li
+                      key={v.mmsi}
+                      className="border-l-2 pl-2.5"
+                      style={{ borderColor: "var(--trace)" }}
+                    >
+                      <div className="flex items-baseline justify-between gap-2">
+                        <span
+                          className="truncate text-[11.5px]"
+                          style={{ color: "var(--ink-bright)" }}
+                        >
+                          {v.name}
+                        </span>
+                        <span
+                          className="shrink-0 text-[10px] tabular-nums"
+                          style={{ color: "var(--ink-dim)" }}
+                        >
+                          {v.distanceM} m
+                        </span>
+                      </div>
+                      <div className="text-[10px]" style={{ color: "var(--ink-faint)" }}>
+                        {[
+                          v.type,
+                          v.lengthM ? `${v.lengthM} m` : null,
+                          v.draughtM ? `draught ${v.draughtM} m` : null,
+                          v.speedKn == null ? null : `${v.speedKn.toFixed(1)} kn`,
+                          v.destination ? `→ ${v.destination}` : null,
+                        ]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+
+                {vessels.gap && (
+                  <p
+                    className="mt-2 border-l-2 pl-2.5 text-[10.5px] leading-snug"
+                    style={{ borderColor: "var(--rule-bright)", color: "var(--ink-dim)" }}
+                  >
+                    {vessels.gap}
+                  </p>
+                )}
+
+                <a
+                  href="https://aisstream.io"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="mt-2 block text-[10px] underline underline-offset-2"
+                  style={{ color: "var(--ink-faint)" }}
+                >
+                  aisstream.io — live AIS ↗
+                </a>
               </Section>
             )}
 
