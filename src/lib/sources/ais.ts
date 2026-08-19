@@ -215,7 +215,7 @@ export async function fetchVesselTraffic(
           gap ??
           (vessels.length
             ? undefined
-            : "No vessel broadcast in this window. aisstream relays crowd-sourced shore receivers, so this means either no traffic or no receiver in VHF range here — the two are not distinguishable from the data."),
+            : "No vessel broadcast in this window. Three things look identical from here and none can be ruled out: no traffic, no shore receiver in VHF range (aisstream relays crowd-sourced receivers, not satellites), or an accepted key whose account is not yet streaming — a subscription that authenticates but delivers nothing is silent in exactly this way. Do not read this as an empty channel."),
       });
     };
 
