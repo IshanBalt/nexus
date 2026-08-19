@@ -52,7 +52,9 @@ Every edge carries a plain-language rationale and a confidence level, and both t
 
 **5 — Look at the water.** On any bridge, *Check live vessel traffic* opens a short subscription to aisstream.io and returns the ships broadcasting under the structure right now — name, class, length, draught, speed, destination. It runs outside the agent's tool budget and is handed to the model as context, so one answer can carry both halves: the cascade on land and the 229 m loaded ship approaching the pier. On a bridge the NTSB flagged, *Generate exposure brief* asks for exactly that, in the form an owner or an underwriter would want it.
 
-**6 — Simulate.** Breadth-first propagation with severity decay: each hop multiplies by the edge weight, so a sole-access road carries impact far while a redundant one dies out. Onset timing is modelled per dependency type — a severed route fails instantly, a hospital on generator fuel degrades at ~72 hours, water distribution drains at ~12. Scrub the bottom timeline to watch the cascade spread.
+**6 — Watch.** *Watch this bridge* leaves the agent looking at one structure: a vessel check every minute, and when something over 100 m comes past under way, it raises the approach and runs the cascade for that structure without being asked — so the consequence of losing the span is already on screen next to the ship that could take it. A watch that can't see says so; a quiet watch and a blind one never look the same. The loop runs in the browser tab, because a serverless function that lives twenty seconds has nowhere to keep a subscription.
+
+**7 — Simulate.** Breadth-first propagation with severity decay: each hop multiplies by the edge weight, so a sole-access road carries impact far while a redundant one dies out. Onset timing is modelled per dependency type — a severed route fails instantly, a hospital on generator fuel degrades at ~72 hours, water distribution drains at ~12. Scrub the bottom timeline to watch the cascade spread.
 
 ---
 

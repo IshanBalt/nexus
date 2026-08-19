@@ -3,8 +3,9 @@
 import { CONFIDENCE_COLOR, KIND_COLOR, KIND_LABEL, fmtHours, fmtInt, severityColor } from "@/lib/display";
 import type { VesselTraffic } from "@/lib/sources/ais";
 import type { CascadeResult, GeoNode, KnowledgeGraph } from "@/lib/types";
+import { ALERT_RULE, type VesselAlert } from "@/lib/watch";
 
-interface Props {
+export interface Props {
   graph: KnowledgeGraph | null;
   mireyeFields: Record<string, unknown>;
   selected: GeoNode | null;
@@ -14,8 +15,19 @@ interface Props {
   /** The last vessel check, shown only against the structure it was run on. */
   vessels: VesselTraffic | null;
   checkingVessels: boolean;
+  /** The running watch, if any — not necessarily on the selected structure. */
+  watch: {
+    nodeId: string;
+    nodeName: string;
+    startedAt: string;
+    lastCheckAt: string | null;
+    polls: number;
+    gap?: string;
+  } | null;
+  alerts: VesselAlert[];
   onSimulate: (nodeId: string) => void;
   onCheckVessels: (node: GeoNode) => void;
+  onToggleWatch: (node: GeoNode) => void;
   /** Puts a question to the agent, the same path the chat suggestions use. */
   onAsk: (question: string) => void;
   onClearCascade: () => void;
@@ -48,11 +60,15 @@ export default function EvidencePanel({
   timelineHours,
   vessels,
   checkingVessels,
+  watch,
+  alerts,
   onSimulate,
   onCheckVessels,
+  onToggleWatch,
   onAsk,
   onClearCascade,
 }: Props) {
+  const watching = (n: GeoNode) => watch?.nodeId === n.id;
   return (
     <div className="flex h-full flex-col" style={{ background: "var(--panel)" }}>
       <header className="border-b px-4 py-3" style={{ borderColor: "var(--rule)" }}>
@@ -130,14 +146,30 @@ export default function EvidencePanel({
                 {/* Offered on any bridge, not only a listed one: a judge clicking
                     somewhere unplanned should still see the water side work. */}
                 {selected.kind === "bridge" && (
-                  <button
-                    onClick={() => onCheckVessels(selected)}
-                    disabled={checkingVessels}
-                    className="mt-1.5 w-full cursor-pointer border py-1.5 text-[11px] tracking-wide uppercase transition-colors disabled:cursor-wait disabled:opacity-50"
-                    style={{ borderColor: "var(--trace)", color: "var(--trace)" }}
-                  >
-                    {checkingVessels ? "Listening…" : "Check live vessel traffic"}
-                  </button>
+                  <>
+                    <button
+                      onClick={() => onCheckVessels(selected)}
+                      disabled={checkingVessels || watching(selected)}
+                      className="mt-1.5 w-full cursor-pointer border py-1.5 text-[11px] tracking-wide uppercase transition-colors disabled:cursor-wait disabled:opacity-50"
+                      style={{ borderColor: "var(--trace)", color: "var(--trace)" }}
+                    >
+                      {checkingVessels
+                        ? "Listening…"
+                        : watching(selected)
+                          ? "Watching — checking every minute"
+                          : "Check live vessel traffic"}
+                    </button>
+                    <button
+                      onClick={() => onToggleWatch(selected)}
+                      className="mt-1.5 w-full cursor-pointer border py-1.5 text-[11px] tracking-wide uppercase transition-colors"
+                      style={{
+                        borderColor: watching(selected) ? "var(--severe)" : "var(--calm)",
+                        color: watching(selected) ? "var(--severe)" : "var(--calm)",
+                      }}
+                    >
+                      {watching(selected) ? "Stop watching" : "Watch this bridge"}
+                    </button>
+                  </>
                 )}
 
                 {selected.ntsbListed && (
@@ -167,6 +199,101 @@ export default function EvidencePanel({
                     {selected.sources[0].name} ↗
                   </a>
                 )}
+              </Section>
+            )}
+
+            {watch && (
+              <Section
+                title="Watch"
+                action={
+                  <span className="label" style={{ color: "var(--severe)" }}>
+                    ● live
+                  </span>
+                }
+              >
+                <div className="mb-2">
+                  <div className="text-[12px]" style={{ color: "var(--ink-bright)" }}>
+                    {watch.nodeName}
+                  </div>
+                  <div className="text-[10.5px]" style={{ color: "var(--ink-faint)" }}>
+                    {watch.polls} check{watch.polls === 1 ? "" : "s"}
+                    {watch.lastCheckAt &&
+                      ` · last ${new Date(watch.lastCheckAt).toLocaleTimeString()}`}
+                  </div>
+                  <div className="mt-1 text-[10.5px]" style={{ color: "var(--ink-dim)" }}>
+                    Alerting on any {ALERT_RULE}.
+                  </div>
+                </div>
+
+                {/* A watch that is blind must not read as a watch that is quiet. */}
+                {watch.gap && (
+                  <p
+                    className="mb-2 border-l-2 pl-2.5 text-[10.5px] leading-snug"
+                    style={{ borderColor: "var(--signal)", color: "var(--ink-dim)" }}
+                  >
+                    {watch.gap}
+                  </p>
+                )}
+
+                {alerts.length === 0 && (
+                  <Empty>
+                    Nothing qualifying has passed since the watch started. The cascade runs on its
+                    own when something does.
+                  </Empty>
+                )}
+
+                <ul className="space-y-2">
+                  {alerts.map((a) => (
+                    <li
+                      key={a.id}
+                      className="border-l-2 pl-2.5"
+                      style={{ borderColor: a.open ? "var(--severe)" : "var(--rule-bright)" }}
+                    >
+                      <div className="flex items-baseline justify-between gap-2">
+                        <span
+                          className="truncate text-[11.5px]"
+                          style={{ color: a.open ? "var(--ink-bright)" : "var(--ink-dim)" }}
+                        >
+                          {a.name}
+                        </span>
+                        <span
+                          className="shrink-0 text-[10px] tabular-nums"
+                          style={{ color: a.open ? "var(--severe)" : "var(--ink-faint)" }}
+                        >
+                          {a.open ? `${a.distanceM} m` : "passed"}
+                        </span>
+                      </div>
+                      <div className="text-[10px]" style={{ color: "var(--ink-faint)" }}>
+                        {[
+                          a.type,
+                          a.lengthM ? `${a.lengthM} m` : null,
+                          a.draughtM ? `draught ${a.draughtM} m` : null,
+                          a.speedKn == null ? null : `${a.speedKn.toFixed(1)} kn`,
+                          a.destination ? `→ ${a.destination}` : null,
+                        ]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </div>
+                      <div className="text-[10px]" style={{ color: "var(--ink-faint)" }}>
+                        {new Date(a.firstSeen).toLocaleTimeString()} · {a.nodeName}
+                      </div>
+                      <button
+                        onClick={() =>
+                          onAsk(
+                            `The ${a.name}${a.lengthM ? `, ${a.lengthM} m` : ""}${
+                              a.type ? ` (${a.type})` : ""
+                            }, passed ${a.nodeName} at ${a.distanceM} m${
+                              a.speedKn == null ? "" : ` making ${a.speedKn.toFixed(1)} kn`
+                            }. Call simulate_failure on "${a.nodeId}" once, then write — what does this structure carry, what would be lost with it, and does this vessel's size and speed make that a real exposure or an ordinary transit? Under 200 words.`,
+                          )
+                        }
+                        className="label mt-1 cursor-pointer transition-colors hover:text-[var(--ink)]"
+                      >
+                        Assess this approach →
+                      </button>
+                    </li>
+                  ))}
+                </ul>
               </Section>
             )}
 

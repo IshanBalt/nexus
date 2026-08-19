@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ChatPanel, { type ChatMessage, type Step } from "@/components/ChatPanel";
 import EvidencePanel from "@/components/EvidencePanel";
 import type { Basemap } from "@/components/MapView";
@@ -9,6 +9,7 @@ import { fmtHours, fmtInt } from "@/lib/display";
 import type { AnalyzeResult } from "@/lib/analyze";
 import type { VesselTraffic } from "@/lib/sources/ais";
 import type { CascadeResult, GeoNode } from "@/lib/types";
+import { mergeAlerts, WATCH_INTERVAL_MS, type VesselAlert } from "@/lib/watch";
 
 // MapLibre touches `window` at import time, so it can never render on the server.
 const MapView = dynamic(() => import("@/components/MapView"), {
@@ -54,6 +55,29 @@ export default function Home() {
   );
   const [checkingVessels, setCheckingVessels] = useState(false);
 
+  /*
+   * Watch mode. The structure being watched is held separately from the selected
+   * one: a watch is meant to keep running while the user goes and looks at
+   * something else, which is the entire difference between watching a bridge and
+   * checking one.
+   */
+  const [watch, setWatch] = useState<{
+    nodeId: string;
+    nodeName: string;
+    lat: number;
+    lng: number;
+    startedAt: string;
+  } | null>(null);
+  const [watchStatus, setWatchStatus] = useState<{
+    lastCheckAt: string | null;
+    polls: number;
+    gap?: string;
+  }>({ lastCheckAt: null, polls: 0 });
+  const [alerts, setAlerts] = useState<VesselAlert[]>([]);
+  // Mirrors `alerts` so a tick can fold into the current log and act on what it
+  // opened, without waiting for a render to read state back.
+  const alertsRef = useRef<VesselAlert[]>([]);
+
   const stageTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const graph = result?.graph ?? null;
@@ -78,6 +102,11 @@ export default function Home() {
     setSelectedId(null);
     setTimelineHours(null);
     setVesselCheck(null);
+    // A watch belongs to the structure it was started on; a new location leaves
+    // it pointing at a bridge that is no longer in the graph.
+    setWatch(null);
+    setAlerts([]);
+    alertsRef.current = [];
 
     stageTimer.current = setInterval(
       () => setStage((s) => Math.min(s + 1, STAGES.length - 1)),
@@ -231,6 +260,21 @@ export default function Home() {
     }
   }, []);
 
+  const toggleWatch = useCallback((node: GeoNode) => {
+    setWatch((w) =>
+      w?.nodeId === node.id
+        ? null
+        : {
+            nodeId: node.id,
+            nodeName: node.name,
+            lat: node.lat,
+            lng: node.lng,
+            startedAt: new Date().toISOString(),
+          },
+    );
+    setWatchStatus({ lastCheckAt: null, polls: 0 });
+  }, []);
+
   const simulate = useCallback(
     async (nodeId: string) => {
       if (!result) return;
@@ -259,6 +303,62 @@ export default function Home() {
     },
     [result],
   );
+
+  /*
+   * The watch loop. One tick is one ordinary vessel check; what makes this an
+   * agent rather than a refresh button is what happens on a new alert — it runs
+   * the cascade for the watched structure without being asked, so the moment a
+   * ship large enough to take the span down comes past, the consequence of
+   * losing it is already on the screen next to it.
+   */
+  useEffect(() => {
+    if (!watch) return;
+    let cancelled = false;
+
+    const tick = async () => {
+      let traffic: VesselTraffic;
+      try {
+        const res = await fetch("/api/vessels", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ lat: watch.lat, lng: watch.lng, near: watch.nodeName }),
+        });
+        traffic = (await res.json()) as VesselTraffic;
+      } catch (e) {
+        traffic = {
+          vessels: [],
+          windowSeconds: 0,
+          fetchedAt: new Date().toISOString(),
+          // A watch that looks quiet because it is broken is the one failure
+          // this must never have. Say it missed the tick.
+          gap: e instanceof Error ? e.message : "Vessel check failed.",
+          near: watch.nodeName,
+        };
+      }
+      if (cancelled) return;
+
+      const now = new Date().toISOString();
+      setVesselCheck({ nodeId: watch.nodeId, traffic });
+      setWatchStatus((s) => ({ lastCheckAt: now, polls: s.polls + 1, gap: traffic.gap }));
+
+      const { alerts: next, opened } = mergeAlerts(
+        alertsRef.current,
+        traffic.vessels ?? [],
+        { id: watch.nodeId, name: watch.nodeName },
+        now,
+      );
+      alertsRef.current = next;
+      setAlerts(next);
+      if (opened.length) simulate(watch.nodeId);
+    };
+
+    tick();
+    const timer = setInterval(tick, WATCH_INTERVAL_MS);
+    return () => {
+      cancelled = true;
+      clearInterval(timer);
+    };
+  }, [watch, simulate]);
 
   // -------------------------------------------------------------------------
   return (
@@ -405,8 +505,11 @@ export default function Home() {
             timelineHours={timelineHours}
             vessels={vesselCheck && vesselCheck.nodeId === selectedId ? vesselCheck.traffic : null}
             checkingVessels={checkingVessels}
+            watch={watch ? { ...watch, ...watchStatus } : null}
+            alerts={alerts}
             onSimulate={simulate}
             onCheckVessels={checkVessels}
+            onToggleWatch={toggleWatch}
             onAsk={send}
             onClearCascade={() => {
               setCascade(null);

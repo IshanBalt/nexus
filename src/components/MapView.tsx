@@ -409,16 +409,29 @@ export default function MapView({
   useEffect(() => {
     const m = map.current;
     if (!m || !center) return;
-    m.flyTo({ center: [center.lng, center.lat], zoom: 13.2, speed: 1.1, curve: 1.5 });
 
-    marker.current?.remove();
-    const el = document.createElement("div");
-    el.style.cssText =
-      "width:13px;height:13px;border-radius:50%;background:#ffb020;border:2px solid #0a0d11;box-shadow:0 0 0 1px #ffb020";
-    el.className = "pulse";
-    marker.current = new Marker({ element: el })
-      .setLngLat([center.lng, center.lat])
-      .addTo(m);
+    /*
+     * Deferred until the style is up, like the two effects around this one. A
+     * camera move issued before `load` is dropped, and an analysis that resolves
+     * from cache beats the style over the network often enough to matter: the
+     * map then sits at the continental view with the graph drawn somewhere in it
+     * a few pixels wide, which reads as "nothing happened" rather than as a map
+     * that failed to move.
+     */
+    const apply = () => {
+      m.flyTo({ center: [center.lng, center.lat], zoom: 13.2, speed: 1.1, curve: 1.5 });
+
+      marker.current?.remove();
+      const el = document.createElement("div");
+      el.style.cssText =
+        "width:13px;height:13px;border-radius:50%;background:#ffb020;border:2px solid #0a0d11;box-shadow:0 0 0 1px #ffb020";
+      el.className = "pulse";
+      marker.current = new Marker({ element: el })
+        .setLngLat([center.lng, center.lat])
+        .addTo(m);
+    };
+    if (ready.current) apply();
+    else m.once("load", apply);
   }, [center]);
 
   useEffect(() => {

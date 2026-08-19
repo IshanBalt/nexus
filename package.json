@@ -9,7 +9,7 @@
     "build": "npm run copy:maplibre && next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx src/lib/graph.test.ts && tsx src/lib/sources/ais.test.ts && tsx src/components/EvidencePanel.test.tsx"
+    "test": "tsx src/lib/graph.test.ts && tsx src/lib/sources/ais.test.ts && tsx src/lib/watch.test.ts && tsx src/components/EvidencePanel.test.tsx"
   },
   "dependencies": {
     "groq-sdk": "^1.5.0",
