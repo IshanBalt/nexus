@@ -4,10 +4,12 @@ import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ChatPanel, { type ChatMessage, type Step } from "@/components/ChatPanel";
 import EvidencePanel from "@/components/EvidencePanel";
+import FleetPanel from "@/components/FleetPanel";
 import type { Basemap } from "@/components/MapView";
 import { fmtHours, fmtInt } from "@/lib/display";
 import type { AnalyzeResult } from "@/lib/analyze";
 import type { VesselTraffic } from "@/lib/sources/ais";
+import type { FleetEntry } from "@/lib/fleet";
 import type { CascadeResult, GeoNode } from "@/lib/types";
 import { mergeAlerts, WATCH_INTERVAL_MS, type VesselAlert } from "@/lib/watch";
 
@@ -32,6 +34,15 @@ export default function Home() {
   const [loadError, setLoadError] = useState<string | null>(null);
 
   const [query, setQuery] = useState("");
+  /*
+   * The watch is what the left column shows first. A reader who lands here gets
+   * the run that already happened rather than an empty box waiting for them to
+   * think of a question; the analysis view takes over once they open something.
+   */
+  const [leftTab, setLeftTab] = useState<"watch" | "analysis">("watch");
+  // Set when a structure is opened with a question attached: the graph has to
+  // exist before the agent can be asked about it.
+  const [pendingQuestion, setPendingQuestion] = useState<string | null>(null);
   const [basemap, setBasemap] = useState<Basemap>("dark");
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -275,6 +286,15 @@ export default function Home() {
     setWatchStatus({ lastCheckAt: null, polls: 0 });
   }, []);
 
+  const openStructure = useCallback(
+    (entry: FleetEntry, question?: string) => {
+      setLeftTab("analysis");
+      if (question) setPendingQuestion(question);
+      runAnalyze({ lat: entry.lat, lng: entry.lng });
+    },
+    [runAnalyze],
+  );
+
   const simulate = useCallback(
     async (nodeId: string) => {
       if (!result) return;
@@ -360,6 +380,14 @@ export default function Home() {
     };
   }, [watch, simulate]);
 
+  // A question raised from the watch waits for its graph, then goes to the agent.
+  useEffect(() => {
+    if (!pendingQuestion || !result || busy) return;
+    const q = pendingQuestion;
+    setPendingQuestion(null);
+    send(q);
+  }, [pendingQuestion, result, busy, send]);
+
   // -------------------------------------------------------------------------
   return (
     <div className="flex h-full flex-col">
@@ -425,7 +453,31 @@ export default function Home() {
       </header>
 
       <main className="grid min-h-0 flex-1 grid-cols-[340px_1fr_340px]">
-        <div className="min-h-0 border-r" style={{ borderColor: "var(--rule)" }}>
+        <div className="flex min-h-0 flex-col border-r" style={{ borderColor: "var(--rule)" }}>
+          <div className="flex shrink-0 border-b" style={{ borderColor: "var(--rule)" }}>
+            {(["watch", "analysis"] as const).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setLeftTab(tab)}
+                className="label flex-1 cursor-pointer py-2 transition-colors"
+                style={{
+                  color: leftTab === tab ? "var(--base)" : "var(--ink-faint)",
+                  background: leftTab === tab ? "var(--signal)" : "transparent",
+                }}
+              >
+                {tab === "watch" ? "Standing watch" : "Analysis"}
+              </button>
+            ))}
+          </div>
+
+          <div className="min-h-0 flex-1" hidden={leftTab !== "watch"}>
+            <FleetPanel
+              onOpen={(entry) => openStructure(entry)}
+              onAsk={(entry, q) => openStructure(entry, q)}
+            />
+          </div>
+
+          <div className="min-h-0 flex-1" hidden={leftTab !== "analysis"}>
           <ChatPanel
             messages={messages}
             streaming={streaming}
@@ -435,6 +487,7 @@ export default function Home() {
             placeLabel={result?.place.label ?? null}
             onSend={send}
           />
+          </div>
         </div>
 
         <div className="relative min-h-0">
