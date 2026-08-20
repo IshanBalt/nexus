@@ -38,6 +38,12 @@ jobs:
 
       - run: npm ci
 
+      # These secrets are optional and the job is built to run without them.
+      # Triage — the part that decides which structures matter today — reads the
+      # NWS and USGS, which are public and need no key, so an unconfigured repo
+      # still publishes a full sweep every half hour. Setting GROQ_API_KEY and
+      # MIREYE_API_TOKEN adds the written brief on top. Nothing here fails for
+      # want of a credential; the artifact says which depth it ran at.
       - name: Sweep the fleet and brief what matters
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -55,5 +61,13 @@ jobs:
             echo "nothing changed since the last sweep"
             exit 0
           fi
-          git commit -m "watch: sweep at $(date -u +'%Y-%m-%dT%H:%MZ')"
+          # [skip ci] because the site reads this file over HTTP at request time
+          # rather than bundling it — see src/app/api/fleet/route.ts. Without the
+          # tag every sweep would trigger a full Netlify rebuild, 48 a day, to
+          # ship a file the running site already picks up on its own.
+          git commit -m "watch: sweep at $(date -u +'%Y-%m-%dT%H:%MZ') [skip ci]"
+          # A human push between the checkout and here would otherwise fail the
+          # job outright. The artifact is generated, so replaying it on top of
+          # whatever landed is always right.
+          git pull --rebase --autostash
           git push

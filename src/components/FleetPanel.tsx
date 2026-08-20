@@ -77,6 +77,14 @@ export default function FleetPanel({ onOpen, onAsk }: Props) {
           <Stat n={sweep.escalated.length} label="over threshold" color="var(--severe)" />
           <Stat n={quiet.length} label="quiet" color="var(--ink-faint)" />
         </div>
+        {sweep.briefGap && (
+          <p
+            className="mt-2 border-l-2 pl-2 text-[10px] leading-snug"
+            style={{ borderColor: "var(--ink-faint)", color: "var(--ink-faint)" }}
+          >
+            {sweep.briefGap}
+          </p>
+        )}
       </header>
 
       <div className="flex-1 overflow-y-auto">

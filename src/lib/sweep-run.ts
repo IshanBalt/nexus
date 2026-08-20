@@ -9,11 +9,12 @@
  * findings are committed to git, which makes the claim "this ran at 14:02 and
  * saw a flood watch over the Delaware" checkable by anyone.
  */
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { runAgent } from "./agent";
 import { DEFAULT_RADIUS, getOrAnalyze, resolvePlace } from "./analyze";
 import { ESCALATION_THRESHOLD, sweepFleet, type FleetEntry, type FleetSweep } from "./fleet";
+import { hasMireyeKey } from "./mireye";
 
 export interface Brief {
   structure: string;
@@ -27,6 +28,32 @@ export interface Brief {
 
 export interface SweepArtifact extends FleetSweep {
   briefs: Brief[];
+  /**
+   * Set when the sweep ran but could not write about what it found. Absent
+   * briefs and no briefs worth writing are different outcomes and the page
+   * should not show them the same way.
+   */
+  briefGap?: string;
+}
+
+/**
+ * Triage needs nothing but the NWS and USGS, which are public and keyless.
+ * Writing needs Groq to write and Mireye to know what the structure carries.
+ *
+ * So the watch is built to run at two depths rather than to fail at one. With
+ * no credentials at all it still sweeps all 59 structures every half hour and
+ * publishes a dated, checkable record of the readings — the part that decides
+ * is the part that runs free. Credentials add the written brief on top. A
+ * scheduled run that skips the prose is a real run; a scheduled run that dies
+ * on a missing key is an outage, and an agent that stops the moment its
+ * expensive dependency is unavailable is not a watch anyone should trust.
+ */
+function briefingAvailable(): string | null {
+  const missing = [
+    process.env.GROQ_API_KEY ? null : "GROQ_API_KEY",
+    hasMireyeKey() ? null : "MIREYE_API_TOKEN",
+  ].filter(Boolean);
+  return missing.length ? missing.join(" and ") : null;
 }
 
 /**
@@ -100,6 +127,16 @@ async function writeBrief(entry: FleetEntry, nodeId: string): Promise<Brief> {
   }
 }
 
+/** Briefs from the artifact already on disk, for structures still escalated. */
+function carriedBriefs(outPath: string, stillEscalated: Set<string>): Brief[] {
+  try {
+    const prev = JSON.parse(readFileSync(outPath, "utf8")) as SweepArtifact;
+    return prev.briefs.filter((b) => !b.failed && stillEscalated.has(b.structure));
+  } catch {
+    return [];
+  }
+}
+
 export async function runSweep(outPath: string): Promise<SweepArtifact> {
   const sweep = await sweepFleet(8);
   console.log(
@@ -113,7 +150,10 @@ export async function runSweep(outPath: string): Promise<SweepArtifact> {
   // infrastructure data did not load is skipped and the next one gets the turn.
   const candidates = sweep.structures.filter((s) => s.score >= ESCALATION_THRESHOLD);
 
-  for (const entry of candidates) {
+  const missingKeys = briefingAvailable();
+  if (missingKeys) console.log(`  no ${missingKeys} — publishing readings without writing`);
+
+  for (const entry of missingKeys ? [] : candidates) {
     if (briefs.filter((b) => !b.failed).length >= MAX_BRIEFS) break;
     const nodeId = await locate(entry);
     if (!nodeId) {
@@ -127,7 +167,30 @@ export async function runSweep(outPath: string): Promise<SweepArtifact> {
     briefs.push(b);
   }
 
-  const artifact: SweepArtifact = { ...sweep, briefs };
+  // Keep what an earlier run wrote about anything still over the threshold that
+  // this run did not get to — whether that was a missing key, a token budget
+  // spent on higher-ranked structures, or Overpass declining to return the
+  // bridge this time. A brief carries the moment it was written and the panel
+  // prints its age, so an older brief on a structure still escalated is worth
+  // more than a blank. Briefs for structures that have gone quiet are dropped:
+  // those describe weather that is over.
+  const written = new Set(briefs.filter((b) => !b.failed).map((b) => b.structure));
+  const held = carriedBriefs(
+    outPath,
+    new Set(candidates.map((c) => c.name).filter((n) => !written.has(n))),
+  );
+  if (held.length) console.log(`  carrying ${held.length} earlier brief(s) still on the board`);
+  briefs.push(...held);
+
+  const briefGap = missingKeys
+    ? `${candidates.length} structure${candidates.length === 1 ? "" : "s"} met the escalation threshold on readings alone, and this run wrote about none of them: it had no ${missingKeys}. ` +
+      (held.length
+        ? `The ${held.length} brief${held.length === 1 ? "" : "s"} below ${held.length === 1 ? "is" : "are"} carried from an earlier run and dated accordingly — the readings are current, that prose is not.`
+        : `The readings are the whole of what it produced.`) +
+      ` They were still measured, timestamped and published on schedule.`
+    : undefined;
+
+  const artifact: SweepArtifact = { ...sweep, briefs, briefGap };
   writeFileSync(outPath, `${JSON.stringify(artifact, null, 1)}\n`);
   console.log(`wrote ${outPath}`);
   return artifact;
