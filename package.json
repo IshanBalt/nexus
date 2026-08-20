@@ -3,13 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "test": "tsx src/lib/graph.test.ts"
-=======
     "copy:maplibre": "mkdir -p public/maplibre && cp node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs node_modules/maplibre-gl/dist/maplibre-gl-shared.mjs public/maplibre/",
     "postinstall": "npm run copy:maplibre",
     "dev": "npm run copy:maplibre && next dev",
@@ -18,7 +11,6 @@
     "lint": "eslint",
     "sweep": "tsx src/lib/sweep-run.ts",
     "test": "tsx src/lib/graph.test.ts && tsx src/lib/sources/ais.test.ts && tsx src/lib/watch.test.ts && tsx src/components/EvidencePanel.test.tsx"
->>>>>>> 4db52d14f4a961c0a3f2808fa72a08d0b71b2e3d
   },
   "dependencies": {
     "groq-sdk": "^1.5.0",
