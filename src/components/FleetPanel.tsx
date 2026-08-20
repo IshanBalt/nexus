@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { NTSB_BRIDGES } from "@/lib/data/ntsb-bridges";
 import type { FleetEntry } from "@/lib/fleet";
 import type { Brief, SweepArtifact } from "@/lib/sweep-run";
 
@@ -12,6 +13,15 @@ import type { Brief, SweepArtifact } from "@/lib/sweep-run";
  * this arrives with 59 federally-flagged structures already triaged, ranked by
  * what is happening to them today, and says when it ran.
  */
+
+/**
+ * Ohio reports six of these by ODOT structure file number, so the federal list
+ * calls one of them "LUC-00002-1862" and everyone else calls it the Anthony
+ * Wayne Bridge. Lead with the name a human uses and keep the federal reference
+ * beside it, because the reference is what makes the claim checkable.
+ */
+const COMMON = new Map(NTSB_BRIDGES.filter((b) => b.aliases?.length).map((b) => [b.name, b.aliases![0]]));
+const isFileNumber = (name: string) => /^[A-Z]{3}-\d/.test(name);
 
 const band = (score: number) =>
   score >= 0.65 ? "var(--severe)" : score >= 0.5 ? "var(--signal)" : "var(--ink-dim)";
@@ -93,7 +103,12 @@ export default function FleetPanel({ onOpen, onAsk }: Props) {
                   className="min-w-0 flex-1 truncate text-[12px]"
                   style={{ color: "var(--ink-bright)" }}
                 >
-                  {s.name}
+                  {COMMON.get(s.name) ?? s.name}
+                  {isFileNumber(s.name) && (
+                    <span className="ml-1.5 text-[10px]" style={{ color: "var(--ink-faint)" }}>
+                      {s.name}
+                    </span>
+                  )}
                 </span>
                 {brief && (
                   <span className="label shrink-0" style={{ color: "var(--calm)" }}>
