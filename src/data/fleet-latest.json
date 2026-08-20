@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-20T21:35:17.425Z",
- "durationMs": 21718,
+ "ranAt": "2026-08-20T21:51:36.473Z",
+ "durationMs": 7485,
  "watched": 59,
  "excluded": [
   {
@@ -23,15 +23,24 @@
    "waterway": "Hudson River",
    "lat": 40.8523792,
    "lng": -73.9566274,
-   "score": 0.6,
+   "score": 0.95,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 7:45PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2dc5efef2f3bead4a2091d8f4e0971c257cae44e.001.1",
+     "at": "2026-08-20T21:51:30.107Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "notable",
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 20 at 5:30PM EDT until August 20 at 7:30PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917661b1cd4cb7fed31525a1b1a5e8865a91c3c2.001.1",
-     "at": "2026-08-20T21:35:05.343Z",
+     "at": "2026-08-20T21:51:30.107Z",
      "weight": 0.05
     },
     {
@@ -40,14 +49,14 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 2:16PM EDT until August 21 at 2:00AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.26c2d7e72f8dd431bcfd58bdbd95686640ca0b96.001.1",
-     "at": "2026-08-20T21:35:05.343Z",
+     "at": "2026-08-20T21:51:30.107Z",
      "weight": 0.35
     }
    ],
    "gaps": [
     "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.54 ft over 24 h"
    ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Manhattan",
@@ -55,15 +64,24 @@
    "waterway": "East River",
    "lat": 40.7069642,
    "lng": -73.9904592,
-   "score": 0.6,
+   "score": 0.95,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 7:45PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2dc5efef2f3bead4a2091d8f4e0971c257cae44e.001.1",
+     "at": "2026-08-20T21:51:30.004Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "notable",
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 20 at 5:30PM EDT until August 20 at 7:30PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917661b1cd4cb7fed31525a1b1a5e8865a91c3c2.001.1",
-     "at": "2026-08-20T21:35:03.252Z",
+     "at": "2026-08-20T21:51:30.004Z",
      "weight": 0.05
     },
     {
@@ -72,14 +90,14 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 2:16PM EDT until August 21 at 2:00AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.26c2d7e72f8dd431bcfd58bdbd95686640ca0b96.001.1",
-     "at": "2026-08-20T21:35:03.252Z",
+     "at": "2026-08-20T21:51:30.004Z",
      "weight": 0.35
     }
    ],
    "gaps": [
     "no USGS gauge within ~13 km"
    ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Vincent R. Casciano",
@@ -87,15 +105,24 @@
    "waterway": "Newark Bay",
    "lat": 40.6946123,
    "lng": -74.1160441,
-   "score": 0.6,
+   "score": 0.95,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 7:45PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2dc5efef2f3bead4a2091d8f4e0971c257cae44e.001.1",
+     "at": "2026-08-20T21:51:29.905Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "notable",
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 20 at 5:30PM EDT until August 20 at 7:30PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917661b1cd4cb7fed31525a1b1a5e8865a91c3c2.001.1",
-     "at": "2026-08-20T21:35:03.262Z",
+     "at": "2026-08-20T21:51:29.905Z",
      "weight": 0.05
     },
     {
@@ -104,14 +131,14 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 2:16PM EDT until August 21 at 2:00AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.26c2d7e72f8dd431bcfd58bdbd95686640ca0b96.001.1",
-     "at": "2026-08-20T21:35:03.262Z",
+     "at": "2026-08-20T21:51:29.905Z",
      "weight": 0.35
     }
    ],
    "gaps": [
     "Third River at Bloomfield NJ: tidal record, 0.11 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Williamsburg",
@@ -119,15 +146,24 @@
    "waterway": "East River",
    "lat": 40.7135807,
    "lng": -73.9721363,
-   "score": 0.6,
+   "score": 0.95,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 7:45PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2dc5efef2f3bead4a2091d8f4e0971c257cae44e.001.1",
+     "at": "2026-08-20T21:51:30.049Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "notable",
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 20 at 5:30PM EDT until August 20 at 7:30PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917661b1cd4cb7fed31525a1b1a5e8865a91c3c2.001.1",
-     "at": "2026-08-20T21:35:03.327Z",
+     "at": "2026-08-20T21:51:30.049Z",
      "weight": 0.05
     },
     {
@@ -136,44 +172,14 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 2:16PM EDT until August 21 at 2:00AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.26c2d7e72f8dd431bcfd58bdbd95686640ca0b96.001.1",
-     "at": "2026-08-20T21:35:03.328Z",
+     "at": "2026-08-20T21:51:30.049Z",
      "weight": 0.35
     }
    ],
    "gaps": [
     "no USGS gauge within ~13 km"
    ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Commodore Barry",
-   "state": "NJ",
-   "waterway": "Delaware River",
-   "lat": 39.8267836,
-   "lng": -75.3700139,
-   "score": 0.59,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
-     "at": "2026-08-20T21:35:02.804Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "river",
-     "level": "notable",
-     "headline": "Nearby gauge rising 0.26 ft in 24 h",
-     "detail": "Darby Creek near Darby, PA: stage 2.02 ft, discharge 54 cfs, up 0.26 ft over 24 h — this gauge is not on the channel the NTSB record names.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01475510/",
-     "at": "2026-08-20T17:10:00.000-04:00",
-     "weight": 0.04
-    }
-   ],
-   "gaps": [],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Benjamin Franklin",
@@ -181,22 +187,31 @@
    "waterway": "Delaware River",
    "lat": 39.9529288,
    "lng": -75.1343785,
-   "score": 0.55,
+   "score": 0.9,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 9:45PM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7ced341ca9ed740df2b4446fb11a0bccb843caec.001.1",
+     "at": "2026-08-20T21:51:30.522Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "high",
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
-     "at": "2026-08-20T21:35:06.882Z",
+     "at": "2026-08-20T21:51:30.522Z",
      "weight": 0.35
     }
    ],
    "gaps": [
     "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.69 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Betsy Ross",
@@ -204,22 +219,223 @@
    "waterway": "Delaware River",
    "lat": 39.9847942,
    "lng": -75.0659033,
-   "score": 0.55,
+   "score": 0.9,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 9:45PM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7ced341ca9ed740df2b4446fb11a0bccb843caec.001.1",
+     "at": "2026-08-20T21:51:30.508Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "high",
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
-     "at": "2026-08-20T21:35:06.744Z",
+     "at": "2026-08-20T21:51:30.508Z",
      "weight": 0.35
     }
    ],
    "gaps": [
     "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.69 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Commodore Barry",
+   "state": "NJ",
+   "waterway": "Delaware River",
+   "lat": 39.8267836,
+   "lng": -75.3700139,
+   "score": 0.9,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 9:45PM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7ced341ca9ed740df2b4446fb11a0bccb843caec.001.1",
+     "at": "2026-08-20T21:51:29.891Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flood Watch in force",
+     "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
+     "at": "2026-08-20T21:51:29.891Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "Darby Creek near Darby, PA: stage steady at 1.99 ft over 24 h"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Outerbridge Crossing",
+   "state": "NY",
+   "waterway": "Arthur Kill",
+   "lat": 40.5252739,
+   "lng": -74.2384605,
+   "score": 0.9,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 7:45PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2dc5efef2f3bead4a2091d8f4e0971c257cae44e.001.1",
+     "at": "2026-08-20T21:51:30.082Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flood Watch in force",
+     "detail": "Flood Watch issued August 20 at 2:16PM EDT until August 21 at 2:00AM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.26c2d7e72f8dd431bcfd58bdbd95686640ca0b96.001.1",
+     "at": "2026-08-20T21:51:30.082Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 0.98 ft over 24 h"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Reedy Point",
+   "state": "DE",
+   "waterway": "Chesapeake and Delaware Canal",
+   "lat": 39.5584456,
+   "lng": -75.5824037,
+   "score": 0.9,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Special Marine Warning in force",
+     "detail": "Special Marine Warning issued August 20 at 5:36PM EDT until August 20 at 7:00PM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.39eefc5fbdc480d0ea7f32db875fc71737d8276b.001.1",
+     "at": "2026-08-20T21:51:29.552Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flood Watch in force",
+     "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
+     "at": "2026-08-20T21:51:29.552Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.65 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Walt Whitman",
+   "state": "PA",
+   "waterway": "Delaware River",
+   "lat": 39.9072951,
+   "lng": -75.1410302,
+   "score": 0.9,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 9:45PM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7ced341ca9ed740df2b4446fb11a0bccb843caec.001.1",
+     "at": "2026-08-20T21:51:30.493Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flood Watch in force",
+     "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
+     "at": "2026-08-20T21:51:30.493Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.69 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Brooklyn",
+   "state": "NY",
+   "waterway": "East River",
+   "lat": 40.7062175,
+   "lng": -73.9970208,
+   "score": 0.6,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 7:45PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2dc5efef2f3bead4a2091d8f4e0971c257cae44e.001.1",
+     "at": "2026-08-20T21:51:29.909Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
+     "level": "notable",
+     "headline": "Flood Advisory in force",
+     "detail": "Flood Advisory issued August 20 at 5:30PM EDT until August 20 at 7:30PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917661b1cd4cb7fed31525a1b1a5e8865a91c3c2.001.1",
+     "at": "2026-08-20T21:51:29.909Z",
+     "weight": 0.05
+    }
+   ],
+   "gaps": [
+    "no USGS gauge within ~13 km"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Verrazano Narrows",
+   "state": "NY",
+   "waterway": "The Narrows",
+   "lat": 40.6063358,
+   "lng": -74.0454441,
+   "score": 0.6,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 20 at 5:39PM EDT until August 20 at 7:45PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2dc5efef2f3bead4a2091d8f4e0971c257cae44e.001.1",
+     "at": "2026-08-20T21:51:29.912Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
+     "level": "notable",
+     "headline": "Flood Advisory in force",
+     "detail": "Flood Advisory issued August 20 at 5:30PM EDT until August 20 at 7:30PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917661b1cd4cb7fed31525a1b1a5e8865a91c3c2.001.1",
+     "at": "2026-08-20T21:51:29.912Z",
+     "weight": 0.05
+    }
+   ],
+   "gaps": [
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 0.98 ft over 24 h"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Delaware River Turnpike",
@@ -235,58 +451,12 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
-     "at": "2026-08-20T21:35:07.349Z",
+     "at": "2026-08-20T21:51:30.524Z",
      "weight": 0.35
     }
    ],
    "gaps": [
     "Delaware River at Trenton NJ: stage steady at 9.03 ft over 24 h"
-   ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Outerbridge Crossing",
-   "state": "NY",
-   "waterway": "Arthur Kill",
-   "lat": 40.5252739,
-   "lng": -74.2384605,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued August 20 at 2:16PM EDT until August 21 at 2:00AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.26c2d7e72f8dd431bcfd58bdbd95686640ca0b96.001.1",
-     "at": "2026-08-20T21:35:04.902Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 0.98 ft over 24 h"
-   ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Reedy Point",
-   "state": "DE",
-   "waterway": "Chesapeake and Delaware Canal",
-   "lat": 39.5584456,
-   "lng": -75.5824037,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
-     "at": "2026-08-20T21:35:00.498Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.65 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -304,7 +474,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
-     "at": "2026-08-20T21:35:00.569Z",
+     "at": "2026-08-20T21:51:29.499Z",
      "weight": 0.35
     }
    ],
@@ -327,83 +497,14 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
-     "at": "2026-08-20T21:35:00.180Z",
+     "at": "2026-08-20T21:51:29.410Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 4.93 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 4.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Walt Whitman",
-   "state": "PA",
-   "waterway": "Delaware River",
-   "lat": 39.9072951,
-   "lng": -75.1410302,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued August 20 at 12:55PM EDT until August 21 at 2:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5427b617d1a67661dc9fe8124682252042f8170.002.1",
-     "at": "2026-08-20T21:35:06.527Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.69 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Brooklyn",
-   "state": "NY",
-   "waterway": "East River",
-   "lat": 40.7062175,
-   "lng": -73.9970208,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 20 at 5:30PM EDT until August 20 at 7:30PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917661b1cd4cb7fed31525a1b1a5e8865a91c3c2.001.1",
-     "at": "2026-08-20T21:35:03.633Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "USGS unreachable: fetch failed"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Verrazano Narrows",
-   "state": "NY",
-   "waterway": "The Narrows",
-   "lat": 40.6063358,
-   "lng": -74.0454441,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 20 at 5:30PM EDT until August 20 at 7:30PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917661b1cd4cb7fed31525a1b1a5e8865a91c3c2.001.1",
-     "at": "2026-08-20T21:35:03.266Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 0.98 ft over 24 h"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "William Preston Lane Jr.",
@@ -419,7 +520,7 @@
      "headline": "Marine Weather Statement in force",
      "detail": "Marine Weather Statement issued August 20 at 5:31PM EDT by NWS Baltimore MD/Washington DC",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.51916ab268e2439f641c009713bde83b97430002.001.1",
-     "at": "2026-08-20T21:35:01.517Z",
+     "at": "2026-08-20T21:51:29.751Z",
      "weight": 0.05
     }
    ],
@@ -554,7 +655,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.99 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.00 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -567,7 +668,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.99 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.00 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -580,7 +681,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.99 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.00 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -593,7 +694,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.99 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.00 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -684,7 +785,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: fetch failed"
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.27 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1017,5 +1118,6 @@
    ],
    "writtenAt": "2026-08-20T21:31:48.875Z"
   }
- ]
+ ],
+ "briefGap": "15 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The 1 brief below is carried from an earlier run and dated accordingly — the readings are current, that prose is not. They were still measured, timestamped and published on schedule."
 }
