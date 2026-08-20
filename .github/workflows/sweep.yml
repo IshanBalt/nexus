@@ -33,10 +33,18 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # 24 is what this lockfile is verified against on a clean clone.
+          node-version: 24
           cache: npm
 
-      - run: npm ci
+      # Every scheduled run before 2026-08-20T21:40Z died on this line, first
+      # because the lockfile disagreed with its environment and then because a
+      # bad merge left conflict markers in both JSON files. A watch that cannot
+      # survive its own install is not a watch, so fall back rather than stop:
+      # `npm ci` is reproducible and preferred, `npm install` will resolve a
+      # lockfile that does not match the platform. Which one ran is in the log.
+      - name: Install
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
 
       # These secrets are optional and the job is built to run without them.
       # Triage — the part that decides which structures matter today — reads the
