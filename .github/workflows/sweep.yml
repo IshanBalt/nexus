@@ -1,0 +1,59 @@
+# The standing watch, running on its own.
+#
+# This is what makes Nexus an agent rather than a page with a button: every
+# half hour, with nobody watching, it goes over the 59 located structures on the
+# NTSB's vessel-collision list, pulls live NWS alerts and USGS river readings
+# for each, decides which ones a person should hear about, and writes about
+# those. The findings are committed, so every run leaves a dated, checkable
+# record of what the world looked like at that moment — including the runs that
+# found nothing, which is the honest half of a watch.
+name: standing watch
+
+on:
+  schedule:
+    # Every 30 minutes. NWS reissues alerts on its own cadence and USGS posts
+    # instantaneous values every 15, so this is about as often as the underlying
+    # data can actually change.
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+
+# Only one sweep at a time: two runs committing findings would race on the
+# artifact, and a queued sweep is stale by the time it lands anyway.
+concurrency:
+  group: standing-watch
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Sweep the fleet and brief what matters
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MIREYE_API_TOKEN: ${{ secrets.MIREYE_API_TOKEN }}
+          AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
+        run: npm run sweep
+
+      - name: Commit what it found
+        run: |
+          git config user.name "nexus-watch"
+          git config user.email "noreply@users.noreply.github.com"
+          git add src/data/fleet-latest.json
+          # A sweep that changed nothing is a real outcome, not a failure.
+          if git diff --staged --quiet; then
+            echo "nothing changed since the last sweep"
+            exit 0
+          fi
+          git commit -m "watch: sweep at $(date -u +'%Y-%m-%dT%H:%MZ')"
+          git push

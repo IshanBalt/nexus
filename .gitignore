@@ -41,3 +41,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
+=======
+
+# Vendored at build time by "npm run copy:maplibre" — MapLibre 6 needs its
+# worker and shared chunk served under their real, unhashed filenames.
+/public/maplibre
+>>>>>>> 4db52d14f4a961c0a3f2808fa72a08d0b71b2e3d
