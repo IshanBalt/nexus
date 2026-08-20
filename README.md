@@ -34,6 +34,8 @@ Nexus does not wait to be asked. Every half hour, with nobody watching, it sweep
 
 Triage is deterministic arithmetic, not a model. Fifty-nine federal structures ranked by an LLM would drift between runs and could not be audited; a documented sum over measured readings can be disagreed with by anyone who reads it. Every signal carries the weight it contributed, so the score can be recomputed from what the panel shows. The model is asked only to write, and only about what triage already selected — which is the division of labour that makes the answer trustworthy: judgment where it is checkable, prose where it is useful.
 
+The watch runs at whatever depth its credentials allow. Triage needs nothing but the NWS and USGS, both public and keyless, so a clone of this repository with no secrets configured still sweeps all 59 structures on schedule and publishes dated readings; `GROQ_API_KEY` and `MIREYE_API_TOKEN` add the written brief on top, and the artifact records which depth it ran at. Briefs carry across runs that could not reach a structure — a spent token budget, an Overpass timeout — and the panel prints each one's age, because a brief dated an hour ago is worth more than a blank and only useful if you can see how old it is.
+
 The report names 68 spans. Three structures have no coordinate here, and say so: I-610 and Beltway 8 cross the Houston Ship Channel on ways whose centroids sit a mile off the span, and nothing in OpenStreetMap carries the GulfGate name. A federal finding attached to the wrong bridge is worse than a bridge left out.
 
 ---
