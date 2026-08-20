@@ -542,7 +542,11 @@ export default function Home() {
                   United States, then reasons over it — what depends on this, what breaks next, and
                   where the load-bearing failure points are.
                 </p>
-                <p className="label mt-5">Click anywhere on the map to begin</p>
+                <p className="prose-reasoning mt-3" style={{ color: "var(--ink-dim)" }}>
+                  It is doing that on its own, right now, over the 59 bridges the NTSB named as
+                  needing a vessel-collision assessment. The standing watch is on the left.
+                </p>
+                <p className="label mt-5">Open one of them, or click anywhere on the map</p>
               </div>
             </div>
           )}

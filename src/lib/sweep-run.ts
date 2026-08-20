@@ -40,31 +40,34 @@ const MAX_BRIEFS = Number(process.env.NEXUS_SWEEP_BRIEFS ?? 2);
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /**
- * Whether there is anything here to reason about.
+ * The graph node for this structure, if R10 actually found it.
  *
- * Overpass fails often enough that a sweep will sometimes reach a structure
- * with an empty graph, and an agent asked to brief on nothing writes a
- * paragraph explaining that it cannot — which is honest and worthless. Checking
- * first costs one cached analysis and saves a model call against a per-minute
- * budget, so the agent moves to the next structure on the list instead.
+ * Asking whether the graph has *anything* in it is the wrong question, and the
+ * first version of this asked it: Philadelphia returns a floodplain and a
+ * turnpike, passes that test, and the agent then writes a careful paragraph
+ * explaining that it cannot find the Benjamin Franklin Bridge. R10 already
+ * answers the question that matters — a node carrying this structure's NTSB
+ * match is the structure, found and identified — so use that, and hand the id
+ * over rather than making the model spend a turn searching for what we already
+ * hold.
  */
-async function hasGraph(entry: FleetEntry): Promise<boolean> {
+async function locate(entry: FleetEntry): Promise<string | null> {
   try {
     const place = await resolvePlace(`${entry.lat},${entry.lng}`);
     place.lat = entry.lat;
     place.lng = entry.lng;
     const { graph } = await getOrAnalyze(place, DEFAULT_RADIUS);
-    return graph.nodes.some((n) => n.kind !== "population" && n.kind !== "county");
+    return graph.nodes.find((n) => n.ntsbListed?.matchedName === entry.name)?.id ?? null;
   } catch {
-    return false;
+    return null;
   }
 }
 
-async function writeBrief(entry: FleetEntry): Promise<Brief> {
+async function writeBrief(entry: FleetEntry, nodeId: string): Promise<Brief> {
   const question = [
     `${entry.name} carries the NTSB's MIR-25-10 listing: designed before AASHTO's vessel-collision guidance, spanning ${entry.waterway}, no current vulnerability assessment on record.`,
     `Live right now: ${entry.signals.map((s) => s.detail).join(" ")}`,
-    `Find the bridge with find_nodes, call simulate_failure on it once, then write. What does this structure carry, who loses what if it comes down today, and does today's condition change the case for assessing it? Under 200 words. Do not restate the tool calls.`,
+    `The structure is node "${nodeId}". Call simulate_failure on it once, then write — every extra tool call spends a minute of the token budget. What does this structure carry, who loses what if it comes down today, and does today's condition change the case for assessing it? Under 200 words. Do not restate the tool calls.`,
   ].join("\n\n");
 
   const written = new Date().toISOString();
@@ -112,13 +115,14 @@ export async function runSweep(outPath: string): Promise<SweepArtifact> {
 
   for (const entry of candidates) {
     if (briefs.filter((b) => !b.failed).length >= MAX_BRIEFS) break;
-    if (!(await hasGraph(entry))) {
-      console.log(`  skipping ${entry.name} — no infrastructure data loaded for it`);
+    const nodeId = await locate(entry);
+    if (!nodeId) {
+      console.log(`  skipping ${entry.name} — not present in the graph built for its coordinates`);
       continue;
     }
     if (briefs.length > 0) await sleep(BRIEF_SPACING_MS);
-    console.log(`  briefing ${entry.name}…`);
-    const b = await writeBrief(entry);
+    console.log(`  briefing ${entry.name} (${nodeId})…`);
+    const b = await writeBrief(entry, nodeId);
     console.log(b.failed ? `    failed: ${b.failed.slice(0, 80)}` : `    ${b.answer.length} chars via ${b.toolsUsed.join(", ") || "no tools"}`);
     briefs.push(b);
   }

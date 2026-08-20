@@ -28,6 +28,16 @@ npm test
 
 ## How it works
 
+## The standing watch
+
+Nexus does not wait to be asked. Every half hour, with nobody watching, it sweeps the **59 structures it could locate** from the NTSB's list of bridges needing a vessel-collision assessment, pulls live National Weather Service alerts and USGS river readings for each, and decides which ones a person should hear about today. It writes about those. The findings are committed to this repository as a dated artifact, so every claim about what the world looked like at 16:43 on a Thursday can be checked against the run that made it.
+
+Triage is deterministic arithmetic, not a model. Fifty-nine federal structures ranked by an LLM would drift between runs and could not be audited; a documented sum over measured readings can be disagreed with by anyone who reads it. Every signal carries the weight it contributed, so the score can be recomputed from what the panel shows. The model is asked only to write, and only about what triage already selected — which is the division of labour that makes the answer trustworthy: judgment where it is checkable, prose where it is useful.
+
+The report names 68 spans. Three structures have no coordinate here, and say so: I-610 and Beltway 8 cross the Houston Ship Channel on ways whose centroids sit a mile off the span, and nothing in OpenStreetMap carries the GulfGate name. A federal finding attached to the wrong bridge is worse than a bridge left out.
+
+---
+
 **1 — Resolve.** A click, an address, a coordinate pair, or a place name resolves through Mireye `/v1/lookup`, falling back to Nominatim for landmarks Mireye does not index.
 
 **2 — Federate.** Four data pulls run in parallel: OpenStreetMap infrastructure via Overpass, plus Mireye's `lookup`, `utilities`, and `natural_hazard` presets. Every failure is captured rather than swallowed.
@@ -77,6 +87,6 @@ The graph is a few hundred nodes built fresh per query and thrown away, so it li
 
 ## Data sources
 
-Mireye (terrain, flood, soil, utilities, parcel, county market) · OpenStreetMap / Overpass · [NTSB MIR-25-10](https://www.ntsb.gov/investigations/AccidentReports/Reports/MIR2510.pdf) (bridges needing a vessel-strike assessment) · [aisstream.io](https://aisstream.io) (live AIS) · FEMA NFHL and USGS elevation via Mireye · Nominatim · CARTO basemaps · Esri World Imagery and Hillshade.
+Mireye (terrain, flood, soil, utilities, parcel, county market) · OpenStreetMap / Overpass · [NWS active alerts](https://api.weather.gov) · [USGS instantaneous values](https://waterservices.usgs.gov/nwis/iv/) · [NTSB MIR-25-10](https://www.ntsb.gov/investigations/AccidentReports/Reports/MIR2510.pdf) (bridges needing a vessel-strike assessment) · [aisstream.io](https://aisstream.io) (live AIS) · FEMA NFHL and USGS elevation via Mireye · Nominatim · CARTO basemaps · Esri World Imagery and Hillshade.
 
 `AISSTREAM_API_KEY` is optional. Without it the vessel check reports that it is not configured, and nothing else changes.
