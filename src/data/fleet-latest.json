@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-21T17:02:54.340Z",
- "durationMs": 35040,
+ "ranAt": "2026-08-21T17:54:33.443Z",
+ "durationMs": 8377,
  "watched": 59,
  "excluded": [
   {
@@ -28,15 +28,36 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Delaware River rising 0.63 ft in 24 h",
-     "detail": "Delaware River at Trenton NJ: stage 9.65 ft, discharge 10,000 cfs, up 0.63 ft over 24 h.",
+     "headline": "Delaware River rising 0.69 ft in 24 h",
+     "detail": "Delaware River at Trenton NJ: stage 9.71 ft, discharge 10,400 cfs, up 0.69 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01463500/",
-     "at": "2026-08-21T12:15:00.000-04:00",
+     "at": "2026-08-21T13:15:00.000-04:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Delaware River rising 0.63 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Delaware River rising 0.69 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Napoleon Bonaparte Broward",
+   "state": "FL",
+   "waterway": "St. Johns River",
+   "lat": 30.3790463,
+   "lng": -81.5545862,
+   "score": 0.28,
+   "signals": [
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "St. Johns River rising 0.53 ft in 24 h",
+     "detail": "ST. JOHNS RIVER AT JACKSONVILLE, FL: stage 10.60 ft, discharge 42,400 cfs, up 0.53 ft over 24 h.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/02246500/",
+     "at": "2026-08-21T13:30:00.000-04:00",
+     "weight": 0.08
+    }
+   ],
+   "gaps": [],
+   "verdict": "St. Johns River rising 0.53 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -112,7 +133,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.24 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -125,7 +146,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: fetch failed"
+    "no USGS gauge within ~13 km"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -268,7 +289,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: tidal record, 2.27 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: tidal record, 2.26 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -333,7 +354,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 1.42 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 1.40 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -346,7 +367,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: tidal record, 0.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Baton Rouge, LA: tidal record, 0.36 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -372,7 +393,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.51 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.49 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -385,7 +406,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 3.92 ft over 24 h"
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 3.96 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -424,7 +445,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.19 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -464,19 +485,6 @@
    "signals": [],
    "gaps": [
     "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.01 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Napoleon Bonaparte Broward",
-   "state": "FL",
-   "waterway": "St. Johns River",
-   "lat": 30.3790463,
-   "lng": -81.5545862,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "ST. JOHNS RIVER AT JACKSONVILLE, FL: stage steady at 10.20 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -567,7 +575,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.30 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -580,7 +588,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: fetch failed"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.24 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
