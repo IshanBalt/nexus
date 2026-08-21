@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-21T17:54:33.443Z",
- "durationMs": 8377,
+ "ranAt": "2026-08-21T18:25:38.919Z",
+ "durationMs": 9008,
  "watched": 59,
  "excluded": [
   {
@@ -58,6 +58,27 @@
    ],
    "gaps": [],
    "verdict": "St. Johns River rising 0.53 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Leo Frigo",
+   "state": "WI",
+   "waterway": "Fox River",
+   "lat": 44.5307424,
+   "lng": -87.9993328,
+   "score": 0.24,
+   "signals": [
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Nearby gauge rising 0.33 ft in 24 h",
+     "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.07 ft, discharge 7 cfs, up 0.33 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/040850684/",
+     "at": "2026-08-21T13:00:00.000-05:00",
+     "weight": 0.04
+    }
+   ],
+   "gaps": [],
+   "verdict": "Nearby gauge rising 0.33 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -185,7 +206,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.42 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.39 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -394,19 +415,6 @@
    "signals": [],
    "gaps": [
     "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.49 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Leo Frigo",
-   "state": "WI",
-   "waterway": "Fox River",
-   "lat": 44.5307424,
-   "lng": -87.9993328,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 3.96 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
