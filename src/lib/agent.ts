@@ -7,29 +7,49 @@ import type { VesselTraffic } from "./sources/ais";
 import type { GeoNode, KnowledgeGraph } from "./types";
 
 /*
- * Two models, because on Groq's free tier neither one alone is both reliable and
- * fast enough.
+ * Several models, because on Groq's free tier no single one has the budget for a
+ * whole question.
  *
- * The tier meters tokens per minute and charges `prompt + max_completion_tokens`
- * up front, used or not. A question costs two or three model calls, and three
- * calls do not fit in 8000 TPM. When the bucket runs dry the SDK backs off and
- * retries, which is invisible from the outside and simply looks like a hang:
- * measured 32s and 53s for a single question, against a platform that kills the
- * request at about 20s. That was the whole reason the chat produced no answer.
+ * The tier meters tokens per minute against prompt plus the completion actually
+ * written. Prompts here are large and grow as tool results pile into the
+ * transcript, so a question costs about 2500 tokens for a single tool call and
+ * near 10000 for three — and one 8000 TPM bucket cannot hold that. The call
+ * that fails is the third, which is why the chat would show its reasoning steps
+ * and then produce no answer.
  *
- * Measured over the same four questions, with identical prompts:
+ * Reserved completion tokens are *not* charged, contrary to what this file said
+ * for a long time. Measured 2026-08-20: the same prompt at
+ * `max_completion_tokens` 200 and 900 cost 123 and 131 tokens of meter, the
+ * difference being the completion each actually wrote. So the ceiling below is
+ * free headroom, and shrinking it would buy nothing.
  *
- *   openai/gpt-oss-20b        8000 TPM   4/4 correct, one call throttled to 41s
- *   llama-3.3-70b-versatile  12000 TPM   2/4 correct, 0.8-5.1s, malformed tool JSON
+ * The buckets are metered **per model**, and each of these has its own 8000.
+ * Measured 2026-08-20 by spending 2000 tokens on gpt-oss-20b and re-reading
+ * `x-ratelimit-remaining-tokens` for all three: 20b fell to 5970 while 120b and
+ * qwen both stayed at their full allowance. So a question that exhausts one
+ * model continues on the next with a full budget instead of failing, which puts
+ * about 24000 TPM behind a question that needs 9000.
  *
- * gpt-oss leads because a wrong answer is worse than a slow one. The buckets are
- * metered per model, so when gpt-oss is throttled the same call is retried once
- * against llama's separate allowance rather than waiting for a refill. Tool-call
- * accuracy matters least on exactly the call most likely to be throttled — the
- * last one, which only has to write prose from evidence already gathered.
+ * Order is by measured answer quality, best first. gpt-oss leads because a wrong
+ * answer is worse than a slow one; qwen is last because it is the one that has
+ * been seen spending its whole completion budget on reasoning and returning
+ * nothing.
+ *
+ * Not here on purpose: `llama-3.3-70b-versatile`, which this code fell back to
+ * for months and which returns 404 on this account — every rate-limit recovery
+ * it attempted failed twice. And `groq/compound`, whose 70000 TPM is tempting
+ * until you notice it answers by searching the web: asked how old a bridge was,
+ * it fetched a news article. Every claim this project makes is supposed to be
+ * checkable against the graph it came from, so a model that quietly consults
+ * something else cannot write the answer, however large its budget.
  */
-const MODEL = process.env.NEXUS_MODEL ?? "openai/gpt-oss-20b";
-const FALLBACK_MODEL = process.env.NEXUS_FALLBACK_MODEL ?? "llama-3.3-70b-versatile";
+const MODELS = (
+  process.env.NEXUS_MODELS ?? "openai/gpt-oss-20b,openai/gpt-oss-120b,qwen/qwen3.6-27b"
+)
+  .split(",")
+  .map((m) => m.trim())
+  .filter(Boolean);
+const MODEL = process.env.NEXUS_MODEL ?? MODELS[0];
 
 /**
  * Wall-clock budget for tool calling. Past it, the model is asked to answer with
@@ -41,14 +61,27 @@ const FALLBACK_MODEL = process.env.NEXUS_FALLBACK_MODEL ?? "llama-3.3-70b-versat
  */
 const TOOL_BUDGET_MS = Number(process.env.NEXUS_TOOL_BUDGET_MS ?? 11_000);
 
-/** Model turns per question. Each is a round trip, so this bounds latency too. */
-const MAX_TURNS = 6;
+/**
+ * Model turns per question. Each is a round trip carrying the whole transcript,
+ * so this is also what a question costs: the prompt is resent every turn and
+ * grows as tool results accumulate, reaching ~15000 tokens on a question that
+ * takes five tool calls.
+ *
+ * Cutting this to 4 was tried and reverted. It did keep every question inside
+ * budget, but a run that had to answer early was seen picking the wrong bridge
+ * and then filling the gap from outside knowledge — naming hospitals and
+ * expressways that appear nowhere in the graph. Starving the gathering step is
+ * the wrong economy: the model spends its budget on invention instead. The
+ * rotation below is what makes the cost affordable; this stays where it was.
+ */
+const MAX_TURNS = Number(process.env.NEXUS_MAX_TURNS ?? 6);
 
 /**
- * Reserved up front against the per-minute token budget on every call, used or
- * not, so this is a cost paid per round trip rather than per word written. The
- * answers are a few short paragraphs — about 400 tokens — and this leaves room
- * for a long one without spending the budget on headroom nothing will use.
+ * A ceiling, not a reservation: unused headroom here is not billed against the
+ * per-minute budget (measured — see the note at the top of this file). The
+ * answers are a few short paragraphs, about 400 tokens, so this leaves room for
+ * a long one at no cost. It still bounds latency, and it still bounds how much
+ * of a turn gpt-oss can spend on reasoning before it has to commit.
  */
 const MAX_COMPLETION_TOKENS = 900;
 
@@ -260,7 +293,7 @@ function parseArgs(raw: string | undefined): Record<string, unknown> {
 function friendlyError(e: unknown): string {
   const raw = e instanceof Error ? e.message : String(e);
   if (/rate_limit|tokens per minute|TPM/i.test(raw)) {
-    return "Groq's free tier allows 8,000 tokens a minute, and this question needed more. Wait about a minute and ask again — the graph stays loaded, so nothing is recomputed.";
+    return `All ${MODELS.length} models on Groq's free tier are out of tokens for this minute — each gets 8,000 and this question worked through every one. Wait about a minute and ask again; the graph stays loaded, so nothing is recomputed.`;
   }
   if (/401|invalid_api_key|Unauthorized/i.test(raw)) {
     return "Groq rejected the API key. Check GROQ_API_KEY.";
@@ -550,6 +583,9 @@ export async function* runAgent(
 
   const deadline = Date.now() + TOOL_BUDGET_MS;
   let sawText = false;
+  let modelIndex = Math.max(0, MODELS.indexOf(MODEL));
+  /** Tool results in plain form, for the wrap-up turn. See messagesFor. */
+  const gathered: { name: string; text: string }[] = [];
 
   // Each iteration is one model turn; the loop ends when the model stops calling tools.
   for (let turn = 0; turn < MAX_TURNS; turn++) {
@@ -561,58 +597,83 @@ export async function* runAgent(
      */
     const mustAnswer = turn === MAX_TURNS - 1 || Date.now() > deadline;
 
+    /*
+     * The wrap-up turn is handed the evidence as prose rather than as the
+     * tool-call transcript that produced it.
+     *
+     * Dropping the schemas was not enough on its own: a transcript full of
+     * assistant tool_calls is itself the instruction, and gpt-oss would answer
+     * it by calling another tool, which Groq rejects outright with "Tool choice
+     * is none, but model called a tool" — a whole question lost at the last
+     * step with every result already in hand. Flattening removes the pattern
+     * there is nothing left to imitate, and drops the tool_call JSON from the
+     * prompt as well, so the most expensive call is also the smallest.
+     */
     const messagesFor = (): Groq.Chat.Completions.ChatCompletionMessageParam[] =>
       mustAnswer
         ? [
-            ...convo,
+            ...convo.filter((m) => m.role === "system"),
+            ...messages.slice(0, -1),
             {
-              role: "system",
-              content:
-                "You are out of time for gathering data. Write your answer now, using only what the tool results above already contain. Do not call any more tools. If the evidence is not enough to answer fully, say plainly what you could not establish.",
+              role: "user",
+              content: [
+                messages[messages.length - 1]?.content ?? "",
+                "",
+                gathered.length
+                  ? `What the graph tools returned:\n\n${gathered
+                      .map((g) => `${g.name}:\n${g.text}`)
+                      .join("\n\n")}`
+                  : "No tool returned anything usable.",
+                "",
+                "Answer the question above from this evidence alone. Do not call any tools and do not mention them. If the evidence does not settle the question, say plainly what you could not establish.",
+              ].join("\n"),
             },
           ]
         : convo;
 
-    const call = (model: string, withTools: boolean) =>
+    /*
+     * The wrap-up turn ships no tool schemas at all. Sending them with
+     * `tool_choice: "none"` spent about 910 tokens describing tools the model
+     * was forbidden to call, on the most expensive call of the question — and
+     * it was also the source of `tool_use_failed`, which Groq raises when a
+     * model reaches for a tool that tool_choice denied. Removing the schemas
+     * removes both the cost and the temptation.
+     */
+    const call = (model: string) =>
       client.chat.completions.create({
         model,
         messages: messagesFor(),
-        ...(withTools ? { tools: TOOLS, tool_choice: mustAnswer ? "none" : "auto" } : {}),
+        ...(mustAnswer ? {} : { tools: TOOLS, tool_choice: "auto" as const }),
         stream: true,
         max_completion_tokens: MAX_COMPLETION_TOKENS,
       });
 
+    /*
+     * On a rate limit, move to the next model rather than giving up. Each has
+     * its own per-minute bucket, so the same call has a full budget waiting one
+     * name over, and a question that needs three calls no longer has to fit
+     * inside one model's 8000.
+     *
+     * The index lives outside the turn loop: a model that ran dry on turn two
+     * is still dry on turn three, and re-offering it there would spend the
+     * round trip to be told so again.
+     *
+     * This used to retry only on the wrap-up turn, which meant the common
+     * failure — the third gathering call, made well before the deadline — fell
+     * straight through to an error with every tool result already in hand and
+     * nothing written. That is the case this is here for.
+     */
     let stream;
-    try {
-      stream = await call(MODEL, true);
-    } catch (e) {
-      /*
-       * Retry only on the wrap-up turn, and only there. That turn writes prose
-       * from evidence already gathered, so it is the one place the weaker
-       * fallback model is a fair substitute — putting it on a tool-calling turn
-       * was measured trading a clear "rate limited, wait a minute" message for a
-       * confusing malformed-tool-call one, which is a worse answer, not a better.
-       *
-       * Two rejections are worth retrying there:
-       *
-       * Rate limit — the per-minute allowance is metered per model, so the same
-       * call against the fallback model has a full budget of its own.
-       *
-       * tool_use_failed — Groq rejects the entire request when the model tries
-       * to call a tool that tool_choice forbade. This is exactly where that
-       * happens, because most of the system prompt is instructions to use tools.
-       * Dropping the schemas removes the temptation and shortens the prompt.
-       */
-      const recoverable =
-        mustAnswer && (rateLimited(e) || /tool_use_failed|Tool choice is none/i.test(String(e)));
-      if (!recoverable) {
-        yield { type: "error", message: friendlyError(e) };
-        return;
-      }
+    for (;;) {
       try {
-        stream = await call(rateLimited(e) ? FALLBACK_MODEL : MODEL, false);
-      } catch (retry) {
-        yield { type: "error", message: friendlyError(retry) };
+        stream = await call(MODELS[modelIndex] ?? MODEL);
+        break;
+      } catch (e) {
+        if (rateLimited(e) && modelIndex + 1 < MODELS.length) {
+          modelIndex++;
+          continue;
+        }
+        yield { type: "error", message: friendlyError(e) };
         return;
       }
     }
@@ -688,6 +749,7 @@ export async function* runAgent(
         summary: text.length > 300 ? `${text.slice(0, 300)}…` : text,
       };
       convo.push({ role: "tool", tool_call_id: call.id, content: text });
+      gathered.push({ name: call.name, text });
     }
   }
 
