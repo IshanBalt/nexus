@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-22T23:13:42.632Z",
- "durationMs": 19483,
+ "ranAt": "2026-08-22T23:43:11.062Z",
+ "durationMs": 6532,
  "watched": 59,
  "excluded": [
   {
@@ -31,7 +31,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 5:36PM EDT until August 22 at 8:30PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c436ecabbbeb9a8b7f3e0b00cd0d3061265364a6.001.1",
-     "at": "2026-08-22T23:13:24.274Z",
+     "at": "2026-08-22T23:43:05.704Z",
      "weight": 0.05
     },
     {
@@ -40,16 +40,16 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T23:13:24.274Z",
+     "at": "2026-08-22T23:43:05.704Z",
      "weight": 0.35
     },
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Cuyahoga River rising 0.35 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.28 ft, discharge 509 cfs, up 0.35 ft over 24 h.",
+     "headline": "Cuyahoga River rising 0.55 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 3.48 ft, discharge 598 cfs, up 0.55 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-22T19:00:00.000-04:00",
+     "at": "2026-08-22T19:30:00.000-04:00",
      "weight": 0.08
     }
    ],
@@ -70,7 +70,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 5:36PM EDT until August 22 at 8:30PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c436ecabbbeb9a8b7f3e0b00cd0d3061265364a6.001.1",
-     "at": "2026-08-22T23:13:24.357Z",
+     "at": "2026-08-22T23:43:05.633Z",
      "weight": 0.05
     },
     {
@@ -79,16 +79,16 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T23:13:24.357Z",
+     "at": "2026-08-22T23:43:05.633Z",
      "weight": 0.35
     },
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Cuyahoga River rising 0.35 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.28 ft, discharge 509 cfs, up 0.35 ft over 24 h.",
+     "headline": "Cuyahoga River rising 0.55 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 3.48 ft, discharge 598 cfs, up 0.55 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-22T19:00:00.000-04:00",
+     "at": "2026-08-22T19:30:00.000-04:00",
      "weight": 0.08
     }
    ],
@@ -109,7 +109,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 5:36PM EDT until August 22 at 8:30PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c436ecabbbeb9a8b7f3e0b00cd0d3061265364a6.001.1",
-     "at": "2026-08-22T23:13:24.366Z",
+     "at": "2026-08-22T23:43:05.746Z",
      "weight": 0.05
     },
     {
@@ -118,16 +118,16 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T23:13:24.366Z",
+     "at": "2026-08-22T23:43:05.746Z",
      "weight": 0.35
     },
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Cuyahoga River rising 0.35 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.28 ft, discharge 509 cfs, up 0.35 ft over 24 h.",
+     "headline": "Cuyahoga River rising 0.55 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 3.48 ft, discharge 598 cfs, up 0.55 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-22T19:00:00.000-04:00",
+     "at": "2026-08-22T19:30:00.000-04:00",
      "weight": 0.08
     }
    ],
@@ -148,7 +148,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 5:36PM EDT until August 22 at 8:30PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c436ecabbbeb9a8b7f3e0b00cd0d3061265364a6.001.1",
-     "at": "2026-08-22T23:13:24.347Z",
+     "at": "2026-08-22T23:43:05.680Z",
      "weight": 0.05
     },
     {
@@ -157,16 +157,16 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T23:13:24.347Z",
+     "at": "2026-08-22T23:43:05.680Z",
      "weight": 0.35
     },
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Cuyahoga River rising 0.35 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.28 ft, discharge 509 cfs, up 0.35 ft over 24 h.",
+     "headline": "Cuyahoga River rising 0.55 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 3.48 ft, discharge 598 cfs, up 0.55 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-22T19:00:00.000-04:00",
+     "at": "2026-08-22T19:30:00.000-04:00",
      "weight": 0.08
     }
    ],
@@ -184,15 +184,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Nearby gauge rising 1.46 ft in 24 h",
-     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 3.63 ft, discharge 120 cfs, up 1.46 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 1.47 ft in 24 h",
+     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 3.63 ft, discharge 120 cfs, up 1.47 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
      "at": "2026-08-22T18:30:00.000-04:00",
      "weight": 0.09
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 1.46 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 1.47 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "LUC-01W02-0002",
@@ -205,15 +205,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Nearby gauge rising 1.46 ft in 24 h",
-     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 3.63 ft, discharge 120 cfs, up 1.46 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 1.47 ft in 24 h",
+     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 3.63 ft, discharge 120 cfs, up 1.47 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
      "at": "2026-08-22T18:30:00.000-04:00",
      "weight": 0.09
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 1.46 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 1.47 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -226,15 +226,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Mississippi River rising 0.60 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 9.53 ft, discharge 277,000 cfs, up 0.60 ft over 24 h.",
+     "headline": "Mississippi River rising 0.67 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 9.58 ft, discharge 278,000 cfs, up 0.67 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-22T17:15:00.000-05:00",
+     "at": "2026-08-22T18:15:00.000-05:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.60 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.67 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -505,7 +505,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.55 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -583,7 +583,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.01 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -661,7 +661,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.20 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.23 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -687,7 +687,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -713,7 +713,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.20 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.23 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
