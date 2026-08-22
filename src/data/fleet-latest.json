@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-22T04:58:30.172Z",
- "durationMs": 10534,
+ "ranAt": "2026-08-22T05:27:55.715Z",
+ "durationMs": 6761,
  "watched": 59,
  "excluded": [
   {
@@ -39,6 +39,27 @@
    "verdict": "Delaware River rising 0.35 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
+   "name": "Horace Wilkinson",
+   "state": "LA",
+   "waterway": "Mississippi River",
+   "lat": 30.4395674,
+   "lng": -91.1971058,
+   "score": 0.28,
+   "signals": [
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Mississippi River rising 0.54 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 8.95 ft, discharge 264,000 cfs, up 0.54 ft over 24 h.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
+     "at": "2026-08-21T23:15:00.000-05:00",
+     "weight": 0.08
+    }
+   ],
+   "gaps": [],
+   "verdict": "Mississippi River rising 0.54 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
    "name": "Leo Frigo",
    "state": "WI",
    "waterway": "Fox River",
@@ -49,15 +70,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.37 ft in 24 h",
-     "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.08 ft, discharge 7 cfs, up 0.37 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.36 ft in 24 h",
+     "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.07 ft, discharge 7 cfs, up 0.36 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/040850684/",
-     "at": "2026-08-21T23:00:00.000-05:00",
+     "at": "2026-08-22T00:00:00.000-05:00",
      "weight": 0.04
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 0.37 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 0.36 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -94,7 +115,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.36 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.39 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -185,7 +206,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.23 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.22 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -359,19 +380,6 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Horace Wilkinson",
-   "state": "LA",
-   "waterway": "Mississippi River",
-   "lat": 30.4395674,
-   "lng": -91.1971058,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "Mississippi River at Baton Rouge, LA: tidal record, 0.62 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "Huey P. Long",
    "state": "LA",
    "waterway": "Mississippi River",
@@ -419,7 +427,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.13 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -432,7 +440,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.13 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -757,7 +765,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Third River at Bloomfield NJ: stage steady at 2.09 ft over 24 h"
+    "Third River at Bloomfield NJ: tidal record, 0.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
