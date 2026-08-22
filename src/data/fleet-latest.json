@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-22T11:14:25.091Z",
- "durationMs": 16606,
+ "ranAt": "2026-08-22T11:43:05.423Z",
+ "durationMs": 6310,
  "watched": 59,
  "excluded": [
   {
@@ -28,36 +28,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Delaware River rising 0.41 ft in 24 h",
-     "detail": "Delaware River at Trenton NJ: stage 9.73 ft, discharge 10,500 cfs, up 0.41 ft over 24 h.",
+     "headline": "Delaware River rising 0.39 ft in 24 h",
+     "detail": "Delaware River at Trenton NJ: stage 9.72 ft, discharge 10,400 cfs, up 0.39 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01463500/",
-     "at": "2026-08-22T06:15:00.000-04:00",
+     "at": "2026-08-22T07:15:00.000-04:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Delaware River rising 0.41 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Horace Wilkinson",
-   "state": "LA",
-   "waterway": "Mississippi River",
-   "lat": 30.4395674,
-   "lng": -91.1971058,
-   "score": 0.28,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "notable",
-     "headline": "Mississippi River rising 0.52 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 8.95 ft, discharge 264,000 cfs, up 0.52 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-22T05:15:00.000-05:00",
-     "weight": 0.08
-    }
-   ],
-   "gaps": [],
-   "verdict": "Mississippi River rising 0.52 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Delaware River rising 0.39 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Leo Frigo",
@@ -70,15 +49,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.36 ft in 24 h",
-     "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.05 ft, discharge 7 cfs, up 0.36 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.35 ft in 24 h",
+     "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.05 ft, discharge 7 cfs, up 0.35 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/040850684/",
      "at": "2026-08-22T06:00:00.000-05:00",
      "weight": 0.04
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 0.36 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 0.35 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -193,7 +172,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: stage steady at 4.09 ft over 24 h"
+    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: stage steady at 4.11 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -376,6 +355,19 @@
    "signals": [],
    "gaps": [
     "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 1.65 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Horace Wilkinson",
+   "state": "LA",
+   "waterway": "Mississippi River",
+   "lat": 30.4395674,
+   "lng": -91.1971058,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Mississippi River at Baton Rouge, LA: tidal record, 0.54 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -622,7 +614,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 6.80 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 6.96 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -765,7 +757,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Third River at Bloomfield NJ: tidal record, 0.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Third River at Bloomfield NJ: tidal record, 0.20 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
