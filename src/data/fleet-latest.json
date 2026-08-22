@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-22T20:46:57.758Z",
- "durationMs": 21076,
+ "ranAt": "2026-08-22T21:14:11.565Z",
+ "durationMs": 7921,
  "watched": 59,
  "excluded": [
   {
@@ -31,7 +31,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T20:46:38.018Z",
+     "at": "2026-08-22T21:14:05.167Z",
      "weight": 0.35
     }
    ],
@@ -54,7 +54,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T20:46:38.023Z",
+     "at": "2026-08-22T21:14:05.198Z",
      "weight": 0.35
     }
    ],
@@ -77,7 +77,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T20:46:38.246Z",
+     "at": "2026-08-22T21:14:05.244Z",
      "weight": 0.35
     }
    ],
@@ -100,7 +100,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T20:46:38.146Z",
+     "at": "2026-08-22T21:14:05.193Z",
      "weight": 0.35
     }
    ],
@@ -108,6 +108,66 @@
     "Cuyahoga River at Independence OH: tidal record, 0.05 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "LUC-00002-1862",
+   "state": "OH",
+   "waterway": "Maumee River",
+   "lat": 41.64126,
+   "lng": -83.53514,
+   "score": 0.4,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "notable",
+     "headline": "Flood Advisory in force",
+     "detail": "Flood Advisory issued August 22 at 5:11PM EDT until August 22 at 5:15PM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bb80d9ff8da9c309a4b905ac0e611df14bfaccd6.001.1",
+     "at": "2026-08-22T21:14:11.564Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "river",
+     "level": "high",
+     "headline": "Nearby gauge rising 2.11 ft in 24 h",
+     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 4.29 ft, discharge 168 cfs, up 2.11 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
+     "at": "2026-08-22T16:30:00.000-04:00",
+     "weight": 0.15
+    }
+   ],
+   "gaps": [],
+   "verdict": "Nearby gauge rising 2.11 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "LUC-01W02-0002",
+   "state": "OH",
+   "waterway": "Maumee River",
+   "lat": 41.65165,
+   "lng": -83.52704,
+   "score": 0.4,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "notable",
+     "headline": "Flood Advisory in force",
+     "detail": "Flood Advisory issued August 22 at 5:11PM EDT until August 22 at 5:15PM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bb80d9ff8da9c309a4b905ac0e611df14bfaccd6.001.1",
+     "at": "2026-08-22T21:14:10.007Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "river",
+     "level": "high",
+     "headline": "Nearby gauge rising 2.11 ft in 24 h",
+     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 4.29 ft, discharge 168 cfs, up 2.11 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
+     "at": "2026-08-22T16:30:00.000-04:00",
+     "weight": 0.15
+    }
+   ],
+   "gaps": [],
+   "verdict": "Nearby gauge rising 2.11 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -120,61 +180,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Mississippi River rising 0.62 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 9.46 ft, discharge 276,000 cfs, up 0.62 ft over 24 h.",
+     "headline": "Mississippi River rising 0.59 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 9.46 ft, discharge 276,000 cfs, up 0.59 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
      "at": "2026-08-22T15:15:00.000-05:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.62 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "LUC-00002-1862",
-   "state": "OH",
-   "waterway": "Maumee River",
-   "lat": 41.64126,
-   "lng": -83.53514,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 22 at 2:19PM EDT until August 22 at 5:15PM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9610bd91c58c8cbc7c080bf3f643e74436c88235.001.1",
-     "at": "2026-08-22T20:46:57.757Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "LUC-01W02-0002",
-   "state": "OH",
-   "waterway": "Maumee River",
-   "lat": 41.65165,
-   "lng": -83.52704,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 22 at 2:19PM EDT until August 22 at 5:15PM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9610bd91c58c8cbc7c080bf3f643e74436c88235.001.1",
-     "at": "2026-08-22T20:46:57.737Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.59 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -302,7 +316,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.01 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.99 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -744,7 +758,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAVANNAH RIVER AT GA 25, AT PORT WENTWORTH, GA: tidal record, 6.19 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAVANNAH RIVER AT GA 25, AT PORT WENTWORTH, GA: tidal record, 6.57 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
