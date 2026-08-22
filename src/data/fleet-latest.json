@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-22T19:19:07.311Z",
- "durationMs": 21391,
+ "ranAt": "2026-08-22T19:44:04.739Z",
+ "durationMs": 10317,
  "watched": 59,
  "excluded": [
   {
@@ -31,7 +31,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T19:18:47.974Z",
+     "at": "2026-08-22T19:43:55.844Z",
      "weight": 0.35
     }
    ],
@@ -54,7 +54,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T19:18:47.689Z",
+     "at": "2026-08-22T19:43:55.766Z",
      "weight": 0.35
     }
    ],
@@ -77,7 +77,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T19:18:47.472Z",
+     "at": "2026-08-22T19:43:56.110Z",
      "weight": 0.35
     }
    ],
@@ -100,7 +100,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T19:18:47.627Z",
+     "at": "2026-08-22T19:43:55.835Z",
      "weight": 0.35
     }
    ],
@@ -115,7 +115,7 @@
    "waterway": "Maumee River",
    "lat": 41.64126,
    "lng": -83.53514,
-   "score": 0.25,
+   "score": 0.34,
    "signals": [
     {
      "kind": "weather",
@@ -123,14 +123,21 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 2:19PM EDT until August 22 at 5:15PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9610bd91c58c8cbc7c080bf3f643e74436c88235.001.1",
-     "at": "2026-08-22T19:19:07.304Z",
+     "at": "2026-08-22T19:44:00.295Z",
      "weight": 0.05
+    },
+    {
+     "kind": "river",
+     "level": "elevated",
+     "headline": "Nearby gauge rising 1.19 ft in 24 h",
+     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 3.37 ft, discharge 96 cfs, up 1.19 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
+     "at": "2026-08-22T14:30:00.000-04:00",
+     "weight": 0.09
     }
    ],
-   "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
+   "gaps": [],
+   "verdict": "Nearby gauge rising 1.19 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "LUC-01W02-0002",
@@ -138,7 +145,7 @@
    "waterway": "Maumee River",
    "lat": 41.65165,
    "lng": -83.52704,
-   "score": 0.25,
+   "score": 0.34,
    "signals": [
     {
      "kind": "weather",
@@ -146,14 +153,21 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 2:19PM EDT until August 22 at 5:15PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9610bd91c58c8cbc7c080bf3f643e74436c88235.001.1",
-     "at": "2026-08-22T19:19:07.302Z",
+     "at": "2026-08-22T19:44:04.738Z",
      "weight": 0.05
+    },
+    {
+     "kind": "river",
+     "level": "elevated",
+     "headline": "Nearby gauge rising 1.19 ft in 24 h",
+     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 3.37 ft, discharge 96 cfs, up 1.19 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
+     "at": "2026-08-22T14:30:00.000-04:00",
+     "weight": 0.09
     }
    ],
-   "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
+   "gaps": [],
+   "verdict": "Nearby gauge rising 1.19 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -203,7 +217,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.73 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.51 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -216,7 +230,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.73 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.51 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -229,7 +243,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.28 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -294,7 +308,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 2.46 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 2.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -333,7 +347,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 9.63 ft over 24 h"
+    "Delaware River at Trenton NJ: stage steady at 9.62 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -424,7 +438,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: tidal record, 0.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Baton Rouge, LA: tidal record, 0.61 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -606,7 +620,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CORTE MADERA C A ROSS CA: stage steady at 4.21 ft over 24 h"
+    "CORTE MADERA C A ROSS CA: stage steady at 4.22 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -632,7 +646,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.28 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -814,7 +828,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.73 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.51 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
