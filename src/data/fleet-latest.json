@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-22T07:53:12.493Z",
- "durationMs": 6978,
+ "ranAt": "2026-08-22T08:19:48.534Z",
+ "durationMs": 7072,
  "watched": 59,
  "excluded": [
   {
@@ -23,7 +23,7 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49481,
    "lng": -81.70729,
-   "score": 0.9,
+   "score": 0.55,
    "signals": [
     {
      "kind": "weather",
@@ -31,16 +31,7 @@
      "headline": "Special Marine Warning in force",
      "detail": "Special Marine Warning issued August 22 at 3:52AM EDT until August 22 at 4:45AM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b104c41e7fefbe3bc748fd5d56273fb89e649059.001.1",
-     "at": "2026-08-22T07:53:07.011Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 22 at 2:26AM EDT until August 22 at 4:00AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.52ca3c0e964168dd1f4e91556c322371f1f5acb5.001.1",
-     "at": "2026-08-22T07:53:07.011Z",
+     "at": "2026-08-22T08:19:42.479Z",
      "weight": 0.35
     }
    ],
@@ -55,7 +46,7 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49423,
    "lng": -81.70286,
-   "score": 0.9,
+   "score": 0.55,
    "signals": [
     {
      "kind": "weather",
@@ -63,16 +54,7 @@
      "headline": "Special Marine Warning in force",
      "detail": "Special Marine Warning issued August 22 at 3:52AM EDT until August 22 at 4:45AM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b104c41e7fefbe3bc748fd5d56273fb89e649059.001.1",
-     "at": "2026-08-22T07:53:07.071Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 22 at 2:26AM EDT until August 22 at 4:00AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.52ca3c0e964168dd1f4e91556c322371f1f5acb5.001.1",
-     "at": "2026-08-22T07:53:07.071Z",
+     "at": "2026-08-22T08:19:42.487Z",
      "weight": 0.35
     }
    ],
@@ -87,7 +69,7 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49941,
    "lng": -81.67162,
-   "score": 0.9,
+   "score": 0.55,
    "signals": [
     {
      "kind": "weather",
@@ -95,16 +77,7 @@
      "headline": "Special Marine Warning in force",
      "detail": "Special Marine Warning issued August 22 at 3:52AM EDT until August 22 at 4:45AM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b104c41e7fefbe3bc748fd5d56273fb89e649059.001.1",
-     "at": "2026-08-22T07:53:06.925Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 22 at 2:26AM EDT until August 22 at 4:00AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.52ca3c0e964168dd1f4e91556c322371f1f5acb5.001.1",
-     "at": "2026-08-22T07:53:06.925Z",
+     "at": "2026-08-22T08:19:42.490Z",
      "weight": 0.35
     }
    ],
@@ -119,7 +92,7 @@
    "waterway": "Cuyahoga River",
    "lat": 41.47977,
    "lng": -81.66805,
-   "score": 0.9,
+   "score": 0.55,
    "signals": [
     {
      "kind": "weather",
@@ -127,16 +100,7 @@
      "headline": "Special Marine Warning in force",
      "detail": "Special Marine Warning issued August 22 at 3:52AM EDT until August 22 at 4:45AM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b104c41e7fefbe3bc748fd5d56273fb89e649059.001.1",
-     "at": "2026-08-22T07:53:06.907Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 22 at 2:26AM EDT until August 22 at 4:00AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.52ca3c0e964168dd1f4e91556c322371f1f5acb5.001.1",
-     "at": "2026-08-22T07:53:06.907Z",
+     "at": "2026-08-22T08:19:42.455Z",
      "weight": 0.35
     }
    ],
@@ -156,15 +120,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Delaware River rising 0.37 ft in 24 h",
-     "detail": "Delaware River at Trenton NJ: stage 9.77 ft, discharge 10,700 cfs, up 0.37 ft over 24 h.",
+     "headline": "Delaware River rising 0.39 ft in 24 h",
+     "detail": "Delaware River at Trenton NJ: stage 9.77 ft, discharge 10,700 cfs, up 0.39 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01463500/",
      "at": "2026-08-22T03:15:00.000-04:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Delaware River rising 0.37 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Delaware River rising 0.39 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -177,15 +141,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Mississippi River rising 0.50 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 8.90 ft, discharge 263,000 cfs, up 0.50 ft over 24 h.",
+     "headline": "Mississippi River rising 0.47 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 8.90 ft, discharge 263,000 cfs, up 0.47 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
      "at": "2026-08-22T02:15:00.000-05:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.50 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.47 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Leo Frigo",
@@ -201,7 +165,7 @@
      "headline": "Nearby gauge rising 0.36 ft in 24 h",
      "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.06 ft, discharge 7 cfs, up 0.36 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/040850684/",
-     "at": "2026-08-22T02:00:00.000-05:00",
+     "at": "2026-08-22T03:00:00.000-05:00",
      "weight": 0.04
     }
    ],
@@ -503,7 +467,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -516,7 +480,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -724,7 +688,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.23 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -763,7 +727,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.34 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.35 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -802,7 +766,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.16 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -841,7 +805,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Third River at Bloomfield NJ: tidal record, 0.36 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Third River at Bloomfield NJ: tidal record, 0.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
