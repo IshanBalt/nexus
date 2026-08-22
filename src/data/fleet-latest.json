@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-22T09:50:02.422Z",
- "durationMs": 21188,
+ "ranAt": "2026-08-22T10:15:49.348Z",
+ "durationMs": 21052,
  "watched": 59,
  "excluded": [
   {
@@ -18,98 +18,6 @@
  ],
  "structures": [
   {
-   "name": "CUY-00002-1441",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49481,
-   "lng": -81.70729,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 22 at 5:31AM EDT until August 22 at 6:15AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3740354a5823376adc7a68154171583e399be41d.001.1",
-     "at": "2026-08-22T09:49:42.566Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.92 ft over 24 h"
-   ],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00006-1456",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49423,
-   "lng": -81.70286,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 22 at 5:31AM EDT until August 22 at 6:15AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3740354a5823376adc7a68154171583e399be41d.001.1",
-     "at": "2026-08-22T09:49:42.851Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.92 ft over 24 h"
-   ],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00010-1613",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49941,
-   "lng": -81.67162,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 22 at 5:31AM EDT until August 22 at 6:15AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3740354a5823376adc7a68154171583e399be41d.001.1",
-     "at": "2026-08-22T09:49:42.637Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.92 ft over 24 h"
-   ],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00490-0010",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.47977,
-   "lng": -81.66805,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 22 at 5:31AM EDT until August 22 at 6:15AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3740354a5823376adc7a68154171583e399be41d.001.1",
-     "at": "2026-08-22T09:49:42.577Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.92 ft over 24 h"
-   ],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "Delaware River Turnpike",
    "state": "PA",
    "waterway": "Delaware River",
@@ -120,15 +28,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Delaware River rising 0.40 ft in 24 h",
-     "detail": "Delaware River at Trenton NJ: stage 9.74 ft, discharge 10,500 cfs, up 0.40 ft over 24 h.",
+     "headline": "Delaware River rising 0.41 ft in 24 h",
+     "detail": "Delaware River at Trenton NJ: stage 9.74 ft, discharge 10,500 cfs, up 0.41 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01463500/",
      "at": "2026-08-22T05:15:00.000-04:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Delaware River rising 0.40 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Delaware River rising 0.41 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -165,7 +73,7 @@
      "headline": "Nearby gauge rising 0.37 ft in 24 h",
      "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.06 ft, discharge 7 cfs, up 0.37 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/040850684/",
-     "at": "2026-08-22T04:00:00.000-05:00",
+     "at": "2026-08-22T05:00:00.000-05:00",
      "weight": 0.04
     }
    ],
@@ -298,7 +206,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.20 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.19 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -338,6 +246,58 @@
    "signals": [],
    "gaps": [
     "SAN DIEGO R A FASHION VALLEY AT SAN DIEGO CA: tidal record, 0.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00002-1441",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49481,
+   "lng": -81.70729,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: stage steady at 2.92 ft over 24 h"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00006-1456",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49423,
+   "lng": -81.70286,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: stage steady at 2.92 ft over 24 h"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00010-1613",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49941,
+   "lng": -81.67162,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: stage steady at 2.92 ft over 24 h"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00490-0010",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.47977,
+   "lng": -81.66805,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: stage steady at 2.92 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -480,7 +440,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.05 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -571,7 +531,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 1.01 ft over 24 h"
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 1.00 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -662,7 +622,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 6.55 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 6.80 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -779,7 +739,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 1.01 ft over 24 h"
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 1.00 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -805,7 +765,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Third River at Bloomfield NJ: tidal record, 0.23 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Third River at Bloomfield NJ: tidal record, 0.25 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -849,11 +809,7 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   }
  ],
- "escalated": [
-  "CUY-00002-1441",
-  "CUY-00006-1456",
-  "CUY-00010-1613"
- ],
+ "escalated": [],
  "sources": [
   {
    "name": "NTSB MIR-25-10",
@@ -869,5 +825,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "4 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "0 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
