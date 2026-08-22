@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-22T22:13:54.982Z",
- "durationMs": 7528,
+ "ranAt": "2026-08-22T22:46:12.103Z",
+ "durationMs": 19272,
  "watched": 59,
  "excluded": [
   {
@@ -23,7 +23,7 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49481,
    "lng": -81.70729,
-   "score": 0.6,
+   "score": 0.68,
    "signals": [
     {
      "kind": "weather",
@@ -31,7 +31,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 5:36PM EDT until August 22 at 8:30PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c436ecabbbeb9a8b7f3e0b00cd0d3061265364a6.001.1",
-     "at": "2026-08-22T22:13:48.779Z",
+     "at": "2026-08-22T22:45:54.213Z",
      "weight": 0.05
     },
     {
@@ -40,13 +40,20 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T22:13:48.779Z",
+     "at": "2026-08-22T22:45:54.214Z",
      "weight": 0.35
+    },
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Cuyahoga River rising 0.34 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 3.27 ft, discharge 505 cfs, up 0.34 ft over 24 h.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
+     "at": "2026-08-22T18:30:00.000-04:00",
+     "weight": 0.08
     }
    ],
-   "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.11 ft over 24 h"
-   ],
+   "gaps": [],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
@@ -55,7 +62,7 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49423,
    "lng": -81.70286,
-   "score": 0.6,
+   "score": 0.68,
    "signals": [
     {
      "kind": "weather",
@@ -63,7 +70,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 5:36PM EDT until August 22 at 8:30PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c436ecabbbeb9a8b7f3e0b00cd0d3061265364a6.001.1",
-     "at": "2026-08-22T22:13:48.810Z",
+     "at": "2026-08-22T22:45:54.299Z",
      "weight": 0.05
     },
     {
@@ -72,13 +79,20 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T22:13:48.810Z",
+     "at": "2026-08-22T22:45:54.299Z",
      "weight": 0.35
+    },
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Cuyahoga River rising 0.34 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 3.27 ft, discharge 505 cfs, up 0.34 ft over 24 h.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
+     "at": "2026-08-22T18:30:00.000-04:00",
+     "weight": 0.08
     }
    ],
-   "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.11 ft over 24 h"
-   ],
+   "gaps": [],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
@@ -87,7 +101,7 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49941,
    "lng": -81.67162,
-   "score": 0.6,
+   "score": 0.68,
    "signals": [
     {
      "kind": "weather",
@@ -95,7 +109,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 5:36PM EDT until August 22 at 8:30PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c436ecabbbeb9a8b7f3e0b00cd0d3061265364a6.001.1",
-     "at": "2026-08-22T22:13:48.983Z",
+     "at": "2026-08-22T22:45:54.304Z",
      "weight": 0.05
     },
     {
@@ -104,13 +118,20 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T22:13:48.983Z",
+     "at": "2026-08-22T22:45:54.304Z",
      "weight": 0.35
+    },
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Cuyahoga River rising 0.34 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 3.27 ft, discharge 505 cfs, up 0.34 ft over 24 h.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
+     "at": "2026-08-22T18:30:00.000-04:00",
+     "weight": 0.08
     }
    ],
-   "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.11 ft over 24 h"
-   ],
+   "gaps": [],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
@@ -119,7 +140,7 @@
    "waterway": "Cuyahoga River",
    "lat": 41.47977,
    "lng": -81.66805,
-   "score": 0.6,
+   "score": 0.68,
    "signals": [
     {
      "kind": "weather",
@@ -127,7 +148,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 22 at 5:36PM EDT until August 22 at 8:30PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c436ecabbbeb9a8b7f3e0b00cd0d3061265364a6.001.1",
-     "at": "2026-08-22T22:13:48.774Z",
+     "at": "2026-08-22T22:45:54.290Z",
      "weight": 0.05
     },
     {
@@ -136,13 +157,20 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued August 22 at 12:21PM EDT until August 22 at 10:00PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.70f7a247c2e93fb519fefa76fd20f0f08e713ac6.001.1",
-     "at": "2026-08-22T22:13:48.774Z",
+     "at": "2026-08-22T22:45:54.290Z",
      "weight": 0.35
+    },
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Cuyahoga River rising 0.34 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 3.27 ft, discharge 505 cfs, up 0.34 ft over 24 h.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
+     "at": "2026-08-22T18:30:00.000-04:00",
+     "weight": 0.08
     }
    ],
-   "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.11 ft over 24 h"
-   ],
+   "gaps": [],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
@@ -198,15 +226,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Mississippi River rising 0.65 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 9.51 ft, discharge 277,000 cfs, up 0.65 ft over 24 h.",
+     "headline": "Mississippi River rising 0.62 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 9.53 ft, discharge 277,000 cfs, up 0.62 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-22T16:15:00.000-05:00",
+     "at": "2026-08-22T17:15:00.000-05:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.65 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.62 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -386,7 +414,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 9.61 ft over 24 h"
+    "Delaware River at Trenton NJ: stage steady at 9.60 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -399,7 +427,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.68 ft over 24 h"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.67 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -503,7 +531,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 3.98 ft over 24 h"
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 3.97 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -568,7 +596,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.84 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.97 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
