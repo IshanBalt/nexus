@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-23T07:10:43.194Z",
- "durationMs": 9967,
+ "ranAt": "2026-08-23T07:54:57.541Z",
+ "durationMs": 7081,
  "watched": 59,
  "excluded": [
   {
@@ -18,6 +18,52 @@
  ],
  "structures": [
   {
+   "name": "Benjamin Franklin",
+   "state": "PA",
+   "waterway": "Delaware River",
+   "lat": 39.9529288,
+   "lng": -75.1343785,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 23 at 3:49AM EDT until August 23 at 8:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.48417b820be275867125802374a6d4e438b66dec.001.1",
+     "at": "2026-08-23T07:54:51.716Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Walt Whitman",
+   "state": "PA",
+   "waterway": "Delaware River",
+   "lat": 39.9072951,
+   "lng": -75.1410302,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 23 at 3:49AM EDT until August 23 at 8:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.48417b820be275867125802374a6d4e438b66dec.001.1",
+     "at": "2026-08-23T07:54:51.662Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
    "name": "CUY-00002-1441",
    "state": "OH",
    "waterway": "Cuyahoga River",
@@ -28,15 +74,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.08 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.99 ft, discharge 1,330 cfs, up 2.08 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.27 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.19 ft, discharge 1,430 cfs, up 2.27 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T03:00:00.000-04:00",
+     "at": "2026-08-23T03:30:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.08 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.27 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00006-1456",
@@ -49,15 +95,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.08 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.99 ft, discharge 1,330 cfs, up 2.08 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.27 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.19 ft, discharge 1,430 cfs, up 2.27 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T03:00:00.000-04:00",
+     "at": "2026-08-23T03:30:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.08 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.27 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00010-1613",
@@ -70,15 +116,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.08 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.99 ft, discharge 1,330 cfs, up 2.08 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.27 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.19 ft, discharge 1,430 cfs, up 2.27 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T03:00:00.000-04:00",
+     "at": "2026-08-23T03:30:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.08 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.27 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00490-0010",
@@ -91,15 +137,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.08 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.99 ft, discharge 1,330 cfs, up 2.08 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.27 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.19 ft, discharge 1,430 cfs, up 2.27 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T03:00:00.000-04:00",
+     "at": "2026-08-23T03:30:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.08 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.27 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -112,15 +158,36 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Mississippi River rising 0.81 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 9.71 ft, discharge 281,000 cfs, up 0.81 ft over 24 h.",
+     "headline": "Mississippi River rising 0.80 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 9.69 ft, discharge 280,000 cfs, up 0.80 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-23T01:15:00.000-05:00",
+     "at": "2026-08-23T02:15:00.000-05:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.81 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.80 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Commodore Barry",
+   "state": "NJ",
+   "waterway": "Delaware River",
+   "lat": 39.8267836,
+   "lng": -75.3700139,
+   "score": 0.24,
+   "signals": [
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Nearby gauge rising 0.25 ft in 24 h",
+     "detail": "Darby Creek near Darby, PA: stage 2.06 ft, discharge 61 cfs, up 0.25 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01475510/",
+     "at": "2026-08-23T03:25:00.000-04:00",
+     "weight": 0.04
+    }
+   ],
+   "gaps": [],
+   "verdict": "Nearby gauge rising 0.25 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -131,7 +198,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 3.51 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 3.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -158,19 +225,6 @@
    "signals": [],
    "gaps": [
     "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.77 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Benjamin Franklin",
-   "state": "PA",
-   "waterway": "Delaware River",
-   "lat": 39.9529288,
-   "lng": -75.1343785,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -266,19 +320,6 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Commodore Barry",
-   "state": "NJ",
-   "waterway": "Delaware River",
-   "lat": 39.8267836,
-   "lng": -75.3700139,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "Darby Creek near Darby, PA: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "Coronado",
    "state": "CA",
    "waterway": "San Diego Bay",
@@ -300,7 +341,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 9.51 ft over 24 h"
+    "Delaware River at Trenton NJ: stage steady at 9.49 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -313,7 +354,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.67 ft over 24 h"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.66 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -365,7 +406,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.54 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.53 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -404,7 +445,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.51 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.49 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -781,20 +822,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Third River at Bloomfield NJ: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Walt Whitman",
-   "state": "PA",
-   "waterway": "Delaware River",
-   "lat": 39.9072951,
-   "lng": -75.1410302,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Third River at Bloomfield NJ: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -826,9 +854,9 @@
   }
  ],
  "escalated": [
-  "CUY-00002-1441",
-  "CUY-00006-1456",
-  "CUY-00010-1613"
+  "Benjamin Franklin",
+  "Walt Whitman",
+  "CUY-00002-1441"
  ],
  "sources": [
   {
@@ -845,5 +873,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "4 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "6 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
