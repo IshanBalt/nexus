@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-23T21:43:33.844Z",
- "durationMs": 7630,
+ "ranAt": "2026-08-23T22:13:54.142Z",
+ "durationMs": 7131,
  "watched": 59,
  "excluded": [
   {
@@ -17,90 +17,6 @@
   }
  ],
  "structures": [
-  {
-   "name": "CUY-00002-1441",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49481,
-   "lng": -81.70729,
-   "score": 0.38,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "elevated",
-     "headline": "Cuyahoga River rising 1.73 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.68 ft, discharge 1,170 cfs, up 1.73 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T17:30:00.000-04:00",
-     "weight": 0.18
-    }
-   ],
-   "gaps": [],
-   "verdict": "Cuyahoga River rising 1.73 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00006-1456",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49423,
-   "lng": -81.70286,
-   "score": 0.38,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "elevated",
-     "headline": "Cuyahoga River rising 1.73 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.68 ft, discharge 1,170 cfs, up 1.73 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T17:30:00.000-04:00",
-     "weight": 0.18
-    }
-   ],
-   "gaps": [],
-   "verdict": "Cuyahoga River rising 1.73 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00010-1613",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49941,
-   "lng": -81.67162,
-   "score": 0.38,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "elevated",
-     "headline": "Cuyahoga River rising 1.73 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.68 ft, discharge 1,170 cfs, up 1.73 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T17:30:00.000-04:00",
-     "weight": 0.18
-    }
-   ],
-   "gaps": [],
-   "verdict": "Cuyahoga River rising 1.73 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00490-0010",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.47977,
-   "lng": -81.66805,
-   "score": 0.38,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "elevated",
-     "headline": "Cuyahoga River rising 1.73 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.68 ft, discharge 1,170 cfs, up 1.73 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T17:30:00.000-04:00",
-     "weight": 0.18
-    }
-   ],
-   "gaps": [],
-   "verdict": "Cuyahoga River rising 1.73 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
   {
    "name": "Horace Wilkinson",
    "state": "LA",
@@ -133,15 +49,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.41 ft in 24 h",
-     "detail": "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage 1.09 ft, discharge 144 cfs, up 0.41 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.37 ft in 24 h",
+     "detail": "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage 1.04 ft, discharge 131 cfs, up 0.37 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01302020/",
-     "at": "2026-08-23T15:30:00.000-05:00",
+     "at": "2026-08-23T16:30:00.000-05:00",
      "weight": 0.04
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 0.41 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 0.37 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -269,7 +185,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.75 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.74 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -309,6 +225,58 @@
    "signals": [],
    "gaps": [
     "SAN DIEGO R A FASHION VALLEY AT SAN DIEGO CA: tidal record, 0.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00002-1441",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49481,
+   "lng": -81.70729,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: tidal record, 2.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00006-1456",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49423,
+   "lng": -81.70286,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: tidal record, 2.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00010-1613",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49941,
+   "lng": -81.67162,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: tidal record, 2.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00490-0010",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.47977,
+   "lng": -81.66805,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: tidal record, 2.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -451,7 +419,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.23 ft over 24 h"
+    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.22 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -464,7 +432,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.23 ft over 24 h"
+    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.22 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -516,7 +484,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.91 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -594,7 +562,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CORTE MADERA C A ROSS CA: stage steady at 4.20 ft over 24 h"
+    "CORTE MADERA C A ROSS CA: stage steady at 4.21 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -724,7 +692,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAVANNAH RIVER AT GA 25, AT PORT WENTWORTH, GA: tidal record, 7.00 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAVANNAH RIVER AT GA 25, AT PORT WENTWORTH, GA: tidal record, 6.89 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
