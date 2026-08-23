@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-23T19:43:48.427Z",
- "durationMs": 6619,
+ "ranAt": "2026-08-23T20:13:53.031Z",
+ "durationMs": 11350,
  "watched": 59,
  "excluded": [
   {
@@ -28,15 +28,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Cuyahoga River rising 1.96 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.86 ft, discharge 1,260 cfs, up 1.96 ft over 24 h.",
+     "headline": "Cuyahoga River rising 1.87 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 4.79 ft, discharge 1,220 cfs, up 1.87 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T15:30:00.000-04:00",
+     "at": "2026-08-23T16:00:00.000-04:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 1.96 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 1.87 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00006-1456",
@@ -49,15 +49,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Cuyahoga River rising 1.96 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.86 ft, discharge 1,260 cfs, up 1.96 ft over 24 h.",
+     "headline": "Cuyahoga River rising 1.87 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 4.79 ft, discharge 1,220 cfs, up 1.87 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T15:30:00.000-04:00",
+     "at": "2026-08-23T16:00:00.000-04:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 1.96 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 1.87 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00010-1613",
@@ -70,15 +70,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Cuyahoga River rising 1.96 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.86 ft, discharge 1,260 cfs, up 1.96 ft over 24 h.",
+     "headline": "Cuyahoga River rising 1.87 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 4.79 ft, discharge 1,220 cfs, up 1.87 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T15:30:00.000-04:00",
+     "at": "2026-08-23T16:00:00.000-04:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 1.96 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 1.87 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00490-0010",
@@ -91,15 +91,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Cuyahoga River rising 1.96 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.86 ft, discharge 1,260 cfs, up 1.96 ft over 24 h.",
+     "headline": "Cuyahoga River rising 1.87 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 4.79 ft, discharge 1,220 cfs, up 1.87 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T15:30:00.000-04:00",
+     "at": "2026-08-23T16:00:00.000-04:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 1.96 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 1.87 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -133,15 +133,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.41 ft in 24 h",
-     "detail": "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage 1.10 ft, discharge 147 cfs, up 0.41 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.42 ft in 24 h",
+     "detail": "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage 1.10 ft, discharge 147 cfs, up 0.42 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01302020/",
      "at": "2026-08-23T14:30:00.000-05:00",
      "weight": 0.04
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 0.41 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 0.42 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -217,7 +217,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.30 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -269,7 +269,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.77 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.76 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -451,7 +451,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.25 ft over 24 h"
+    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.24 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -464,7 +464,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.25 ft over 24 h"
+    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.24 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -620,7 +620,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.30 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
