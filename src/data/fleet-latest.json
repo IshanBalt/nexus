@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-23T08:56:25.659Z",
- "durationMs": 11204,
+ "ranAt": "2026-08-23T09:22:20.799Z",
+ "durationMs": 10732,
  "watched": 59,
  "excluded": [
   {
@@ -29,9 +29,9 @@
      "kind": "weather",
      "level": "high",
      "headline": "Flash Flood Warning in force",
-     "detail": "Flash Flood Warning issued August 23 at 3:49AM EDT until August 23 at 8:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.48417b820be275867125802374a6d4e438b66dec.001.1",
-     "at": "2026-08-23T08:56:15.960Z",
+     "detail": "Flash Flood Warning issued August 23 at 5:07AM EDT until August 23 at 8:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.275358bb4700965663e852c4dea536526b7cc538.002.1",
+     "at": "2026-08-23T09:22:11.386Z",
      "weight": 0.35
     }
    ],
@@ -52,9 +52,9 @@
      "kind": "weather",
      "level": "high",
      "headline": "Flash Flood Warning in force",
-     "detail": "Flash Flood Warning issued August 23 at 3:49AM EDT until August 23 at 8:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.48417b820be275867125802374a6d4e438b66dec.001.1",
-     "at": "2026-08-23T08:56:15.840Z",
+     "detail": "Flash Flood Warning issued August 23 at 5:07AM EDT until August 23 at 8:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.275358bb4700965663e852c4dea536526b7cc538.002.1",
+     "at": "2026-08-23T09:22:11.368Z",
      "weight": 0.35
     }
    ],
@@ -74,15 +74,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.77 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.69 ft, discharge 1,690 cfs, up 2.77 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.80 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.72 ft, discharge 1,710 cfs, up 2.80 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T04:45:00.000-04:00",
+     "at": "2026-08-23T05:00:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.77 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.80 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00006-1456",
@@ -95,15 +95,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.77 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.69 ft, discharge 1,690 cfs, up 2.77 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.80 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.72 ft, discharge 1,710 cfs, up 2.80 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T04:45:00.000-04:00",
+     "at": "2026-08-23T05:00:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.77 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.80 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00010-1613",
@@ -116,15 +116,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.77 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.69 ft, discharge 1,690 cfs, up 2.77 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.80 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.72 ft, discharge 1,710 cfs, up 2.80 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T04:45:00.000-04:00",
+     "at": "2026-08-23T05:00:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.77 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.80 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00490-0010",
@@ -137,15 +137,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.77 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.69 ft, discharge 1,690 cfs, up 2.77 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.80 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.72 ft, discharge 1,710 cfs, up 2.80 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T04:45:00.000-04:00",
+     "at": "2026-08-23T05:00:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.77 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.80 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -158,36 +158,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Mississippi River rising 0.80 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 9.71 ft, discharge 281,000 cfs, up 0.80 ft over 24 h.",
+     "headline": "Mississippi River rising 0.78 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 9.71 ft, discharge 281,000 cfs, up 0.78 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
      "at": "2026-08-23T03:15:00.000-05:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.80 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Commodore Barry",
-   "state": "NJ",
-   "waterway": "Delaware River",
-   "lat": 39.8267836,
-   "lng": -75.3700139,
-   "score": 0.29,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "elevated",
-     "headline": "Nearby gauge rising 1.63 ft in 24 h",
-     "detail": "Darby Creek near Darby, PA: stage 3.43 ft, discharge 468 cfs, up 1.63 ft over 24 h — this gauge is not on the channel the NTSB record names.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01475510/",
-     "at": "2026-08-23T04:40:00.000-04:00",
-     "weight": 0.09
-    }
-   ],
-   "gaps": [],
-   "verdict": "Nearby gauge rising 1.63 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.78 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Brooklyn",
@@ -203,7 +182,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T08:56:15.424Z",
+     "at": "2026-08-23T09:22:10.926Z",
      "weight": 0.05
     }
    ],
@@ -226,7 +205,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T08:56:15.567Z",
+     "at": "2026-08-23T09:22:11.053Z",
      "weight": 0.05
     }
    ],
@@ -249,7 +228,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T08:56:15.464Z",
+     "at": "2026-08-23T09:22:10.934Z",
      "weight": 0.05
     }
    ],
@@ -272,7 +251,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T08:56:15.590Z",
+     "at": "2026-08-23T09:22:11.045Z",
      "weight": 0.05
     }
    ],
@@ -295,7 +274,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T08:56:15.429Z",
+     "at": "2026-08-23T09:22:10.893Z",
      "weight": 0.05
     }
    ],
@@ -318,7 +297,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T08:56:15.362Z",
+     "at": "2026-08-23T09:22:10.884Z",
      "weight": 0.05
     }
    ],
@@ -341,7 +320,7 @@
      "headline": "Flood Advisory in force",
      "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T08:56:15.490Z",
+     "at": "2026-08-23T09:22:10.961Z",
      "weight": 0.05
     }
    ],
@@ -468,6 +447,19 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
   {
+   "name": "Commodore Barry",
+   "state": "NJ",
+   "waterway": "Delaware River",
+   "lat": 39.8267836,
+   "lng": -75.3700139,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Darby Creek near Darby, PA: tidal record, 3.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
    "name": "Coronado",
    "state": "CA",
    "waterway": "San Diego Bay",
@@ -580,7 +572,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.46 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.44 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -593,7 +585,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: tidal record, 0.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 3.96 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -619,7 +611,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 2.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 2.11 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -632,7 +624,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 2.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 2.11 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -658,7 +650,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.01 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: stage steady at 4.23 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -814,7 +806,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.48 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -853,7 +845,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.39 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.38 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -892,7 +884,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.18 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
