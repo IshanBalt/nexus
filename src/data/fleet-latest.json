@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-23T09:51:06.642Z",
- "durationMs": 20089,
+ "ranAt": "2026-08-23T10:16:33.422Z",
+ "durationMs": 21124,
  "watched": 59,
  "excluded": [
   {
@@ -18,6 +18,38 @@
  ],
  "structures": [
   {
+   "name": "Verrazano Narrows",
+   "state": "NY",
+   "waterway": "The Narrows",
+   "lat": 40.6063358,
+   "lng": -74.0454441,
+   "score": 0.9,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 23 at 6:12AM EDT until August 23 at 8:00AM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f5db5516bac97bf9b8d6a98999f2c9760ae45141.001.1",
+     "at": "2026-08-23T10:16:13.248Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Special Marine Warning in force",
+     "detail": "Special Marine Warning issued August 23 at 6:03AM EDT until August 23 at 6:30AM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36e14a10beaf996cd5e70e7c03c139021f4ee1a2.001.1",
+     "at": "2026-08-23T10:16:13.248Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 1.09 ft over 24 h"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
    "name": "Benjamin Franklin",
    "state": "PA",
    "waterway": "Delaware River",
@@ -31,12 +63,104 @@
      "headline": "Flash Flood Warning in force",
      "detail": "Flash Flood Warning issued August 23 at 5:07AM EDT until August 23 at 8:00AM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.275358bb4700965663e852c4dea536526b7cc538.002.1",
-     "at": "2026-08-23T09:50:47.892Z",
+     "at": "2026-08-23T10:16:13.841Z",
      "weight": 0.35
     }
    ],
    "gaps": [
     "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Brooklyn",
+   "state": "NY",
+   "waterway": "East River",
+   "lat": 40.7062175,
+   "lng": -73.9970208,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 23 at 6:12AM EDT until August 23 at 8:00AM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f5db5516bac97bf9b8d6a98999f2c9760ae45141.001.1",
+     "at": "2026-08-23T10:16:13.369Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "no USGS gauge within ~13 km"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Manhattan",
+   "state": "NY",
+   "waterway": "East River",
+   "lat": 40.7069642,
+   "lng": -73.9904592,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 23 at 6:12AM EDT until August 23 at 8:00AM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f5db5516bac97bf9b8d6a98999f2c9760ae45141.001.1",
+     "at": "2026-08-23T10:16:13.307Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "no USGS gauge within ~13 km"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Outerbridge Crossing",
+   "state": "NY",
+   "waterway": "Arthur Kill",
+   "lat": 40.5252739,
+   "lng": -74.2384605,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 23 at 6:12AM EDT until August 23 at 8:00AM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f5db5516bac97bf9b8d6a98999f2c9760ae45141.001.1",
+     "at": "2026-08-23T10:16:13.420Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 1.09 ft over 24 h"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Vincent R. Casciano",
+   "state": "NJ",
+   "waterway": "Newark Bay",
+   "lat": 40.6946123,
+   "lng": -74.1160441,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued August 23 at 6:12AM EDT until August 23 at 8:00AM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f5db5516bac97bf9b8d6a98999f2c9760ae45141.001.1",
+     "at": "2026-08-23T10:16:13.159Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "Third River at Bloomfield NJ: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -54,7 +178,7 @@
      "headline": "Flash Flood Warning in force",
      "detail": "Flash Flood Warning issued August 23 at 5:07AM EDT until August 23 at 8:00AM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.275358bb4700965663e852c4dea536526b7cc538.002.1",
-     "at": "2026-08-23T09:50:47.833Z",
+     "at": "2026-08-23T10:16:13.786Z",
      "weight": 0.35
     }
    ],
@@ -74,15 +198,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.85 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.77 ft, discharge 1,740 cfs, up 2.85 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.89 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.81 ft, discharge 1,760 cfs, up 2.89 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T05:30:00.000-04:00",
+     "at": "2026-08-23T06:00:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.85 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.89 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00006-1456",
@@ -95,15 +219,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.85 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.77 ft, discharge 1,740 cfs, up 2.85 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.89 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.81 ft, discharge 1,760 cfs, up 2.89 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T05:30:00.000-04:00",
+     "at": "2026-08-23T06:00:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.85 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.89 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00010-1613",
@@ -116,15 +240,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.85 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.77 ft, discharge 1,740 cfs, up 2.85 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.89 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.81 ft, discharge 1,760 cfs, up 2.89 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T05:30:00.000-04:00",
+     "at": "2026-08-23T06:00:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.85 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.89 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00490-0010",
@@ -137,15 +261,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.85 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.77 ft, discharge 1,740 cfs, up 2.85 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.89 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.81 ft, discharge 1,760 cfs, up 2.89 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T05:30:00.000-04:00",
+     "at": "2026-08-23T06:00:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.85 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.89 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -167,194 +291,6 @@
    ],
    "gaps": [],
    "verdict": "Mississippi River rising 0.78 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Brooklyn",
-   "state": "NY",
-   "waterway": "East River",
-   "lat": 40.7062175,
-   "lng": -73.9970208,
-   "score": 0.3,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Marine Weather Statement in force",
-     "detail": "Marine Weather Statement issued August 23 at 5:36AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3b4b8410a76cbee02370ed2b3517b64c9546ff50.001.1",
-     "at": "2026-08-23T09:50:47.381Z",
-     "weight": 0.05
-    },
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T09:50:47.381Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "no USGS gauge within ~13 km"
-   ],
-   "verdict": "Marine Weather Statement in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Manhattan",
-   "state": "NY",
-   "waterway": "East River",
-   "lat": 40.7069642,
-   "lng": -73.9904592,
-   "score": 0.3,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Marine Weather Statement in force",
-     "detail": "Marine Weather Statement issued August 23 at 5:36AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3b4b8410a76cbee02370ed2b3517b64c9546ff50.001.1",
-     "at": "2026-08-23T09:50:47.429Z",
-     "weight": 0.05
-    },
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T09:50:47.429Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "no USGS gauge within ~13 km"
-   ],
-   "verdict": "Marine Weather Statement in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Verrazano Narrows",
-   "state": "NY",
-   "waterway": "The Narrows",
-   "lat": 40.6063358,
-   "lng": -74.0454441,
-   "score": 0.3,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Marine Weather Statement in force",
-     "detail": "Marine Weather Statement issued August 23 at 5:36AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3b4b8410a76cbee02370ed2b3517b64c9546ff50.001.1",
-     "at": "2026-08-23T09:50:47.373Z",
-     "weight": 0.05
-    },
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T09:50:47.373Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Marine Weather Statement in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "George Washington",
-   "state": "NY",
-   "waterway": "Hudson River",
-   "lat": 40.8523792,
-   "lng": -73.9566274,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T09:50:47.539Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.65 ft over 24 h"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Outerbridge Crossing",
-   "state": "NY",
-   "waterway": "Arthur Kill",
-   "lat": 40.5252739,
-   "lng": -74.2384605,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T09:50:47.551Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Vincent R. Casciano",
-   "state": "NJ",
-   "waterway": "Newark Bay",
-   "lat": 40.6946123,
-   "lng": -74.1160441,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T09:50:47.368Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "Third River at Bloomfield NJ: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Williamsburg",
-   "state": "NY",
-   "waterway": "East River",
-   "lat": 40.7135807,
-   "lng": -73.9721363,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued August 23 at 4:52AM EDT until August 23 at 6:45AM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f3d526779c256f9f0a6f373f87053b8a23dd964.001.1",
-     "at": "2026-08-23T09:50:47.426Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "no USGS gauge within ~13 km"
-   ],
-   "verdict": "Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -456,7 +392,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.89 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.88 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -509,6 +445,19 @@
    "signals": [],
    "gaps": [
     "Delaware River at Trenton NJ: stage steady at 9.49 ft over 24 h"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "George Washington",
+   "state": "NY",
+   "waterway": "Hudson River",
+   "lat": 40.8523792,
+   "lng": -73.9566274,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.65 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -586,7 +535,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.44 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -599,7 +548,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.43 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.40 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -638,7 +587,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 2.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "USGS unreachable: The operation was aborted due to timeout"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -651,7 +600,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 2.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 2.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -911,7 +860,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.16 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.15 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -940,12 +889,25 @@
     "no USGS gauge within ~13 km"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Williamsburg",
+   "state": "NY",
+   "waterway": "East River",
+   "lat": 40.7135807,
+   "lng": -73.9721363,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "no USGS gauge within ~13 km"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   }
  ],
  "escalated": [
+  "Verrazano Narrows",
   "Benjamin Franklin",
-  "Walt Whitman",
-  "CUY-00002-1441"
+  "Brooklyn"
  ],
  "sources": [
   {
@@ -962,5 +924,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "6 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "11 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
