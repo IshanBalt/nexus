@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-23T19:18:13.894Z",
- "durationMs": 21203,
+ "ranAt": "2026-08-23T19:43:48.427Z",
+ "durationMs": 6619,
  "watched": 59,
  "excluded": [
   {
@@ -23,20 +23,20 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49481,
    "lng": -81.70729,
-   "score": 0.5,
+   "score": 0.38,
    "signals": [
     {
      "kind": "river",
-     "level": "high",
-     "headline": "Cuyahoga River rising 2.00 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.90 ft, discharge 1,280 cfs, up 2.00 ft over 24 h.",
+     "level": "elevated",
+     "headline": "Cuyahoga River rising 1.96 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 4.86 ft, discharge 1,260 cfs, up 1.96 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T15:00:00.000-04:00",
-     "weight": 0.3
+     "at": "2026-08-23T15:30:00.000-04:00",
+     "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.00 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 1.96 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00006-1456",
@@ -44,20 +44,20 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49423,
    "lng": -81.70286,
-   "score": 0.5,
+   "score": 0.38,
    "signals": [
     {
      "kind": "river",
-     "level": "high",
-     "headline": "Cuyahoga River rising 2.00 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.90 ft, discharge 1,280 cfs, up 2.00 ft over 24 h.",
+     "level": "elevated",
+     "headline": "Cuyahoga River rising 1.96 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 4.86 ft, discharge 1,260 cfs, up 1.96 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T15:00:00.000-04:00",
-     "weight": 0.3
+     "at": "2026-08-23T15:30:00.000-04:00",
+     "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.00 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 1.96 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00010-1613",
@@ -65,20 +65,20 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49941,
    "lng": -81.67162,
-   "score": 0.5,
+   "score": 0.38,
    "signals": [
     {
      "kind": "river",
-     "level": "high",
-     "headline": "Cuyahoga River rising 2.00 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.90 ft, discharge 1,280 cfs, up 2.00 ft over 24 h.",
+     "level": "elevated",
+     "headline": "Cuyahoga River rising 1.96 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 4.86 ft, discharge 1,260 cfs, up 1.96 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T15:00:00.000-04:00",
-     "weight": 0.3
+     "at": "2026-08-23T15:30:00.000-04:00",
+     "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.00 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 1.96 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00490-0010",
@@ -86,20 +86,20 @@
    "waterway": "Cuyahoga River",
    "lat": 41.47977,
    "lng": -81.66805,
-   "score": 0.5,
+   "score": 0.38,
    "signals": [
     {
      "kind": "river",
-     "level": "high",
-     "headline": "Cuyahoga River rising 2.00 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 4.90 ft, discharge 1,280 cfs, up 2.00 ft over 24 h.",
+     "level": "elevated",
+     "headline": "Cuyahoga River rising 1.96 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 4.86 ft, discharge 1,260 cfs, up 1.96 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T15:00:00.000-04:00",
-     "weight": 0.3
+     "at": "2026-08-23T15:30:00.000-04:00",
+     "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.00 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 1.96 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -112,15 +112,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Mississippi River rising 0.71 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 10.12 ft, discharge 290,000 cfs, up 0.71 ft over 24 h.",
+     "headline": "Mississippi River rising 0.70 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 10.16 ft, discharge 291,000 cfs, up 0.70 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-23T13:15:00.000-05:00",
+     "at": "2026-08-23T14:15:00.000-05:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.71 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.70 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "George Washington",
@@ -133,15 +133,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.38 ft in 24 h",
-     "detail": "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage 1.07 ft, discharge 139 cfs, up 0.38 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.41 ft in 24 h",
+     "detail": "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage 1.10 ft, discharge 147 cfs, up 0.41 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01302020/",
-     "at": "2026-08-23T13:30:00.000-05:00",
+     "at": "2026-08-23T14:30:00.000-05:00",
      "weight": 0.04
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 0.38 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 0.41 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -256,7 +256,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 0.14 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 0.18 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -451,7 +451,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.25 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -464,7 +464,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.25 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -833,11 +833,7 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   }
  ],
- "escalated": [
-  "CUY-00002-1441",
-  "CUY-00006-1456",
-  "CUY-00010-1613"
- ],
+ "escalated": [],
  "sources": [
   {
    "name": "NTSB MIR-25-10",
@@ -853,5 +849,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "4 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "0 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
