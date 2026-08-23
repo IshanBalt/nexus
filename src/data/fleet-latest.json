@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-23T17:14:35.372Z",
- "durationMs": 14664,
+ "ranAt": "2026-08-23T17:43:18.229Z",
+ "durationMs": 8022,
  "watched": 59,
  "excluded": [
   {
@@ -18,29 +18,6 @@
  ],
  "structures": [
   {
-   "name": "Bourne",
-   "state": "MA",
-   "waterway": "Cape Cod Canal",
-   "lat": 41.7477306,
-   "lng": -70.5895299,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 23 at 12:15PM EDT until August 23 at 1:15PM EDT by NWS Boston/Norton MA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4c16d9782c7243c70626ee7fb2f7d7b66256fab.001.1",
-     "at": "2026-08-23T17:14:21.622Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.30 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "CUY-00002-1441",
    "state": "OH",
    "waterway": "Cuyahoga River",
@@ -51,15 +28,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.30 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.19 ft, discharge 1,430 cfs, up 2.30 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.24 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.13 ft, discharge 1,400 cfs, up 2.24 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T13:00:00.000-04:00",
+     "at": "2026-08-23T13:30:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.30 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.24 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00006-1456",
@@ -72,15 +49,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.30 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.19 ft, discharge 1,430 cfs, up 2.30 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.24 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.13 ft, discharge 1,400 cfs, up 2.24 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T13:00:00.000-04:00",
+     "at": "2026-08-23T13:30:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.30 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.24 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00010-1613",
@@ -93,15 +70,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.30 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.19 ft, discharge 1,430 cfs, up 2.30 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.24 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.13 ft, discharge 1,400 cfs, up 2.24 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T13:00:00.000-04:00",
+     "at": "2026-08-23T13:30:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.30 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.24 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00490-0010",
@@ -114,15 +91,15 @@
     {
      "kind": "river",
      "level": "high",
-     "headline": "Cuyahoga River rising 2.30 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 5.19 ft, discharge 1,430 cfs, up 2.30 ft over 24 h.",
+     "headline": "Cuyahoga River rising 2.24 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 5.13 ft, discharge 1,400 cfs, up 2.24 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-08-23T13:00:00.000-04:00",
+     "at": "2026-08-23T13:30:00.000-04:00",
      "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 2.30 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 2.24 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -135,15 +112,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Mississippi River rising 0.70 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 10.01 ft, discharge 287,000 cfs, up 0.70 ft over 24 h.",
+     "headline": "Mississippi River rising 0.74 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 10.04 ft, discharge 288,000 cfs, up 0.74 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-23T11:15:00.000-05:00",
+     "at": "2026-08-23T12:15:00.000-05:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.70 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.74 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "George Washington",
@@ -228,6 +205,19 @@
    "signals": [],
    "gaps": [
     "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Bourne",
+   "state": "MA",
+   "waterway": "Cape Cod Canal",
+   "lat": 41.7477306,
+   "lng": -70.5895299,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.30 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -383,7 +373,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.55 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.57 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -435,7 +425,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 3.92 ft over 24 h"
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -526,7 +516,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.91 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -695,7 +685,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 4.86 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 4.83 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -708,7 +698,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.58 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -844,9 +834,9 @@
   }
  ],
  "escalated": [
-  "Bourne",
   "CUY-00002-1441",
-  "CUY-00006-1456"
+  "CUY-00006-1456",
+  "CUY-00010-1613"
  ],
  "sources": [
   {
@@ -863,5 +853,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "5 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "4 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
