@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-23T23:43:47.965Z",
- "durationMs": 6646,
+ "ranAt": "2026-08-24T00:50:45.455Z",
+ "durationMs": 21649,
  "watched": 59,
  "excluded": [
   {
@@ -23,20 +23,29 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49481,
    "lng": -81.70729,
-   "score": 0.55,
+   "score": 0.9,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Special Marine Warning in force",
+     "detail": "Special Marine Warning issued August 23 at 7:59PM EDT until August 23 at 9:30PM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4247f5f677c543659f5e7ee0dc0dba5c074a3104.001.1",
+     "at": "2026-08-24T00:50:25.658Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "high",
      "headline": "Special Marine Warning in force",
      "detail": "Special Marine Warning issued August 23 at 7:39PM EDT until August 23 at 9:15PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a26c166858e9178f1c54e50d472ac90a1c446129.001.1",
-     "at": "2026-08-23T23:43:42.781Z",
+     "at": "2026-08-24T00:50:25.658Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 2.25 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: tidal record, 1.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -46,20 +55,29 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49423,
    "lng": -81.70286,
-   "score": 0.55,
+   "score": 0.9,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Special Marine Warning in force",
+     "detail": "Special Marine Warning issued August 23 at 7:59PM EDT until August 23 at 9:30PM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4247f5f677c543659f5e7ee0dc0dba5c074a3104.001.1",
+     "at": "2026-08-24T00:50:25.729Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "high",
      "headline": "Special Marine Warning in force",
      "detail": "Special Marine Warning issued August 23 at 7:39PM EDT until August 23 at 9:15PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a26c166858e9178f1c54e50d472ac90a1c446129.001.1",
-     "at": "2026-08-23T23:43:42.877Z",
+     "at": "2026-08-24T00:50:25.729Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 2.25 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: tidal record, 1.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -69,20 +87,29 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49941,
    "lng": -81.67162,
-   "score": 0.55,
+   "score": 0.9,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Special Marine Warning in force",
+     "detail": "Special Marine Warning issued August 23 at 7:59PM EDT until August 23 at 9:30PM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4247f5f677c543659f5e7ee0dc0dba5c074a3104.001.1",
+     "at": "2026-08-24T00:50:25.754Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "high",
      "headline": "Special Marine Warning in force",
      "detail": "Special Marine Warning issued August 23 at 7:39PM EDT until August 23 at 9:15PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a26c166858e9178f1c54e50d472ac90a1c446129.001.1",
-     "at": "2026-08-23T23:43:42.840Z",
+     "at": "2026-08-24T00:50:25.754Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 2.25 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: tidal record, 1.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -92,20 +119,29 @@
    "waterway": "Cuyahoga River",
    "lat": 41.47977,
    "lng": -81.66805,
-   "score": 0.55,
+   "score": 0.9,
    "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Special Marine Warning in force",
+     "detail": "Special Marine Warning issued August 23 at 7:59PM EDT until August 23 at 9:30PM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4247f5f677c543659f5e7ee0dc0dba5c074a3104.001.1",
+     "at": "2026-08-24T00:50:25.620Z",
+     "weight": 0.35
+    },
     {
      "kind": "weather",
      "level": "high",
      "headline": "Special Marine Warning in force",
      "detail": "Special Marine Warning issued August 23 at 7:39PM EDT until August 23 at 9:15PM EDT by NWS Cleveland OH",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a26c166858e9178f1c54e50d472ac90a1c446129.001.1",
-     "at": "2026-08-23T23:43:42.765Z",
+     "at": "2026-08-24T00:50:25.620Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 2.25 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: tidal record, 1.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -121,14 +157,35 @@
      "kind": "river",
      "level": "elevated",
      "headline": "Mississippi River rising 0.76 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 10.37 ft, discharge 295,000 cfs, up 0.76 ft over 24 h.",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 10.41 ft, discharge 296,000 cfs, up 0.76 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-23T18:15:00.000-05:00",
+     "at": "2026-08-23T19:15:00.000-05:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
    "verdict": "Mississippi River rising 0.76 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Sunshine Skyway",
+   "state": "FL",
+   "waterway": "Tampa Bay",
+   "lat": 27.617565,
+   "lng": -82.6535188,
+   "score": 0.24,
+   "signals": [
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Nearby gauge rising 0.27 ft in 24 h",
+     "detail": "FROG CREEK NEAR RUBONIA FL: stage 1.80 ft, discharge 21 cfs, up 0.27 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/02300082/",
+     "at": "2026-08-23T20:00:00.000-04:00",
+     "weight": 0.04
+    }
+   ],
+   "gaps": [],
+   "verdict": "Nearby gauge rising 0.27 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -308,7 +365,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: tidal record, 0.18 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Trenton NJ: tidal record, 0.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -347,7 +404,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.57 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.78 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -451,7 +508,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.21 ft over 24 h"
+    "USGS unreachable: The operation was aborted due to timeout"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -464,7 +521,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: stage steady at 2.21 ft over 24 h"
+    "USGS unreachable: The operation was aborted due to timeout"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -581,7 +638,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.82 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.61 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -633,7 +690,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.82 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.61 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -685,7 +742,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 5.19 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 4.93 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -699,19 +756,6 @@
    "signals": [],
    "gaps": [
     "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.50 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Sunshine Skyway",
-   "state": "FL",
-   "waterway": "Tampa Bay",
-   "lat": 27.617565,
-   "lng": -82.6535188,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: stage steady at 1.79 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -750,7 +794,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.19 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
