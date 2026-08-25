@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-25T17:53:58.774Z",
- "durationMs": 21239,
+ "ranAt": "2026-08-25T18:28:10.712Z",
+ "durationMs": 7970,
  "watched": 59,
  "excluded": [
   {
@@ -29,9 +29,9 @@
      "kind": "river",
      "level": "elevated",
      "headline": "Mississippi River rising 1.19 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 12.22 ft, discharge 335,000 cfs, up 1.19 ft over 24 h.",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 12.27 ft, discharge 336,000 cfs, up 1.19 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-25T12:15:00.000-05:00",
+     "at": "2026-08-25T13:15:00.000-05:00",
      "weight": 0.18
     }
    ],
@@ -164,7 +164,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.39 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.37 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -216,7 +216,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.55 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.53 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -229,7 +229,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.55 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.53 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -242,7 +242,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.55 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.53 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -255,7 +255,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.55 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.53 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -307,7 +307,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.77 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.76 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -411,7 +411,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -424,7 +424,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -476,7 +476,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.77 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.73 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -671,7 +671,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
