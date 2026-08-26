@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-26T13:48:01.803Z",
- "durationMs": 7857,
+ "ranAt": "2026-08-26T14:37:06.285Z",
+ "durationMs": 12346,
  "watched": 59,
  "excluded": [
   {
@@ -28,15 +28,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Mississippi River rising 0.90 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 12.94 ft, discharge 351,000 cfs, up 0.90 ft over 24 h.",
+     "headline": "Mississippi River rising 0.89 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 12.96 ft, discharge 351,000 cfs, up 0.89 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-26T08:15:00.000-05:00",
+     "at": "2026-08-26T09:15:00.000-05:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.90 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.89 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -216,7 +216,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.28 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.29 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -229,7 +229,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.28 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.29 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -242,7 +242,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.28 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.29 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -255,7 +255,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 3.28 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 3.29 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -268,7 +268,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 9.09 ft over 24 h"
+    "Delaware River at Trenton NJ: stage steady at 9.07 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -606,7 +606,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 8.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 8.62 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -671,7 +671,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.35 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.36 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
