@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-08-29T21:51:42.730Z",
- "durationMs": 8634,
+ "ranAt": "2026-08-29T23:47:00.863Z",
+ "durationMs": 18925,
  "watched": 59,
  "excluded": [
   {
@@ -18,29 +18,6 @@
  ],
  "structures": [
   {
-   "name": "Sunshine Skyway",
-   "state": "FL",
-   "waterway": "Tampa Bay",
-   "lat": 27.617565,
-   "lng": -82.6535188,
-   "score": 0.55,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued August 29 at 5:20PM EDT until August 29 at 6:15PM EDT by NWS Tampa Bay Ruskin FL",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.05ad257399fd798f8e5d632397eb0e3ef4267732.001.1",
-     "at": "2026-08-29T21:51:34.619Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: stage steady at 2.32 ft over 24 h"
-   ],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "Horace Wilkinson",
    "state": "LA",
    "waterway": "Mississippi River",
@@ -51,15 +28,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Mississippi River rising 0.52 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 15.57 ft, discharge 407,000 cfs, up 0.52 ft over 24 h.",
+     "headline": "Mississippi River rising 0.54 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 15.64 ft, discharge 409,000 cfs, up 0.54 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-08-29T16:15:00.000-05:00",
+     "at": "2026-08-29T18:15:00.000-05:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 0.52 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 0.54 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -187,7 +164,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: tidal record, 0.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -213,7 +190,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Darby Creek near Darby, PA: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Darby Creek near Darby, PA: tidal record, 0.05 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -239,7 +216,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.81 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 2.80 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -252,7 +229,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.81 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 2.80 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -265,7 +242,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.81 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 2.80 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -278,7 +255,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.81 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 2.80 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -291,7 +268,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: tidal record, 0.11 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Trenton NJ: tidal record, 0.14 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -304,7 +281,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.57 ft over 24 h"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.56 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -330,7 +307,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.53 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.42 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -343,7 +320,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Belle Chasse, LA: tidal record, 0.82 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Belle Chasse, LA: tidal record, 0.86 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -356,7 +333,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.11 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -369,7 +346,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 1.48 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 1.37 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -590,7 +567,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -655,7 +632,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.85 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 4.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -681,7 +658,20 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.39 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Sunshine Skyway",
+   "state": "FL",
+   "waterway": "Tampa Bay",
+   "lat": 27.617565,
+   "lng": -82.6535188,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "FROG CREEK NEAR RUBONIA FL: stage steady at 2.41 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -803,9 +793,7 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   }
  ],
- "escalated": [
-  "Sunshine Skyway"
- ],
+ "escalated": [],
  "sources": [
   {
    "name": "NTSB MIR-25-10",
@@ -821,5 +809,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "1 structure met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "0 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
