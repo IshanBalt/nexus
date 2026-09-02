@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-09-02T16:44:42.621Z",
- "durationMs": 10084,
+ "ranAt": "2026-09-02T19:35:15.349Z",
+ "durationMs": 14328,
  "watched": 59,
  "excluded": [
   {
@@ -29,9 +29,9 @@
      "kind": "weather",
      "level": "high",
      "headline": "Flood Warning in force",
-     "detail": "Flood Warning issued September 2 at 11:22AM CDT by NWS Lake Charles LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9cd612dfd4b822c978327e2c4b9355a79fe132c1.001.1",
-     "at": "2026-09-02T16:44:34.275Z",
+     "detail": "Flood Warning issued September 2 at 2:06PM CDT by NWS Lake Charles LA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b34277fd7f8320a853a0cb15595502e31218e04c.003.1",
+     "at": "2026-09-02T19:35:03.331Z",
      "weight": 0.35
     },
     {
@@ -40,7 +40,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued September 2 at 9:47AM CDT until September 2 at 7:00PM CDT by NWS Lake Charles LA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d212b346129c364d226cb8779c782b5a70fbfe26.001.1",
-     "at": "2026-09-02T16:44:34.275Z",
+     "at": "2026-09-02T19:35:03.331Z",
      "weight": 0.35
     }
    ],
@@ -61,9 +61,9 @@
      "kind": "weather",
      "level": "high",
      "headline": "Flood Warning in force",
-     "detail": "Flood Warning issued September 2 at 11:22AM CDT by NWS Lake Charles LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9cd612dfd4b822c978327e2c4b9355a79fe132c1.001.1",
-     "at": "2026-09-02T16:44:34.199Z",
+     "detail": "Flood Warning issued September 2 at 2:06PM CDT by NWS Lake Charles LA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b34277fd7f8320a853a0cb15595502e31218e04c.003.1",
+     "at": "2026-09-02T19:35:03.444Z",
      "weight": 0.35
     },
     {
@@ -72,7 +72,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued September 2 at 9:47AM CDT until September 2 at 7:00PM CDT by NWS Lake Charles LA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d212b346129c364d226cb8779c782b5a70fbfe26.001.1",
-     "at": "2026-09-02T16:44:34.199Z",
+     "at": "2026-09-02T19:35:03.444Z",
      "weight": 0.35
     }
    ],
@@ -95,7 +95,7 @@
      "headline": "Gale Warning in force",
      "detail": "Gale Warning issued September 2 at 12:39AM PDT until September 2 at 5:00PM PDT by NWS Portland OR",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.18498339edd17e3b7690cc8d1668def37f7b2020.003.1",
-     "at": "2026-09-02T16:44:33.995Z",
+     "at": "2026-09-02T19:35:03.107Z",
      "weight": 0.15
     }
    ],
@@ -115,15 +115,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Calcasieu River rising 0.43 ft in 24 h",
-     "detail": "Calcasieu River at Hwy 171 at Moss Bluff, LA: stage 26.21 ft, up 0.43 ft over 24 h.",
+     "headline": "Calcasieu River rising 0.51 ft in 24 h",
+     "detail": "Calcasieu River at Hwy 171 at Moss Bluff, LA: stage 26.12 ft, up 0.51 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/08015910/",
-     "at": "2026-09-02T10:30:00.000-05:00",
+     "at": "2026-09-02T13:30:00.000-05:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Calcasieu River rising 0.43 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Calcasieu River rising 0.51 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Leo Frigo",
@@ -136,15 +136,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.30 ft in 24 h",
-     "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.14 ft, discharge 4 cfs, up 0.30 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.34 ft in 24 h",
+     "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.19 ft, discharge 5 cfs, up 0.34 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/040850684/",
-     "at": "2026-09-02T11:00:00.000-05:00",
+     "at": "2026-09-02T14:00:00.000-05:00",
      "weight": 0.04
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 0.30 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 0.34 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Rip Van Winkle",
@@ -157,15 +157,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.64 ft in 24 h",
-     "detail": "KINDERHOOK CREEK AT ROSSMAN NY: stage 2.77 ft, discharge 319 cfs, up 0.64 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.47 ft in 24 h",
+     "detail": "KINDERHOOK CREEK AT ROSSMAN NY: stage 2.68 ft, discharge 283 cfs, up 0.47 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01361000/",
-     "at": "2026-09-02T11:30:00.000-05:00",
+     "at": "2026-09-02T13:30:00.000-05:00",
      "weight": 0.04
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 0.64 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 0.47 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -280,7 +280,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: tidal record, 0.13 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: tidal record, 0.16 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -332,7 +332,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -345,7 +345,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -358,7 +358,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -371,7 +371,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -397,7 +397,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.65 ft over 24 h"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.64 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -410,7 +410,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.95 ft over 24 h"
+    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.96 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -423,7 +423,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.20 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Airline Canal at Blind River near Gramercy, LA: stage steady at 1.35 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -436,7 +436,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Belle Chasse, LA: tidal record, 0.67 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Belle Chasse, LA: tidal record, 0.71 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -449,7 +449,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Davis Pond Freshwater Diversion near Boutte, LA: stage steady at 9.91 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -475,7 +475,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: stage steady at 15.19 ft over 24 h"
+    "Mississippi River at Baton Rouge, LA: stage steady at 15.13 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -488,7 +488,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: stage steady at 6.97 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -579,7 +579,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.71 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.67 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -631,7 +631,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.99 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 6.46 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -670,7 +670,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.99 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 6.46 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -722,7 +722,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 5.41 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 5.60 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -735,7 +735,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -748,7 +748,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: stage steady at 2.95 ft over 24 h"
+    "FROG CREEK NEAR RUBONIA FL: stage steady at 2.90 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
