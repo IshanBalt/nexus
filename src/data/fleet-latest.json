@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-09-03T04:49:45.666Z",
- "durationMs": 21397,
+ "ranAt": "2026-09-03T09:21:08.026Z",
+ "durationMs": 20034,
  "watched": 59,
  "excluded": [
   {
@@ -31,7 +31,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued September 2 at 11:32PM CDT until September 3 at 1:00PM CDT by NWS Lake Charles LA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57bac6405ad0425039ab675e87b321ad12362d50.001.1",
-     "at": "2026-09-03T04:49:26.243Z",
+     "at": "2026-09-03T09:20:49.679Z",
      "weight": 0.35
     },
     {
@@ -40,7 +40,7 @@
      "headline": "Flood Warning in force",
      "detail": "Flood Warning issued September 2 at 8:00PM CDT by NWS Lake Charles LA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fd2372f1ad6c2297067367b11628d0fc16914c0a.003.1",
-     "at": "2026-09-03T04:49:26.243Z",
+     "at": "2026-09-03T09:20:49.679Z",
      "weight": 0.35
     }
    ],
@@ -63,7 +63,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued September 2 at 11:32PM CDT until September 3 at 1:00PM CDT by NWS Lake Charles LA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57bac6405ad0425039ab675e87b321ad12362d50.001.1",
-     "at": "2026-09-03T04:49:26.420Z",
+     "at": "2026-09-03T09:20:49.658Z",
      "weight": 0.35
     },
     {
@@ -72,7 +72,7 @@
      "headline": "Flood Warning in force",
      "detail": "Flood Warning issued September 2 at 8:00PM CDT by NWS Lake Charles LA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fd2372f1ad6c2297067367b11628d0fc16914c0a.003.1",
-     "at": "2026-09-03T04:49:26.420Z",
+     "at": "2026-09-03T09:20:49.658Z",
      "weight": 0.35
     }
    ],
@@ -80,6 +80,82 @@
     "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 1.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Commodore Barry",
+   "state": "NJ",
+   "waterway": "Delaware River",
+   "lat": 39.8267836,
+   "lng": -75.3700139,
+   "score": 0.64,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued September 3 at 3:38AM EDT until September 3 at 5:30AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3e40ac0f3e67c214eeade752c39bdba8f05b05f5.001.1",
+     "at": "2026-09-03T09:20:49.052Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "river",
+     "level": "elevated",
+     "headline": "Nearby gauge rising 0.98 ft in 24 h",
+     "detail": "Darby Creek near Darby, PA: stage 2.97 ft, discharge 328 cfs, up 0.98 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01475510/",
+     "at": "2026-09-03T05:00:00.000-04:00",
+     "weight": 0.09
+    }
+   ],
+   "gaps": [],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Benjamin Franklin",
+   "state": "PA",
+   "waterway": "Delaware River",
+   "lat": 39.9529288,
+   "lng": -75.1343785,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued September 3 at 3:38AM EDT until September 3 at 5:30AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3e40ac0f3e67c214eeade752c39bdba8f05b05f5.001.1",
+     "at": "2026-09-03T09:20:49.514Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Betsy Ross",
+   "state": "PA",
+   "waterway": "Delaware River",
+   "lat": 39.9847942,
+   "lng": -75.0659033,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued September 3 at 3:38AM EDT until September 3 at 5:30AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3e40ac0f3e67c214eeade752c39bdba8f05b05f5.001.1",
+     "at": "2026-09-03T09:20:49.611Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00002-1441",
@@ -93,9 +169,9 @@
      "kind": "weather",
      "level": "high",
      "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued September 3 at 12:26AM EDT until September 3 at 2:00AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1ffdccb7320423713d467d1a2ab722db12af6d2e.001.1",
-     "at": "2026-09-03T04:49:25.754Z",
+     "detail": "Special Marine Warning issued September 3 at 4:05AM EDT until September 3 at 5:30AM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90e05e6aced3d37bb72a50f63ea78a02c0cb3774.001.1",
+     "at": "2026-09-03T09:20:49.519Z",
      "weight": 0.35
     }
    ],
@@ -116,9 +192,9 @@
      "kind": "weather",
      "level": "high",
      "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued September 3 at 12:26AM EDT until September 3 at 2:00AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1ffdccb7320423713d467d1a2ab722db12af6d2e.001.1",
-     "at": "2026-09-03T04:49:26.032Z",
+     "detail": "Special Marine Warning issued September 3 at 4:05AM EDT until September 3 at 5:30AM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90e05e6aced3d37bb72a50f63ea78a02c0cb3774.001.1",
+     "at": "2026-09-03T09:20:49.534Z",
      "weight": 0.35
     }
    ],
@@ -139,9 +215,9 @@
      "kind": "weather",
      "level": "high",
      "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued September 3 at 12:26AM EDT until September 3 at 2:00AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1ffdccb7320423713d467d1a2ab722db12af6d2e.001.1",
-     "at": "2026-09-03T04:49:25.866Z",
+     "detail": "Special Marine Warning issued September 3 at 4:05AM EDT until September 3 at 5:30AM EDT by NWS Cleveland OH",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90e05e6aced3d37bb72a50f63ea78a02c0cb3774.001.1",
+     "at": "2026-09-03T09:20:49.380Z",
      "weight": 0.35
     }
    ],
@@ -151,71 +227,50 @@
    "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "CUY-00490-0010",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.47977,
-   "lng": -81.66805,
+   "name": "Delaware River Turnpike",
+   "state": "PA",
+   "waterway": "Delaware River",
+   "lat": 40.1157232,
+   "lng": -74.8256028,
    "score": 0.55,
    "signals": [
     {
      "kind": "weather",
      "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued September 3 at 12:26AM EDT until September 3 at 2:00AM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1ffdccb7320423713d467d1a2ab722db12af6d2e.001.1",
-     "at": "2026-09-03T04:49:25.773Z",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued September 3 at 3:38AM EDT until September 3 at 5:30AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3e40ac0f3e67c214eeade752c39bdba8f05b05f5.001.1",
+     "at": "2026-09-03T09:20:49.669Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Trenton NJ: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Seaway International",
-   "state": "NY",
-   "waterway": "St. Lawrence River",
-   "lat": 44.9895172,
-   "lng": -74.7393646,
+   "name": "Walt Whitman",
+   "state": "PA",
+   "waterway": "Delaware River",
+   "lat": 39.9072951,
+   "lng": -75.1410302,
    "score": 0.55,
    "signals": [
     {
      "kind": "weather",
      "level": "high",
-     "headline": "Flood Warning in force",
-     "detail": "Flood Warning issued September 2 at 11:32PM EDT until September 3 at 2:30AM EDT by NWS Burlington VT",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.58ebf7ab578b180d966186afdc4eaf5eb7be2ea9.001.1",
-     "at": "2026-09-03T04:49:25.624Z",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued September 3 at 3:38AM EDT until September 3 at 5:30AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3e40ac0f3e67c214eeade752c39bdba8f05b05f5.001.1",
+     "at": "2026-09-03T09:20:49.502Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "no USGS gauge within ~13 km"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
-   "verdict": "Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Leo Frigo",
-   "state": "WI",
-   "waterway": "Fox River",
-   "lat": 44.5307424,
-   "lng": -87.9993328,
-   "score": 0.24,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "notable",
-     "headline": "Nearby gauge rising 0.26 ft in 24 h",
-     "detail": "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage 4.11 ft, discharge 4 cfs, up 0.26 ft over 24 h — this gauge is not on the channel the NTSB record names.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/040850684/",
-     "at": "2026-09-02T23:00:00.000-05:00",
-     "weight": 0.04
-    }
-   ],
-   "gaps": [],
-   "verdict": "Nearby gauge rising 0.26 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -252,33 +307,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.67 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Benjamin Franklin",
-   "state": "PA",
-   "waterway": "Delaware River",
-   "lat": 39.9529288,
-   "lng": -75.1343785,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Betsy Ross",
-   "state": "PA",
-   "waterway": "Delaware River",
-   "lat": 39.9847942,
-   "lng": -75.0659033,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.78 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -330,7 +359,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 2.25 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 2.05 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -356,20 +385,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 4.50 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Commodore Barry",
-   "state": "NJ",
-   "waterway": "Delaware River",
-   "lat": 39.8267836,
-   "lng": -75.3700139,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "Darby Creek near Darby, PA: tidal record, 0.21 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 4.39 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -387,15 +403,15 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Delaware River Turnpike",
-   "state": "PA",
-   "waterway": "Delaware River",
-   "lat": 40.1157232,
-   "lng": -74.8256028,
+   "name": "CUY-00490-0010",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.47977,
+   "lng": -81.66805,
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 8.92 ft over 24 h"
+    "Cuyahoga River at Independence OH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -421,7 +437,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.97 ft over 24 h"
+    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 1.04 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -434,7 +450,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: stage steady at 1.25 ft over 24 h"
+    "Airline Canal at Blind River near Gramercy, LA: stage steady at 1.18 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -460,7 +476,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.14 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Davis Pond Freshwater Diversion near Boutte, LA: stage steady at 9.83 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -486,7 +502,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: stage steady at 14.85 ft over 24 h"
+    "Mississippi River at Baton Rouge, LA: stage steady at 14.71 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -499,7 +515,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.48 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.52 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -513,6 +529,19 @@
    "signals": [],
    "gaps": [
     "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.73 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Leo Frigo",
+   "state": "WI",
+   "waterway": "Fox River",
+   "lat": 44.5307424,
+   "lng": -87.9993328,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 4.09 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -538,7 +567,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -551,7 +580,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -590,7 +619,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: stage steady at 4.16 ft over 24 h"
+    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.01 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -642,7 +671,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 1.01 ft over 24 h"
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -668,7 +697,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CORTE MADERA C A ROSS CA: stage steady at 4.24 ft over 24 h"
+    "CORTE MADERA C A ROSS CA: stage steady at 4.23 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -681,7 +710,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.32 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -720,7 +749,20 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.84 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Seaway International",
+   "state": "NY",
+   "waterway": "St. Lawrence River",
+   "lat": 44.9895172,
+   "lng": -74.7393646,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "no USGS gauge within ~13 km"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -733,7 +775,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 4.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 4.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -759,7 +801,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: stage steady at 1.65 ft over 24 h"
+    "Panama Canal at Hwy 44 near Gonzales, LA: stage steady at 1.60 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -772,7 +814,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: stage steady at 2.90 ft over 24 h"
+    "FROG CREEK NEAR RUBONIA FL: stage steady at 2.89 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -811,7 +853,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.21 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.18 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -824,7 +866,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: stage steady at 1.01 ft over 24 h"
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -837,20 +879,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Third River at Bloomfield NJ: tidal record, 0.15 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Walt Whitman",
-   "state": "PA",
-   "waterway": "Delaware River",
-   "lat": 39.9072951,
-   "lng": -75.1410302,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Third River at Bloomfield NJ: tidal record, 0.26 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -884,7 +913,7 @@
  "escalated": [
   "Rainbow",
   "Veterans Memorial",
-  "CUY-00002-1441"
+  "Commodore Barry"
  ],
  "sources": [
   {
@@ -901,5 +930,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "7 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "10 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
