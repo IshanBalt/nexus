@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-09-03T22:24:27.998Z",
- "durationMs": 7810,
+ "ranAt": "2026-09-04T00:13:52.872Z",
+ "durationMs": 5316,
  "watched": 59,
  "excluded": [
   {
@@ -23,7 +23,7 @@
    "waterway": "Neches River",
    "lat": 29.984244,
    "lng": -93.8708568,
-   "score": 0.9,
+   "score": 0.55,
    "signals": [
     {
      "kind": "weather",
@@ -31,21 +31,12 @@
      "headline": "Flood Warning in force",
      "detail": "Flood Warning issued September 3 at 1:59PM CDT by NWS Lake Charles LA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f491253129c77e8ecdc143123a723c5fc693869c.003.1",
-     "at": "2026-09-03T22:24:21.565Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued September 3 at 9:52AM CDT until September 3 at 7:00PM CDT by NWS Lake Charles LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3f780f99b47d34c7f9eeb259cf11be0262f01a7e.001.1",
-     "at": "2026-09-03T22:24:21.565Z",
+     "at": "2026-09-04T00:13:49.148Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.97 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 1.19 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -55,7 +46,7 @@
    "waterway": "Neches River",
    "lat": 29.9803582,
    "lng": -93.8700305,
-   "score": 0.9,
+   "score": 0.55,
    "signals": [
     {
      "kind": "weather",
@@ -63,21 +54,12 @@
      "headline": "Flood Warning in force",
      "detail": "Flood Warning issued September 3 at 1:59PM CDT by NWS Lake Charles LA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f491253129c77e8ecdc143123a723c5fc693869c.003.1",
-     "at": "2026-09-03T22:24:21.581Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued September 3 at 9:52AM CDT until September 3 at 7:00PM CDT by NWS Lake Charles LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3f780f99b47d34c7f9eeb259cf11be0262f01a7e.001.1",
-     "at": "2026-09-03T22:24:21.581Z",
+     "at": "2026-09-04T00:13:49.158Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.97 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 1.19 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -87,29 +69,20 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49481,
    "lng": -81.70729,
-   "score": 0.63,
+   "score": 0.5,
    "signals": [
     {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued September 3 at 4:51PM EDT until September 3 at 6:45PM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.56628dd4f40405a6b823ebb73195b1c69f43e148.001.1",
-     "at": "2026-09-03T22:24:21.405Z",
-     "weight": 0.35
-    },
-    {
      "kind": "river",
-     "level": "notable",
-     "headline": "Cuyahoga River rising 0.40 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.19 ft, discharge 471 cfs, up 0.40 ft over 24 h.",
+     "level": "high",
+     "headline": "Cuyahoga River rising 3.29 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 6.08 ft, discharge 1,900 cfs, up 3.29 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-09-03T18:00:00.000-04:00",
-     "weight": 0.08
+     "at": "2026-09-03T20:00:00.000-04:00",
+     "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 3.29 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00006-1456",
@@ -117,29 +90,20 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49423,
    "lng": -81.70286,
-   "score": 0.63,
+   "score": 0.5,
    "signals": [
     {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued September 3 at 4:51PM EDT until September 3 at 6:45PM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.56628dd4f40405a6b823ebb73195b1c69f43e148.001.1",
-     "at": "2026-09-03T22:24:21.455Z",
-     "weight": 0.35
-    },
-    {
      "kind": "river",
-     "level": "notable",
-     "headline": "Cuyahoga River rising 0.40 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.19 ft, discharge 471 cfs, up 0.40 ft over 24 h.",
+     "level": "high",
+     "headline": "Cuyahoga River rising 3.29 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 6.08 ft, discharge 1,900 cfs, up 3.29 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-09-03T18:00:00.000-04:00",
-     "weight": 0.08
+     "at": "2026-09-03T20:00:00.000-04:00",
+     "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 3.29 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00010-1613",
@@ -147,71 +111,20 @@
    "waterway": "Cuyahoga River",
    "lat": 41.49941,
    "lng": -81.67162,
-   "score": 0.63,
+   "score": 0.5,
    "signals": [
     {
-     "kind": "weather",
+     "kind": "river",
      "level": "high",
-     "headline": "Special Marine Warning in force",
-     "detail": "Special Marine Warning issued September 3 at 4:51PM EDT until September 3 at 6:45PM EDT by NWS Cleveland OH",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.56628dd4f40405a6b823ebb73195b1c69f43e148.001.1",
-     "at": "2026-09-03T22:24:21.417Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "river",
-     "level": "notable",
-     "headline": "Cuyahoga River rising 0.40 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.19 ft, discharge 471 cfs, up 0.40 ft over 24 h.",
+     "headline": "Cuyahoga River rising 3.29 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 6.08 ft, discharge 1,900 cfs, up 3.29 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-09-03T18:00:00.000-04:00",
-     "weight": 0.08
+     "at": "2026-09-03T20:00:00.000-04:00",
+     "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Special Marine Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "LUC-00002-1862",
-   "state": "OH",
-   "waterway": "Maumee River",
-   "lat": 41.64126,
-   "lng": -83.53514,
-   "score": 0.29,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "elevated",
-     "headline": "Nearby gauge rising 1.11 ft in 24 h",
-     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 3.14 ft, discharge 77 cfs, up 1.11 ft over 24 h — this gauge is not on the channel the NTSB record names.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
-     "at": "2026-09-03T17:30:00.000-04:00",
-     "weight": 0.09
-    }
-   ],
-   "gaps": [],
-   "verdict": "Nearby gauge rising 1.11 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "LUC-01W02-0002",
-   "state": "OH",
-   "waterway": "Maumee River",
-   "lat": 41.65165,
-   "lng": -83.52704,
-   "score": 0.29,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "elevated",
-     "headline": "Nearby gauge rising 1.11 ft in 24 h",
-     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 3.14 ft, discharge 77 cfs, up 1.11 ft over 24 h — this gauge is not on the channel the NTSB record names.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
-     "at": "2026-09-03T17:30:00.000-04:00",
-     "weight": 0.09
-    }
-   ],
-   "gaps": [],
-   "verdict": "Nearby gauge rising 1.11 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 3.29 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "CUY-00490-0010",
@@ -219,20 +132,62 @@
    "waterway": "Cuyahoga River",
    "lat": 41.47977,
    "lng": -81.66805,
-   "score": 0.28,
+   "score": 0.5,
    "signals": [
     {
      "kind": "river",
-     "level": "notable",
-     "headline": "Cuyahoga River rising 0.40 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.19 ft, discharge 471 cfs, up 0.40 ft over 24 h.",
+     "level": "high",
+     "headline": "Cuyahoga River rising 3.29 ft in 24 h",
+     "detail": "Cuyahoga River at Independence OH: stage 6.08 ft, discharge 1,900 cfs, up 3.29 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-09-03T18:00:00.000-04:00",
-     "weight": 0.08
+     "at": "2026-09-03T20:00:00.000-04:00",
+     "weight": 0.3
     }
    ],
    "gaps": [],
-   "verdict": "Cuyahoga River rising 0.40 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Cuyahoga River rising 3.29 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "LUC-00002-1862",
+   "state": "OH",
+   "waterway": "Maumee River",
+   "lat": 41.64126,
+   "lng": -83.53514,
+   "score": 0.35,
+   "signals": [
+    {
+     "kind": "river",
+     "level": "high",
+     "headline": "Nearby gauge rising 2.28 ft in 24 h",
+     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 4.31 ft, discharge 169 cfs, up 2.28 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
+     "at": "2026-09-03T19:30:00.000-04:00",
+     "weight": 0.15
+    }
+   ],
+   "gaps": [],
+   "verdict": "Nearby gauge rising 2.28 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "LUC-01W02-0002",
+   "state": "OH",
+   "waterway": "Maumee River",
+   "lat": 41.65165,
+   "lng": -83.52704,
+   "score": 0.35,
+   "signals": [
+    {
+     "kind": "river",
+     "level": "high",
+     "headline": "Nearby gauge rising 2.28 ft in 24 h",
+     "detail": "Ottawa River at University of Toledo, Toledo OH: stage 4.31 ft, discharge 169 cfs, up 2.28 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04177000/",
+     "at": "2026-09-03T19:30:00.000-04:00",
+     "weight": 0.15
+    }
+   ],
+   "gaps": [],
+   "verdict": "Nearby gauge rising 2.28 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Delaware River Turnpike",
@@ -245,15 +200,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Delaware River rising 0.29 ft in 24 h",
-     "detail": "Delaware River at Trenton NJ: stage 9.20 ft, discharge 5,950 cfs, up 0.29 ft over 24 h.",
+     "headline": "Delaware River rising 0.33 ft in 24 h",
+     "detail": "Delaware River at Trenton NJ: stage 9.27 ft, discharge 6,300 cfs, up 0.33 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01463500/",
-     "at": "2026-09-03T17:15:00.000-04:00",
+     "at": "2026-09-03T19:15:00.000-04:00",
      "weight": 0.08
     }
    ],
    "gaps": [],
-   "verdict": "Delaware River rising 0.29 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Delaware River rising 0.33 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -303,7 +258,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.80 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.66 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -316,7 +271,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.80 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.66 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -368,7 +323,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 1.83 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 1.89 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -381,7 +336,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 5.49 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 5.47 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -433,7 +388,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.71 ft over 24 h"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.69 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -459,7 +414,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: stage steady at 1.06 ft over 24 h"
+    "Airline Canal at Blind River near Gramercy, LA: stage steady at 1.09 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -472,7 +427,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Belle Chasse, LA: tidal record, 1.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Belle Chasse, LA: tidal record, 1.05 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -498,7 +453,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 1.66 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 1.87 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -511,7 +466,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: stage steady at 14.38 ft over 24 h"
+    "Mississippi River at Baton Rouge, LA: stage steady at 14.30 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -537,7 +492,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.49 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.54 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -680,7 +635,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CORTE MADERA C A ROSS CA: stage steady at 4.24 ft over 24 h"
+    "CORTE MADERA C A ROSS CA: stage steady at 4.25 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -693,7 +648,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: stage steady at 2.46 ft over 24 h"
+    "KINDERHOOK CREEK AT ROSSMAN NY: stage steady at 2.45 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -732,7 +687,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.84 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.53 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -758,7 +713,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 4.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 4.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -875,7 +830,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.80 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.66 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -926,5 +881,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "5 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "6 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
