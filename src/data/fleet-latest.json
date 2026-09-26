@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-09-26T18:12:12.406Z",
- "durationMs": 21435,
+ "ranAt": "2026-09-26T21:21:11.252Z",
+ "durationMs": 17384,
  "watched": 59,
  "excluded": [
   {
@@ -31,7 +31,7 @@
      "headline": "Coastal Flood Warning in force",
      "detail": "Coastal Flood Warning issued September 26 at 2:08PM EDT until September 27 at 8:00PM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d3426ef0066cfc7d0193770d9f292063b7eb625.001.1",
-     "at": "2026-09-26T18:11:51.916Z",
+     "at": "2026-09-26T21:20:55.165Z",
      "weight": 0.35
     },
     {
@@ -40,7 +40,7 @@
      "headline": "High Wind Warning in force",
      "detail": "High Wind Warning issued September 26 at 1:24PM EDT until September 27 at 8:00AM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8ed7bccd60fd3a824a3f56275507419161d0b31f.001.1",
-     "at": "2026-09-26T18:11:51.916Z",
+     "at": "2026-09-26T21:20:55.165Z",
      "weight": 0.35
     },
     {
@@ -49,12 +49,12 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued September 26 at 12:18PM EDT until September 29 at 2:00AM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8fe193a3a27c821ed6bba9595ad846d36da29d38.001.1",
-     "at": "2026-09-26T18:11:51.916Z",
+     "at": "2026-09-26T21:20:55.165Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.70 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.69 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Coastal Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -72,7 +72,7 @@
      "headline": "Coastal Flood Warning in force",
      "detail": "Coastal Flood Warning issued September 26 at 2:08PM EDT until September 27 at 8:00PM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d3426ef0066cfc7d0193770d9f292063b7eb625.001.1",
-     "at": "2026-09-26T18:11:51.971Z",
+     "at": "2026-09-26T21:20:55.343Z",
      "weight": 0.35
     },
     {
@@ -81,7 +81,7 @@
      "headline": "High Wind Warning in force",
      "detail": "High Wind Warning issued September 26 at 1:24PM EDT until September 27 at 8:00AM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8ed7bccd60fd3a824a3f56275507419161d0b31f.001.1",
-     "at": "2026-09-26T18:11:51.971Z",
+     "at": "2026-09-26T21:20:55.343Z",
      "weight": 0.35
     },
     {
@@ -90,12 +90,12 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued September 26 at 12:18PM EDT until September 29 at 2:00AM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8fe193a3a27c821ed6bba9595ad846d36da29d38.001.1",
-     "at": "2026-09-26T18:11:51.971Z",
+     "at": "2026-09-26T21:20:55.343Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.70 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.69 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Coastal Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -109,21 +109,21 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "high",
+     "headline": "Coastal Flood Warning in force",
+     "detail": "Coastal Flood Warning issued September 26 at 4:23PM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.38d9a8ccbecb65dfc2f7f112189c8085fba16794.007.1",
+     "at": "2026-09-26T21:20:55.501Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:47PM EDT until September 27 at 12:00PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f7a3ddf92c192906a15c84cc522f4cbffe1e47d2.003.1",
-     "at": "2026-09-26T18:11:52.318Z",
+     "at": "2026-09-26T21:20:55.501Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Coastal Flood Warning in force",
-     "detail": "Coastal Flood Warning issued September 26 at 5:14AM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.61f02e743c8435d0dbf5b4a5e23fa6bf9784e86b.008.1",
-     "at": "2026-09-26T18:11:52.318Z",
-     "weight": 0.35
     },
     {
      "kind": "weather",
@@ -131,16 +131,16 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "The Coastal Flood Advisory has been replaced. Please see the latest information from NWS Upton NY on this developing situation.",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5fc2c07df9f96bd93565647920d09b90f7ca1592.001.1",
-     "at": "2026-09-26T18:11:52.318Z",
+     "at": "2026-09-26T21:20:55.501Z",
      "weight": 0.05
     },
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.55 ft in 24 h",
-     "detail": "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage 1.09 ft, discharge 144 cfs, up 0.55 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.48 ft in 24 h",
+     "detail": "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage 1.02 ft, discharge 126 cfs, up 0.48 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01302020/",
-     "at": "2026-09-26T12:30:00.000-05:00",
+     "at": "2026-09-26T15:30:00.000-05:00",
      "weight": 0.04
     }
    ],
@@ -157,21 +157,21 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "high",
+     "headline": "Coastal Flood Warning in force",
+     "detail": "Coastal Flood Warning issued September 26 at 4:23PM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.38d9a8ccbecb65dfc2f7f112189c8085fba16794.007.1",
+     "at": "2026-09-26T21:20:55.364Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:47PM EDT until September 27 at 12:00PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f7a3ddf92c192906a15c84cc522f4cbffe1e47d2.004.1",
-     "at": "2026-09-26T18:11:52.162Z",
+     "at": "2026-09-26T21:20:55.364Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Coastal Flood Warning in force",
-     "detail": "Coastal Flood Warning issued September 26 at 5:14AM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.61f02e743c8435d0dbf5b4a5e23fa6bf9784e86b.008.1",
-     "at": "2026-09-26T18:11:52.162Z",
-     "weight": 0.35
     },
     {
      "kind": "weather",
@@ -179,7 +179,7 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "The Coastal Flood Advisory has been replaced. Please see the latest information from NWS Upton NY on this developing situation.",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5fc2c07df9f96bd93565647920d09b90f7ca1592.001.1",
-     "at": "2026-09-26T18:11:52.162Z",
+     "at": "2026-09-26T21:20:55.364Z",
      "weight": 0.05
     }
    ],
@@ -198,21 +198,21 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "high",
+     "headline": "Coastal Flood Warning in force",
+     "detail": "Coastal Flood Warning issued September 26 at 4:23PM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.38d9a8ccbecb65dfc2f7f112189c8085fba16794.007.1",
+     "at": "2026-09-26T21:20:55.274Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:47PM EDT until September 27 at 12:00PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f7a3ddf92c192906a15c84cc522f4cbffe1e47d2.003.1",
-     "at": "2026-09-26T18:11:52.400Z",
+     "at": "2026-09-26T21:20:55.274Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Coastal Flood Warning in force",
-     "detail": "Coastal Flood Warning issued September 26 at 5:14AM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.61f02e743c8435d0dbf5b4a5e23fa6bf9784e86b.008.1",
-     "at": "2026-09-26T18:11:52.400Z",
-     "weight": 0.35
     },
     {
      "kind": "weather",
@@ -220,7 +220,7 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "The Coastal Flood Advisory has been replaced. Please see the latest information from NWS Upton NY on this developing situation.",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5fc2c07df9f96bd93565647920d09b90f7ca1592.001.1",
-     "at": "2026-09-26T18:11:52.400Z",
+     "at": "2026-09-26T21:20:55.274Z",
      "weight": 0.05
     }
    ],
@@ -239,21 +239,21 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "high",
+     "headline": "Coastal Flood Warning in force",
+     "detail": "Coastal Flood Warning issued September 26 at 4:23PM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.38d9a8ccbecb65dfc2f7f112189c8085fba16794.007.1",
+     "at": "2026-09-26T21:20:55.382Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:47PM EDT until September 27 at 12:00PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f7a3ddf92c192906a15c84cc522f4cbffe1e47d2.004.1",
-     "at": "2026-09-26T18:11:52.188Z",
+     "at": "2026-09-26T21:20:55.382Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Coastal Flood Warning in force",
-     "detail": "Coastal Flood Warning issued September 26 at 5:14AM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.61f02e743c8435d0dbf5b4a5e23fa6bf9784e86b.008.1",
-     "at": "2026-09-26T18:11:52.188Z",
-     "weight": 0.35
     },
     {
      "kind": "weather",
@@ -261,7 +261,7 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "The Coastal Flood Advisory has been replaced. Please see the latest information from NWS Upton NY on this developing situation.",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5fc2c07df9f96bd93565647920d09b90f7ca1592.001.1",
-     "at": "2026-09-26T18:11:52.188Z",
+     "at": "2026-09-26T21:20:55.382Z",
      "weight": 0.05
     }
    ],
@@ -280,21 +280,21 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "high",
+     "headline": "Coastal Flood Warning in force",
+     "detail": "Coastal Flood Warning issued September 26 at 4:23PM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.38d9a8ccbecb65dfc2f7f112189c8085fba16794.007.1",
+     "at": "2026-09-26T21:20:55.507Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:47PM EDT until September 27 at 12:00PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f7a3ddf92c192906a15c84cc522f4cbffe1e47d2.004.1",
-     "at": "2026-09-26T18:11:52.319Z",
+     "at": "2026-09-26T21:20:55.507Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Coastal Flood Warning in force",
-     "detail": "Coastal Flood Warning issued September 26 at 5:14AM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.61f02e743c8435d0dbf5b4a5e23fa6bf9784e86b.004.1",
-     "at": "2026-09-26T18:11:52.319Z",
-     "weight": 0.35
     }
    ],
    "gaps": [
@@ -312,21 +312,21 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "high",
+     "headline": "Coastal Flood Warning in force",
+     "detail": "Coastal Flood Warning issued September 26 at 4:34PM EDT until September 27 at 3:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f239ac2d55bf4aa97a2f346adaee0a7116b5cc8e.009.1",
+     "at": "2026-09-26T21:20:54.710Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:26PM EDT until September 27 at 12:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.55a3917fc6d6e9b2aa1c9ed022207d21f8998fca.003.1",
-     "at": "2026-09-26T18:11:51.584Z",
+     "at": "2026-09-26T21:20:54.710Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Coastal Flood Warning in force",
-     "detail": "Coastal Flood Warning issued September 26 at 11:51AM EDT until September 27 at 3:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9857a6218da2fa40a24418924b892e22cf47025a.009.1",
-     "at": "2026-09-26T18:11:51.584Z",
-     "weight": 0.35
     }
    ],
    "gaps": [
@@ -344,21 +344,21 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "high",
+     "headline": "Coastal Flood Warning in force",
+     "detail": "Coastal Flood Warning issued September 26 at 4:34PM EDT until September 27 at 3:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f239ac2d55bf4aa97a2f346adaee0a7116b5cc8e.009.1",
+     "at": "2026-09-26T21:20:54.718Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:26PM EDT until September 27 at 12:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.55a3917fc6d6e9b2aa1c9ed022207d21f8998fca.003.1",
-     "at": "2026-09-26T18:11:51.477Z",
+     "at": "2026-09-26T21:20:54.718Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Coastal Flood Warning in force",
-     "detail": "Coastal Flood Warning issued September 26 at 11:51AM EDT until September 27 at 3:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9857a6218da2fa40a24418924b892e22cf47025a.009.1",
-     "at": "2026-09-26T18:11:51.477Z",
-     "weight": 0.35
     }
    ],
    "gaps": [
@@ -376,27 +376,50 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "high",
+     "headline": "Coastal Flood Warning in force",
+     "detail": "Coastal Flood Warning issued September 26 at 4:34PM EDT until September 27 at 3:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f239ac2d55bf4aa97a2f346adaee0a7116b5cc8e.009.1",
+     "at": "2026-09-26T21:20:54.667Z",
+     "weight": 0.35
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:26PM EDT until September 27 at 12:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.55a3917fc6d6e9b2aa1c9ed022207d21f8998fca.003.1",
-     "at": "2026-09-26T18:11:51.473Z",
+     "at": "2026-09-26T21:20:54.667Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Coastal Flood Warning in force",
-     "detail": "Coastal Flood Warning issued September 26 at 11:51AM EDT until September 27 at 3:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9857a6218da2fa40a24418924b892e22cf47025a.009.1",
-     "at": "2026-09-26T18:11:51.473Z",
-     "weight": 0.35
     }
    ],
    "gaps": [
     "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 4.74 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Coastal Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Claiborne Pell Newport",
+   "state": "RI",
+   "waterway": "Narragansett Bay",
+   "lat": 41.5035896,
+   "lng": -71.3423974,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flash Flood Warning in force",
+     "detail": "Flash Flood Warning issued September 26 at 5:09PM EDT until September 26 at 6:45PM EDT by NWS Boston/Norton MA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.655bc085538163260735f31d9fc55fabd55b8e99.001.1",
+     "at": "2026-09-26T21:20:55.949Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 4.82 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Commodore Barry",
@@ -408,29 +431,29 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "notable",
+     "headline": "Coastal Flood Advisory in force",
+     "detail": "Coastal Flood Advisory issued September 26 at 4:34PM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f239ac2d55bf4aa97a2f346adaee0a7116b5cc8e.010.1",
+     "at": "2026-09-26T21:20:55.280Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:26PM EDT until September 27 at 12:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.55a3917fc6d6e9b2aa1c9ed022207d21f8998fca.003.1",
-     "at": "2026-09-26T18:11:51.991Z",
+     "at": "2026-09-26T21:20:55.280Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Coastal Flood Advisory in force",
-     "detail": "Coastal Flood Advisory issued September 26 at 11:51AM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9857a6218da2fa40a24418924b892e22cf47025a.010.1",
-     "at": "2026-09-26T18:11:51.991Z",
-     "weight": 0.05
     },
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.34 ft in 24 h",
-     "detail": "Darby Creek near Darby, PA: stage 2.18 ft, discharge 78 cfs, up 0.34 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.36 ft in 24 h",
+     "detail": "Darby Creek near Darby, PA: stage 2.20 ft, discharge 82 cfs, up 0.36 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01475510/",
-     "at": "2026-09-26T14:00:00.000-04:00",
+     "at": "2026-09-26T17:00:00.000-04:00",
      "weight": 0.04
     }
    ],
@@ -447,25 +470,25 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "notable",
+     "headline": "Coastal Flood Advisory in force",
+     "detail": "Coastal Flood Advisory issued September 26 at 4:34PM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f239ac2d55bf4aa97a2f346adaee0a7116b5cc8e.010.1",
+     "at": "2026-09-26T21:20:55.920Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:26PM EDT until September 27 at 12:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.55a3917fc6d6e9b2aa1c9ed022207d21f8998fca.003.1",
-     "at": "2026-09-26T18:11:52.982Z",
+     "at": "2026-09-26T21:20:55.920Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Coastal Flood Advisory in force",
-     "detail": "Coastal Flood Advisory issued September 26 at 11:51AM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9857a6218da2fa40a24418924b892e22cf47025a.010.1",
-     "at": "2026-09-26T18:11:52.982Z",
-     "weight": 0.05
     }
    ],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.37 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.48 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Wind Advisory in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -479,25 +502,25 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "notable",
+     "headline": "Coastal Flood Advisory in force",
+     "detail": "Coastal Flood Advisory issued September 26 at 4:34PM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f239ac2d55bf4aa97a2f346adaee0a7116b5cc8e.010.1",
+     "at": "2026-09-26T21:20:56.000Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:26PM EDT until September 27 at 12:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.55a3917fc6d6e9b2aa1c9ed022207d21f8998fca.003.1",
-     "at": "2026-09-26T18:11:52.978Z",
+     "at": "2026-09-26T21:20:56.000Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Coastal Flood Advisory in force",
-     "detail": "Coastal Flood Advisory issued September 26 at 11:51AM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9857a6218da2fa40a24418924b892e22cf47025a.010.1",
-     "at": "2026-09-26T18:11:52.978Z",
-     "weight": 0.05
     }
    ],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.37 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.48 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Wind Advisory in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -511,25 +534,25 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "notable",
+     "headline": "Coastal Flood Advisory in force",
+     "detail": "Coastal Flood Advisory issued September 26 at 4:34PM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f239ac2d55bf4aa97a2f346adaee0a7116b5cc8e.010.1",
+     "at": "2026-09-26T21:20:55.946Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:26PM EDT until September 27 at 12:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.55a3917fc6d6e9b2aa1c9ed022207d21f8998fca.003.1",
-     "at": "2026-09-26T18:11:52.862Z",
+     "at": "2026-09-26T21:20:55.946Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Coastal Flood Advisory in force",
-     "detail": "Coastal Flood Advisory issued September 26 at 11:51AM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9857a6218da2fa40a24418924b892e22cf47025a.010.1",
-     "at": "2026-09-26T18:11:52.862Z",
-     "weight": 0.05
     }
    ],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 8.82 ft over 24 h"
+    "Delaware River at Trenton NJ: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Wind Advisory in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -543,25 +566,25 @@
    "signals": [
     {
      "kind": "weather",
+     "level": "notable",
+     "headline": "Coastal Flood Advisory in force",
+     "detail": "Coastal Flood Advisory issued September 26 at 4:34PM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f239ac2d55bf4aa97a2f346adaee0a7116b5cc8e.010.1",
+     "at": "2026-09-26T21:20:55.878Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "weather",
      "level": "elevated",
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:26PM EDT until September 27 at 12:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.55a3917fc6d6e9b2aa1c9ed022207d21f8998fca.003.1",
-     "at": "2026-09-26T18:11:53.878Z",
+     "at": "2026-09-26T21:20:55.878Z",
      "weight": 0.15
-    },
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Coastal Flood Advisory in force",
-     "detail": "Coastal Flood Advisory issued September 26 at 11:51AM EDT until September 27 at 5:00AM EDT by NWS Mount Holly NJ",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9857a6218da2fa40a24418924b892e22cf47025a.010.1",
-     "at": "2026-09-26T18:11:53.878Z",
-     "weight": 0.05
     }
    ],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.37 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.48 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Wind Advisory in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -577,9 +600,9 @@
      "kind": "weather",
      "level": "elevated",
      "headline": "Gale Warning in force",
-     "detail": "Gale Warning issued September 26 at 4:30AM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c07debd80e61e5b5a862c184fd0b467cc21a188.003.1",
-     "at": "2026-09-26T18:11:52.140Z",
+     "detail": "Gale Warning issued September 26 at 2:21PM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6fa79156ac6166c77a74bd1add9d817c2de4fcd.006.1",
+     "at": "2026-09-26T21:20:55.339Z",
      "weight": 0.15
     }
    ],
@@ -602,7 +625,7 @@
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued September 26 at 1:28PM EDT until September 27 at 12:00PM EDT by NWS Albany NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.669c03476eaebb812c1685655aed158358bbeccd.001.1",
-     "at": "2026-09-26T18:11:52.177Z",
+     "at": "2026-09-26T21:20:55.425Z",
      "weight": 0.15
     }
    ],
@@ -623,9 +646,9 @@
      "kind": "weather",
      "level": "elevated",
      "headline": "Gale Warning in force",
-     "detail": "Gale Warning issued September 26 at 4:30AM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c07debd80e61e5b5a862c184fd0b467cc21a188.003.1",
-     "at": "2026-09-26T18:11:52.042Z",
+     "detail": "Gale Warning issued September 26 at 2:21PM EDT until September 27 at 6:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b6fa79156ac6166c77a74bd1add9d817c2de4fcd.006.1",
+     "at": "2026-09-26T21:20:55.297Z",
      "weight": 0.15
     }
    ],
@@ -646,9 +669,9 @@
      "kind": "weather",
      "level": "elevated",
      "headline": "Gale Warning in force",
-     "detail": "Gale Warning issued September 26 at 7:45AM EDT until September 26 at 10:00PM EDT by NWS Baltimore MD/Washington DC",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0bac24901d863f96dee49834905d5ce9e40741a.002.1",
-     "at": "2026-09-26T18:11:51.833Z",
+     "detail": "Gale Warning issued September 26 at 2:51PM EDT until September 26 at 10:00PM EDT by NWS Baltimore MD/Washington DC",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fcecbaec471d02c39b68c0cff5e9eb859bfc10f2.003.1",
+     "at": "2026-09-26T21:20:54.981Z",
      "weight": 0.15
     }
    ],
@@ -669,9 +692,9 @@
      "kind": "weather",
      "level": "notable",
      "headline": "Coastal Flood Advisory in force",
-     "detail": "Coastal Flood Advisory issued September 26 at 2:22AM EDT until September 27 at 11:00PM EDT by NWS Gray ME",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cc8a48feb9455f4f7f49809dd0992359b0b5fc60.001.2",
-     "at": "2026-09-26T18:11:52.045Z",
+     "detail": "Coastal Flood Advisory issued September 26 at 2:26PM EDT until September 27 at 11:00PM EDT by NWS Gray ME",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7bb98cd60e8688b79c8b17af203c1ecafc855445.001.1",
+     "at": "2026-09-26T21:20:55.199Z",
      "weight": 0.05
     }
    ],
@@ -694,7 +717,7 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "Coastal Flood Advisory issued September 26 at 12:14AM EDT until September 27 at 5:00AM EDT by NWS Jacksonville FL",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.de793d41c56e58c952cd370bb07bbce05d8ad60e.001.2",
-     "at": "2026-09-26T18:11:51.645Z",
+     "at": "2026-09-26T21:20:54.730Z",
      "weight": 0.05
     }
    ],
@@ -712,7 +735,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 2.59 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 2.64 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -738,7 +761,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.24 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -764,7 +787,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 0.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -777,20 +800,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 6.02 ft over 24 h"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Claiborne Pell Newport",
-   "state": "RI",
-   "waterway": "Narragansett Bay",
-   "lat": 41.5035896,
-   "lng": -71.3423974,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 4.95 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 5.98 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -816,7 +826,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.97 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 2.94 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -829,7 +839,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.97 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 2.94 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -842,7 +852,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.97 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 2.94 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -855,7 +865,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.97 ft over 24 h"
+    "Cuyahoga River at Independence OH: stage steady at 2.94 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -868,7 +878,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.92 ft over 24 h"
+    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.93 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -881,7 +891,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.27 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -894,7 +904,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Belle Chasse, LA: tidal record, 0.80 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Belle Chasse, LA: tidal record, 0.73 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -907,7 +917,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: stage steady at 9.64 ft over 24 h"
+    "Davis Pond Freshwater Diversion near Boutte, LA: stage steady at 9.67 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -933,7 +943,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: tidal record, 0.33 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Baton Rouge, LA: tidal record, 0.43 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -946,7 +956,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.33 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.23 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -959,7 +969,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.54 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.43 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -998,7 +1008,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1011,7 +1021,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1076,7 +1086,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.47 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "KINDERHOOK CREEK AT ROSSMAN NY: stage steady at 2.19 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1089,7 +1099,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.55 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.92 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1115,7 +1125,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.98 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.99 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1128,7 +1138,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: stage steady at 1.70 ft over 24 h"
+    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1141,7 +1151,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: stage steady at 1.83 ft over 24 h"
+    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.28 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1154,7 +1164,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAVANNAH RIVER AT GA 25, AT PORT WENTWORTH, GA: tidal record, 7.77 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAVANNAH RIVER AT GA 25, AT PORT WENTWORTH, GA: tidal record, 7.82 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1180,7 +1190,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.65 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -1218,5 +1228,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "10 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "11 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
