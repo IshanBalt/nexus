@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-09-28T00:12:06.660Z",
- "durationMs": 26289,
+ "ranAt": "2026-09-28T05:39:41.112Z",
+ "durationMs": 13377,
  "watched": 59,
  "excluded": [
   {
@@ -31,7 +31,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued September 27 at 5:05PM EDT until September 29 at 2:00AM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9fed3fbc15a79c3f13fab3547aaad02895191594.001.1",
-     "at": "2026-09-28T00:11:44.046Z",
+     "at": "2026-09-28T05:39:28.407Z",
      "weight": 0.35
     },
     {
@@ -40,12 +40,12 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "Coastal Flood Advisory issued September 27 at 2:27PM EDT until September 29 at 12:00AM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6dcabc9557bd60a5798a0209549744cd5e715cd7.001.2",
-     "at": "2026-09-28T00:11:44.046Z",
+     "at": "2026-09-28T05:39:28.407Z",
      "weight": 0.05
     }
    ],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.83 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.43 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -63,7 +63,7 @@
      "headline": "Flood Watch in force",
      "detail": "Flood Watch issued September 27 at 5:05PM EDT until September 29 at 2:00AM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9fed3fbc15a79c3f13fab3547aaad02895191594.001.1",
-     "at": "2026-09-28T00:11:42.970Z",
+     "at": "2026-09-28T05:39:28.403Z",
      "weight": 0.35
     },
     {
@@ -72,12 +72,12 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "Coastal Flood Advisory issued September 27 at 2:27PM EDT until September 29 at 12:00AM EDT by NWS Boston/Norton MA",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6dcabc9557bd60a5798a0209549744cd5e715cd7.001.2",
-     "at": "2026-09-28T00:11:42.970Z",
+     "at": "2026-09-28T05:39:28.403Z",
      "weight": 0.05
     }
    ],
    "gaps": [
-    "MILL CREEK AT SANDWICH, MA: tidal record, 0.83 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MILL CREEK AT SANDWICH, MA: tidal record, 0.43 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -87,20 +87,50 @@
    "waterway": "Delaware River",
    "lat": 40.1157232,
    "lng": -74.8256028,
-   "score": 0.28,
+   "score": 0.38,
    "signals": [
     {
      "kind": "river",
-     "level": "notable",
-     "headline": "Delaware River rising 0.74 ft in 24 h",
-     "detail": "Delaware River at Trenton NJ: stage 9.54 ft, discharge 7,710 cfs, up 0.74 ft over 24 h.",
+     "level": "elevated",
+     "headline": "Delaware River rising 0.75 ft in 24 h",
+     "detail": "Delaware River at Trenton NJ: stage 9.53 ft, discharge 7,660 cfs, up 0.75 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01463500/",
-     "at": "2026-09-27T19:15:00.000-04:00",
-     "weight": 0.08
+     "at": "2026-09-28T01:15:00.000-04:00",
+     "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Delaware River rising 0.74 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Delaware River rising 0.75 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Memorial",
+   "state": "NH",
+   "waterway": "Piscataqua River",
+   "lat": 43.079502,
+   "lng": -70.7525813,
+   "score": 0.29,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "notable",
+     "headline": "Coastal Flood Advisory in force",
+     "detail": "Coastal Flood Advisory issued September 27 at 7:48PM EDT until September 28 at 3:00AM EDT by NWS Gray ME",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.daa6d210ed39acf55932de6c46cccc135821a09f.001.2",
+     "at": "2026-09-28T05:39:28.468Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Nearby gauge rising 0.27 ft in 24 h",
+     "detail": "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: stage 4.72 ft, discharge 14 cfs, up 0.27 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/01073785/",
+     "at": "2026-09-28T00:30:00.000-04:00",
+     "weight": 0.04
+    }
+   ],
+   "gaps": [],
+   "verdict": "Coastal Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "George Washington",
@@ -114,14 +144,14 @@
      "kind": "weather",
      "level": "notable",
      "headline": "Coastal Flood Statement in force",
-     "detail": "Coastal Flood Statement issued September 27 at 3:14PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82ce844d83e40fe7a054e714b6f65b86bb2f72c4.008.2",
-     "at": "2026-09-28T00:11:49.523Z",
+     "detail": "Coastal Flood Statement issued September 27 at 8:57PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bde4dc0c7e30fb8ac2029f14fa308dc9f83d9cd6.006.1",
+     "at": "2026-09-28T05:39:28.674Z",
      "weight": 0.05
     }
    ],
    "gaps": [
-    "USGS returned 503"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: tidal record, 0.67 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Coastal Flood Statement in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -137,9 +167,9 @@
      "kind": "weather",
      "level": "notable",
      "headline": "Coastal Flood Statement in force",
-     "detail": "Coastal Flood Statement issued September 27 at 3:14PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82ce844d83e40fe7a054e714b6f65b86bb2f72c4.008.2",
-     "at": "2026-09-28T00:11:43.142Z",
+     "detail": "Coastal Flood Statement issued September 27 at 8:57PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bde4dc0c7e30fb8ac2029f14fa308dc9f83d9cd6.006.1",
+     "at": "2026-09-28T05:39:28.569Z",
      "weight": 0.05
     }
    ],
@@ -147,29 +177,6 @@
     "no USGS gauge within ~13 km"
    ],
    "verdict": "Coastal Flood Statement in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Memorial",
-   "state": "NH",
-   "waterway": "Piscataqua River",
-   "lat": 43.079502,
-   "lng": -70.7525813,
-   "score": 0.25,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Coastal Flood Advisory in force",
-     "detail": "Coastal Flood Advisory issued September 27 at 7:48PM EDT until September 28 at 3:00AM EDT by NWS Gray ME",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.daa6d210ed39acf55932de6c46cccc135821a09f.001.2",
-     "at": "2026-09-28T00:11:47.124Z",
-     "weight": 0.05
-    }
-   ],
-   "gaps": [
-    "USGS returned 503"
-   ],
-   "verdict": "Coastal Flood Advisory in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Napoleon Bonaparte Broward",
@@ -183,9 +190,9 @@
      "kind": "weather",
      "level": "notable",
      "headline": "Coastal Flood Advisory in force",
-     "detail": "Coastal Flood Advisory issued September 27 at 8:00PM EDT until September 28 at 5:00AM EDT by NWS Jacksonville FL",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3dc579855c658730f8bb40b68ea4393b56bc6f1d.001.2",
-     "at": "2026-09-28T00:11:41.150Z",
+     "detail": "Coastal Flood Advisory issued September 27 at 9:18PM EDT until September 28 at 8:00PM EDT by NWS Jacksonville FL",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8536463d1252ae7d3ea49731753d802a5b263816.001.1",
+     "at": "2026-09-28T05:39:28.186Z",
      "weight": 0.05
     }
    ],
@@ -206,14 +213,14 @@
      "kind": "weather",
      "level": "notable",
      "headline": "Coastal Flood Statement in force",
-     "detail": "Coastal Flood Statement issued September 27 at 3:14PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82ce844d83e40fe7a054e714b6f65b86bb2f72c4.008.2",
-     "at": "2026-09-28T00:11:46.435Z",
+     "detail": "Coastal Flood Statement issued September 27 at 8:57PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bde4dc0c7e30fb8ac2029f14fa308dc9f83d9cd6.006.1",
+     "at": "2026-09-28T05:39:28.630Z",
      "weight": 0.05
     }
    ],
    "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: tidal record, 0.50 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: tidal record, 0.42 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Coastal Flood Statement in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -229,14 +236,14 @@
      "kind": "weather",
      "level": "notable",
      "headline": "Coastal Flood Statement in force",
-     "detail": "Coastal Flood Statement issued September 27 at 3:14PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82ce844d83e40fe7a054e714b6f65b86bb2f72c4.008.2",
-     "at": "2026-09-28T00:11:44.799Z",
+     "detail": "Coastal Flood Statement issued September 27 at 8:57PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bde4dc0c7e30fb8ac2029f14fa308dc9f83d9cd6.006.1",
+     "at": "2026-09-28T05:39:28.524Z",
      "weight": 0.05
     }
    ],
    "gaps": [
-    "Third River at Bloomfield NJ: tidal record, 0.73 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Third River at Bloomfield NJ: tidal record, 0.42 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Coastal Flood Statement in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -252,9 +259,9 @@
      "kind": "weather",
      "level": "notable",
      "headline": "Coastal Flood Statement in force",
-     "detail": "Coastal Flood Statement issued September 27 at 3:14PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82ce844d83e40fe7a054e714b6f65b86bb2f72c4.008.2",
-     "at": "2026-09-28T00:11:44.649Z",
+     "detail": "Coastal Flood Statement issued September 27 at 8:57PM EDT until September 28 at 12:00PM EDT by NWS Upton NY",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bde4dc0c7e30fb8ac2029f14fa308dc9f83d9cd6.006.1",
+     "at": "2026-09-28T05:39:28.584Z",
      "weight": 0.05
     }
    ],
@@ -272,7 +279,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 2.78 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 2.96 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -298,7 +305,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.55 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.64 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -311,7 +318,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -324,7 +331,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -376,7 +383,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: fetch failed"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 5.74 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -402,7 +409,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Darby Creek near Darby, PA: tidal record, 2.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Darby Creek near Darby, PA: tidal record, 2.20 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -415,7 +422,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "SAN DIEGO R A FASHION VALLEY AT SAN DIEGO CA: stage steady at 2.22 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -428,7 +435,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.82 ft over 24 h"
+    "Cuyahoga River at Independence OH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -441,7 +448,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.82 ft over 24 h"
+    "Cuyahoga River at Independence OH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -454,7 +461,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.82 ft over 24 h"
+    "Cuyahoga River at Independence OH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -467,7 +474,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: stage steady at 2.82 ft over 24 h"
+    "Cuyahoga River at Independence OH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -480,7 +487,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.93 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -493,7 +500,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: stage steady at 0.77 ft over 24 h"
+    "Airline Canal at Blind River near Gramercy, LA: stage steady at 0.53 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -506,7 +513,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Belle Chasse, LA: tidal record, 0.50 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Belle Chasse, LA: tidal record, 0.69 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -519,7 +526,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.25 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -558,7 +565,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.55 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.46 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -571,7 +578,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.68 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -584,7 +591,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 3.91 ft over 24 h"
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -597,7 +604,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "no USGS gauge within ~13 km"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -610,7 +617,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -623,7 +630,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -675,7 +682,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.87 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.83 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -688,7 +695,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 6.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 6.16 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -701,7 +708,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "CORTE MADERA C A ROSS CA: stage steady at 4.20 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -714,7 +721,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.33 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -727,7 +734,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 6.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 6.16 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -740,7 +747,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 8.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 8.61 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -766,7 +773,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.83 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 4.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -779,7 +786,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 5.42 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -792,7 +799,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: stage steady at 1.27 ft over 24 h"
+    "Panama Canal at Hwy 44 near Gonzales, LA: stage steady at 1.08 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -857,7 +864,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: tidal record, 0.50 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "RICHMOND CREEK AT LIGHTHOUSE AVE AT RICHMOND NY: tidal record, 0.42 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -870,7 +877,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.83 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -883,7 +890,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.56 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 7.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
