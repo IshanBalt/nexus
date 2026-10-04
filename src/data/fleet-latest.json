@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-10-04T00:19:43.727Z",
- "durationMs": 21474,
+ "ranAt": "2026-10-04T06:07:32.855Z",
+ "durationMs": 8638,
  "watched": 59,
  "excluded": [
   {
@@ -18,99 +18,33 @@
  ],
  "structures": [
   {
-   "name": "Greater New Orleans",
-   "state": "LA",
-   "waterway": "Mississippi River",
-   "lat": 29.9377577,
-   "lng": -90.0568725,
-   "score": 0.9,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flash Flood Warning in force",
-     "detail": "Flash Flood Warning issued October 3 at 6:20PM CDT until October 3 at 7:30PM CDT by NWS New Orleans LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.33796e6fa0ca2c598dfe09a5d364985edce1ae7c.001.1",
-     "at": "2026-10-04T00:19:22.931Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued October 3 at 4:40PM CDT until October 5 at 12:00AM CDT by NWS New Orleans LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7258ef91666705d29ff4846a13316141a0b205fb.001.1",
-     "at": "2026-10-04T00:19:22.931Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "Mississippi River at Belle Chasse, LA: tidal record, 1.80 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Huey P. Long",
-   "state": "LA",
-   "waterway": "Mississippi River",
-   "lat": 29.9421682,
-   "lng": -90.1665627,
-   "score": 0.9,
-   "signals": [
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flash Flood Warning in force",
-     "detail": "Flash Flood Warning issued October 3 at 6:20PM CDT until October 3 at 7:30PM CDT by NWS New Orleans LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.33796e6fa0ca2c598dfe09a5d364985edce1ae7c.001.1",
-     "at": "2026-10-04T00:19:22.976Z",
-     "weight": 0.35
-    },
-    {
-     "kind": "weather",
-     "level": "high",
-     "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued October 3 at 4:40PM CDT until October 5 at 12:00AM CDT by NWS New Orleans LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7258ef91666705d29ff4846a13316141a0b205fb.001.1",
-     "at": "2026-10-04T00:19:22.976Z",
-     "weight": 0.35
-    }
-   ],
-   "gaps": [
-    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.59 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Flash Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "Hale Boggs",
    "state": "LA",
    "waterway": "Mississippi River",
    "lat": 29.9456238,
    "lng": -90.3722932,
-   "score": 0.6,
+   "score": 0.59,
    "signals": [
-    {
-     "kind": "weather",
-     "level": "notable",
-     "headline": "Flood Advisory in force",
-     "detail": "Flood Advisory issued October 3 at 4:54PM CDT until October 3 at 8:30PM CDT by NWS New Orleans LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8db0131b9c54e56c32edbbe821bb5decb13fd9d1.001.1",
-     "at": "2026-10-04T00:19:22.959Z",
-     "weight": 0.05
-    },
     {
      "kind": "weather",
      "level": "high",
      "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued October 3 at 4:40PM CDT until October 5 at 12:00AM CDT by NWS New Orleans LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7258ef91666705d29ff4846a13316141a0b205fb.001.1",
-     "at": "2026-10-04T00:19:22.959Z",
+     "detail": "Flood Watch issued October 4 at 12:46AM CDT until October 5 at 12:00AM CDT by NWS New Orleans LA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5047c473446a68b9fb299acd844b7e52b0f684c4.002.1",
+     "at": "2026-10-04T06:07:24.995Z",
      "weight": 0.35
+    },
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Nearby gauge rising 0.25 ft in 24 h",
+     "detail": "Davis Pond Freshwater Diversion near Boutte, LA: stage 9.67 ft, discharge 10 cfs, up 0.25 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/295501090190400/",
+     "at": "2026-10-04T00:15:00.000-05:00",
+     "weight": 0.04
     }
    ],
-   "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.47 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
+   "gaps": [],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
@@ -125,39 +59,85 @@
      "kind": "weather",
      "level": "high",
      "headline": "Flood Watch in force",
-     "detail": "Flood Watch issued October 3 at 4:40PM CDT until October 5 at 12:00AM CDT by NWS New Orleans LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7258ef91666705d29ff4846a13316141a0b205fb.001.1",
-     "at": "2026-10-04T00:19:23.088Z",
+     "detail": "Flood Watch issued October 4 at 12:46AM CDT until October 5 at 12:00AM CDT by NWS New Orleans LA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5047c473446a68b9fb299acd844b7e52b0f684c4.002.1",
+     "at": "2026-10-04T06:07:25.003Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.13 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Israel LaFleur",
+   "name": "Greater New Orleans",
    "state": "LA",
-   "waterway": "Calcasieu River",
-   "lat": 30.2068016,
-   "lng": -93.2848893,
+   "waterway": "Mississippi River",
+   "lat": 29.9377577,
+   "lng": -90.0568725,
    "score": 0.55,
    "signals": [
     {
      "kind": "weather",
      "level": "high",
-     "headline": "Flood Warning in force",
-     "detail": "Flood Warning issued October 2 at 9:30PM CDT until October 6 at 1:00AM CDT by NWS Lake Charles LA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.591eb0b7ee73b778a100d1822946f4dc25e484b9.002.1",
-     "at": "2026-10-04T00:19:22.906Z",
+     "headline": "Flood Watch in force",
+     "detail": "Flood Watch issued October 4 at 12:46AM CDT until October 5 at 12:00AM CDT by NWS New Orleans LA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5047c473446a68b9fb299acd844b7e52b0f684c4.002.1",
+     "at": "2026-10-04T06:07:24.871Z",
      "weight": 0.35
     }
    ],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.46 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Belle Chasse, LA: tidal record, 1.67 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
-   "verdict": "Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Huey P. Long",
+   "state": "LA",
+   "waterway": "Mississippi River",
+   "lat": 29.9421682,
+   "lng": -90.1665627,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flood Watch in force",
+     "detail": "Flood Watch issued October 4 at 12:46AM CDT until October 5 at 12:00AM CDT by NWS New Orleans LA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5047c473446a68b9fb299acd844b7e52b0f684c4.002.1",
+     "at": "2026-10-04T06:07:24.884Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.59 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Napoleon Bonaparte Broward",
+   "state": "FL",
+   "waterway": "St. Johns River",
+   "lat": 30.3790463,
+   "lng": -81.5545862,
+   "score": 0.55,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Flood Watch in force",
+     "detail": "Flood Watch issued October 4 at 1:22AM EDT until October 5 at 8:00AM EDT by NWS Jacksonville FL",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3db8c1007b9c57e76864b00f67759a2179bb4345.001.1",
+     "at": "2026-10-04T06:07:24.761Z",
+     "weight": 0.35
+    }
+   ],
+   "gaps": [
+    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.77 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Flood Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Horace Wilkinson",
@@ -170,15 +150,15 @@
     {
      "kind": "river",
      "level": "elevated",
-     "headline": "Mississippi River rising 1.16 ft in 24 h",
-     "detail": "Mississippi River at Baton Rouge, LA: stage 11.78 ft, discharge 326,000 cfs, up 1.16 ft over 24 h.",
+     "headline": "Mississippi River rising 1.10 ft in 24 h",
+     "detail": "Mississippi River at Baton Rouge, LA: stage 11.79 ft, discharge 326,000 cfs, up 1.10 ft over 24 h.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/07374000/",
-     "at": "2026-10-03T18:15:00.000-05:00",
+     "at": "2026-10-04T00:15:00.000-05:00",
      "weight": 0.18
     }
    ],
    "gaps": [],
-   "verdict": "Mississippi River rising 1.16 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Mississippi River rising 1.10 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -215,7 +195,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SUISUN SLOUGH NR BENICIA CA: tidal record, 5.19 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SUISUN SLOUGH NR BENICIA CA: tidal record, 5.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -267,7 +247,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "no USGS gauge within ~13 km"
+    "USGS returned 503"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -293,7 +273,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 0.13 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: stage steady at 4.10 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -306,7 +286,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.40 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 7.11 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -332,7 +312,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Darby Creek near Darby, PA: stage steady at 1.98 ft over 24 h"
+    "Darby Creek near Darby, PA: stage steady at 1.96 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -358,7 +338,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.57 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: stage steady at 2.89 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -371,7 +351,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.57 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: stage steady at 2.89 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -384,7 +364,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.57 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: stage steady at 2.89 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -397,7 +377,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cuyahoga River at Independence OH: tidal record, 0.57 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cuyahoga River at Independence OH: stage steady at 2.89 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -410,7 +390,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 8.86 ft over 24 h"
+    "Delaware River at Trenton NJ: stage steady at 8.82 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -423,7 +403,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.62 ft over 24 h"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: stage steady at 0.61 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -436,7 +416,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: tidal record, 0.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.93 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -449,7 +429,20 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 2.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cedar Bayou at I-10 nr Mont Belvieu, TX: tidal record, 1.73 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Israel LaFleur",
+   "state": "LA",
+   "waterway": "Calcasieu River",
+   "lat": 30.2068016,
+   "lng": -93.2848893,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.49 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -462,7 +455,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 4.13 ft over 24 h"
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 4.11 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -488,7 +481,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -501,7 +494,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.30 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -541,19 +534,6 @@
    "signals": [],
    "gaps": [
     "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Napoleon Bonaparte Broward",
-   "state": "FL",
-   "waterway": "St. Johns River",
-   "lat": 30.3790463,
-   "lng": -81.5545862,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.77 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -605,7 +585,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.97 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.96 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -631,7 +611,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CORTE MADERA C A ROSS CA: stage steady at 4.20 ft over 24 h"
+    "USGS returned 503"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -644,7 +624,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.23 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -683,7 +663,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 8.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 8.14 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -709,7 +689,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 4.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.98 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -722,7 +702,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 5.83 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -748,7 +728,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.59 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.62 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -787,7 +767,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: stage steady at 105.69 ft over 24 h"
+    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.23 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -813,7 +793,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.97 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Cow Bayou at SH 87 nr Bridge City, TX: tidal record, 0.96 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -826,7 +806,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Third River at Bloomfield NJ: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "USGS unreachable: fetch failed"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -871,9 +851,9 @@
   }
  ],
  "escalated": [
-  "Greater New Orleans",
-  "Huey P. Long",
-  "Hale Boggs"
+  "Hale Boggs",
+  "Gramercy",
+  "Greater New Orleans"
  ],
  "sources": [
   {
