@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-10-15T04:57:23.880Z",
- "durationMs": 19277,
+ "ranAt": "2026-10-15T09:35:54.984Z",
+ "durationMs": 5080,
  "watched": 59,
  "excluded": [
   {
@@ -29,14 +29,14 @@
      "kind": "weather",
      "level": "elevated",
      "headline": "Gale Watch in force",
-     "detail": "Gale Watch issued October 14 at 12:57PM EDT until October 17 at 8:00PM EDT by NWS Boston/Norton MA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.565f02a726d65416f4cfe813fcb99d065974a05b.012.1",
-     "at": "2026-10-15T04:57:06.361Z",
+     "detail": "Gale Watch issued October 15 at 2:45AM EDT until October 17 at 8:00PM EDT by NWS Boston/Norton MA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea14b98cfe025efbb18e5f2e04733da103a3d1d2.012.1",
+     "at": "2026-10-15T09:35:51.543Z",
      "weight": 0.15
     }
    ],
    "gaps": [
-    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 3.55 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 4.01 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Gale Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -54,7 +54,7 @@
      "headline": "Gale Watch in force",
      "detail": "Gale Watch issued October 14 at 11:56PM CDT until October 17 at 1:00PM CDT by NWS Houston/Galveston TX",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e7a287fd1eb09cb2f3fdd332bf94237bb2c9a740.001.1",
-     "at": "2026-10-15T04:57:06.544Z",
+     "at": "2026-10-15T09:35:51.741Z",
      "weight": 0.15
     }
    ],
@@ -74,17 +74,17 @@
     {
      "kind": "weather",
      "level": "elevated",
-     "headline": "Gale Watch in force",
-     "detail": "Gale Watch issued October 14 at 11:36PM EDT until October 17 at 4:00AM EDT by NWS Gaylord MI",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0d156d5464473fd0f638502bdddb96531eac4460.003.1",
-     "at": "2026-10-15T04:57:05.575Z",
+     "headline": "Gale Warning in force",
+     "detail": "Gale Warning issued October 15 at 2:56AM EDT until October 17 at 4:00AM EDT by NWS Gaylord MI",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d805c29f6e7f4d9cf4ddf5d24d905f2632def34.002.2",
+     "at": "2026-10-15T09:35:50.783Z",
      "weight": 0.15
     }
    ],
    "gaps": [
     "no USGS gauge within ~13 km"
    ],
-   "verdict": "Gale Watch in force. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Gale Warning in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Tobin",
@@ -98,9 +98,9 @@
      "kind": "weather",
      "level": "elevated",
      "headline": "Gale Watch in force",
-     "detail": "Gale Watch issued October 14 at 12:57PM EDT until October 17 at 8:00PM EDT by NWS Boston/Norton MA",
-     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.565f02a726d65416f4cfe813fcb99d065974a05b.005.2",
-     "at": "2026-10-15T04:57:05.436Z",
+     "detail": "Gale Watch issued October 15 at 2:45AM EDT until October 17 at 8:00PM EDT by NWS Boston/Norton MA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea14b98cfe025efbb18e5f2e04733da103a3d1d2.006.2",
+     "at": "2026-10-15T09:35:50.665Z",
      "weight": 0.15
     }
    ],
@@ -110,88 +110,27 @@
    "verdict": "Gale Watch in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "CUY-00002-1441",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49481,
-   "lng": -81.70729,
-   "score": 0.28,
+   "name": "William Preston Lane Jr.",
+   "state": "MD",
+   "waterway": "Chesapeake Bay",
+   "lat": 38.9961371,
+   "lng": -76.3892615,
+   "score": 0.25,
    "signals": [
     {
-     "kind": "river",
+     "kind": "weather",
      "level": "notable",
-     "headline": "Cuyahoga River rising 0.72 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.35 ft, discharge 540 cfs, up 0.72 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-10-15T00:45:00.000-04:00",
-     "weight": 0.08
+     "headline": "Marine Weather Statement in force",
+     "detail": "Marine Weather Statement issued October 15 at 3:56AM EDT by NWS Baltimore MD/Washington DC",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.506df1da65ea9dcf01a4e2fae0c25ba292e92eb9.001.1",
+     "at": "2026-10-15T09:35:50.635Z",
+     "weight": 0.05
     }
    ],
-   "gaps": [],
-   "verdict": "Cuyahoga River rising 0.72 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00006-1456",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49423,
-   "lng": -81.70286,
-   "score": 0.28,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "notable",
-     "headline": "Cuyahoga River rising 0.72 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.35 ft, discharge 540 cfs, up 0.72 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-10-15T00:45:00.000-04:00",
-     "weight": 0.08
-    }
+   "gaps": [
+    "no USGS gauge within ~13 km"
    ],
-   "gaps": [],
-   "verdict": "Cuyahoga River rising 0.72 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00010-1613",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.49941,
-   "lng": -81.67162,
-   "score": 0.28,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "notable",
-     "headline": "Cuyahoga River rising 0.72 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.35 ft, discharge 540 cfs, up 0.72 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-10-15T00:45:00.000-04:00",
-     "weight": 0.08
-    }
-   ],
-   "gaps": [],
-   "verdict": "Cuyahoga River rising 0.72 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "CUY-00490-0010",
-   "state": "OH",
-   "waterway": "Cuyahoga River",
-   "lat": 41.47977,
-   "lng": -81.66805,
-   "score": 0.28,
-   "signals": [
-    {
-     "kind": "river",
-     "level": "notable",
-     "headline": "Cuyahoga River rising 0.72 ft in 24 h",
-     "detail": "Cuyahoga River at Independence OH: stage 3.35 ft, discharge 540 cfs, up 0.72 ft over 24 h.",
-     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/04208000/",
-     "at": "2026-10-15T00:45:00.000-04:00",
-     "weight": 0.08
-    }
-   ],
-   "gaps": [],
-   "verdict": "Cuyahoga River rising 0.72 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Marine Weather Statement in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -202,7 +141,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 3.53 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 3.22 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -228,7 +167,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.92 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.90 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -319,7 +258,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 5.62 ft over 24 h"
+    "LITTLE CALUMET RIVER AT SOUTH HOLLAND, IL: stage steady at 5.64 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -345,7 +284,59 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN DIEGO R A FASHION VALLEY AT SAN DIEGO CA: stage steady at 3.26 ft over 24 h"
+    "SAN DIEGO R A FASHION VALLEY AT SAN DIEGO CA: stage steady at 3.20 ft over 24 h"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00002-1441",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49481,
+   "lng": -81.70729,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: tidal record, 0.84 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00006-1456",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49423,
+   "lng": -81.70286,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: tidal record, 0.84 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00010-1613",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.49941,
+   "lng": -81.67162,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: tidal record, 0.84 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "CUY-00490-0010",
+   "state": "OH",
+   "waterway": "Cuyahoga River",
+   "lat": 41.47977,
+   "lng": -81.66805,
+   "score": 0.2,
+   "signals": [],
+   "gaps": [
+    "Cuyahoga River at Independence OH: tidal record, 0.84 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -358,7 +349,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 9.72 ft over 24 h"
+    "Delaware River at Trenton NJ: stage steady at 9.66 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -397,7 +388,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: stage steady at 1.36 ft over 24 h"
+    "Airline Canal at Blind River near Gramercy, LA: stage steady at 1.29 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -436,7 +427,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: tidal record, 0.60 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Baton Rouge, LA: tidal record, 0.53 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -475,7 +466,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 4.28 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -501,7 +492,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 1.82 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 1.47 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -514,7 +505,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 1.82 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 1.47 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -540,7 +531,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.14 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -631,7 +622,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CORTE MADERA C A ROSS CA: stage steady at 4.22 ft over 24 h"
+    "CORTE MADERA C A ROSS CA: stage steady at 4.21 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -683,7 +674,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 8.17 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.97 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -735,7 +726,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: stage steady at 2.08 ft over 24 h"
+    "Panama Canal at Hwy 44 near Gonzales, LA: stage steady at 2.05 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -748,7 +739,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: stage steady at 2.09 ft over 24 h"
+    "FROG CREEK NEAR RUBONIA FL: stage steady at 2.24 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -827,19 +818,6 @@
    "signals": [],
    "gaps": [
     "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.72 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "William Preston Lane Jr.",
-   "state": "MD",
-   "waterway": "Chesapeake Bay",
-   "lat": 38.9961371,
-   "lng": -76.3892615,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "no USGS gauge within ~13 km"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
