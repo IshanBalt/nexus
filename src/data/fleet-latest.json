@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-10-21T12:08:48.448Z",
- "durationMs": 20651,
+ "ranAt": "2026-10-21T17:28:44.616Z",
+ "durationMs": 12626,
  "watched": 59,
  "excluded": [
   {
@@ -18,6 +18,144 @@
  ],
  "structures": [
   {
+   "name": "Antioch",
+   "state": "CA",
+   "waterway": "San Joaquin River",
+   "lat": 38.0297241,
+   "lng": -121.7515641,
+   "score": 0.65,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Tsunami Warning in force",
+     "detail": "TEST Tsunami Warning issued October 21 at 9:31AM PDT until October 21 at 10:31AM PDT by NWS National Tsunami Warning Center",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e44842d243e6e042fdae8d0d467b041c4c4f98fc.001.1",
+     "at": "2026-10-21T17:28:32.349Z",
+     "weight": 0.45
+    }
+   ],
+   "gaps": [
+    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 2.68 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Tsunami Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Benicia-Martinez",
+   "state": "CA",
+   "waterway": "Carquinez Strait",
+   "lat": 38.0404902,
+   "lng": -122.1228994,
+   "score": 0.65,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Tsunami Warning in force",
+     "detail": "TEST Tsunami Warning issued October 21 at 9:31AM PDT until October 21 at 10:31AM PDT by NWS National Tsunami Warning Center",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e44842d243e6e042fdae8d0d467b041c4c4f98fc.001.1",
+     "at": "2026-10-21T17:28:32.346Z",
+     "weight": 0.45
+    }
+   ],
+   "gaps": [
+    "SUISUN SLOUGH NR BENICIA CA: tidal record, 3.85 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Tsunami Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Carquinez",
+   "state": "CA",
+   "waterway": "Carquinez Strait",
+   "lat": 38.0608989,
+   "lng": -122.2251736,
+   "score": 0.65,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Tsunami Warning in force",
+     "detail": "TEST Tsunami Warning issued October 21 at 9:31AM PDT until October 21 at 10:31AM PDT by NWS National Tsunami Warning Center",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e44842d243e6e042fdae8d0d467b041c4c4f98fc.001.1",
+     "at": "2026-10-21T17:28:32.416Z",
+     "weight": 0.45
+    }
+   ],
+   "gaps": [
+    "no USGS gauge within ~13 km"
+   ],
+   "verdict": "Tsunami Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Golden Gate",
+   "state": "CA",
+   "waterway": "San Francisco Bay",
+   "lat": 37.8176155,
+   "lng": -122.4783123,
+   "score": 0.65,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Tsunami Warning in force",
+     "detail": "TEST Tsunami Warning issued October 21 at 9:31AM PDT until October 21 at 10:31AM PDT by NWS National Tsunami Warning Center",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e44842d243e6e042fdae8d0d467b041c4c4f98fc.001.1",
+     "at": "2026-10-21T17:28:32.476Z",
+     "weight": 0.45
+    }
+   ],
+   "gaps": [
+    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.99 ft over 24 h"
+   ],
+   "verdict": "Tsunami Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Richmond-San Rafael",
+   "state": "CA",
+   "waterway": "San Francisco Bay",
+   "lat": 37.9377058,
+   "lng": -122.4583655,
+   "score": 0.65,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Tsunami Warning in force",
+     "detail": "TEST Tsunami Warning issued October 21 at 9:31AM PDT until October 21 at 10:31AM PDT by NWS National Tsunami Warning Center",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e44842d243e6e042fdae8d0d467b041c4c4f98fc.001.1",
+     "at": "2026-10-21T17:28:32.591Z",
+     "weight": 0.45
+    }
+   ],
+   "gaps": [
+    "CORTE MADERA C A ROSS CA: stage steady at 4.21 ft over 24 h"
+   ],
+   "verdict": "Tsunami Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "San Mateo-Hayward",
+   "state": "CA",
+   "waterway": "San Francisco Bay",
+   "lat": 37.5950607,
+   "lng": -122.2288275,
+   "score": 0.65,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "high",
+     "headline": "Tsunami Warning in force",
+     "detail": "TEST Tsunami Warning issued October 21 at 9:31AM PDT until October 21 at 10:31AM PDT by NWS National Tsunami Warning Center",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e44842d243e6e042fdae8d0d467b041c4c4f98fc.001.1",
+     "at": "2026-10-21T17:28:32.607Z",
+     "weight": 0.45
+    }
+   ],
+   "gaps": [
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 6.48 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   ],
+   "verdict": "Tsunami Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
    "name": "Outerbridge Crossing",
    "state": "NY",
    "waterway": "Arthur Kill",
@@ -31,7 +169,7 @@
      "headline": "Coastal Flood Statement in force",
      "detail": "Coastal Flood Statement issued October 21 at 2:26AM EDT until October 21 at 6:00PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b50357c179a6533b6c4f105b62f3c7d7d29b3a4.003.1",
-     "at": "2026-10-21T12:08:29.869Z",
+     "at": "2026-10-21T17:28:33.371Z",
      "weight": 0.05
     }
    ],
@@ -54,7 +192,7 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "Coastal Flood Advisory issued October 21 at 2:39AM EDT until October 21 at 10:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fe9f91a2df44109c3e55566591959cc931a7ca0b.004.1",
-     "at": "2026-10-21T12:08:28.375Z",
+     "at": "2026-10-21T17:28:32.527Z",
      "weight": 0.05
     }
    ],
@@ -77,7 +215,7 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "Coastal Flood Advisory issued October 21 at 2:39AM EDT until October 21 at 10:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fe9f91a2df44109c3e55566591959cc931a7ca0b.004.1",
-     "at": "2026-10-21T12:08:28.490Z",
+     "at": "2026-10-21T17:28:32.491Z",
      "weight": 0.05
     }
    ],
@@ -100,7 +238,7 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "Coastal Flood Advisory issued October 21 at 2:39AM EDT until October 21 at 10:00PM EDT by NWS Mount Holly NJ",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fe9f91a2df44109c3e55566591959cc931a7ca0b.004.1",
-     "at": "2026-10-21T12:08:28.239Z",
+     "at": "2026-10-21T17:28:32.364Z",
      "weight": 0.05
     }
    ],
@@ -123,7 +261,7 @@
      "headline": "Coastal Flood Statement in force",
      "detail": "Coastal Flood Statement issued October 21 at 2:26AM EDT until October 21 at 6:00PM EDT by NWS Upton NY",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b50357c179a6533b6c4f105b62f3c7d7d29b3a4.003.1",
-     "at": "2026-10-21T12:08:29.391Z",
+     "at": "2026-10-21T17:28:32.959Z",
      "weight": 0.05
     }
    ],
@@ -133,17 +271,25 @@
    "verdict": "Coastal Flood Statement in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Antioch",
-   "state": "CA",
-   "waterway": "San Joaquin River",
-   "lat": 38.0297241,
-   "lng": -121.7515641,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "SAN JOAQUIN R A JERSEY POINT CA: tidal record, 2.76 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+   "name": "Sunshine Skyway",
+   "state": "FL",
+   "waterway": "Tampa Bay",
+   "lat": 27.617565,
+   "lng": -82.6535188,
+   "score": 0.24,
+   "signals": [
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "Nearby gauge rising 0.28 ft in 24 h",
+     "detail": "FROG CREEK NEAR RUBONIA FL: stage 1.87 ft, discharge 15 cfs, up 0.28 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/02300082/",
+     "at": "2026-10-21T13:00:00.000-04:00",
+     "weight": 0.04
+    }
    ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
+   "gaps": [],
+   "verdict": "Nearby gauge rising 0.28 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Astoria-Megler",
@@ -155,19 +301,6 @@
    "signals": [],
    "gaps": [
     "no USGS gauge within ~13 km"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Benicia-Martinez",
-   "state": "CA",
-   "waterway": "Carquinez Strait",
-   "lat": 38.0404902,
-   "lng": -122.1228994,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "SUISUN SLOUGH NR BENICIA CA: tidal record, 3.89 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -224,19 +357,6 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Carquinez",
-   "state": "CA",
-   "waterway": "Carquinez Strait",
-   "lat": 38.0608989,
-   "lng": -122.2251736,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "no USGS gauge within ~13 km"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "Chesapeake City",
    "state": "MD",
    "waterway": "Chesapeake and Delaware Canal",
@@ -245,7 +365,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 0.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "CHRISTINA RIVER AT COOCHS BRIDGE, DE: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -271,7 +391,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 2.81 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 2.61 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -284,7 +404,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Darby Creek near Darby, PA: tidal record, 0.01 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Darby Creek near Darby, PA: stage steady at 1.89 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -297,7 +417,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS returned 503"
+    "SAN DIEGO R A FASHION VALLEY AT SAN DIEGO CA: stage steady at 2.54 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -362,7 +482,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: stage steady at 8.89 ft over 24 h"
+    "Delaware River at Trenton NJ: stage steady at 8.88 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -380,19 +500,6 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Golden Gate",
-   "state": "CA",
-   "waterway": "San Francisco Bay",
-   "lat": 37.8176155,
-   "lng": -122.4783123,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "REDWOOD C A HWY 1 BRIDGE A MUIR BEACH CA: stage steady at 0.98 ft over 24 h"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "Gramercy",
    "state": "LA",
    "waterway": "Mississippi River",
@@ -401,7 +508,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -414,7 +521,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Belle Chasse, LA: tidal record, 0.70 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Belle Chasse, LA: tidal record, 0.51 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -427,7 +534,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.14 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Davis Pond Freshwater Diversion near Boutte, LA: tidal record, 0.13 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -453,7 +560,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: tidal record, 0.35 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Baton Rouge, LA: tidal record, 0.38 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -466,7 +573,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.36 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "L. Cataouatche at Whiskey Canal S of Waggaman, LA: tidal record, 0.34 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -479,7 +586,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.24 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.20 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -492,7 +599,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 4.26 ft over 24 h"
+    "ASHWAUBENON CREEK AT GRANT ST NR WEST DEPERE, WI: stage steady at 4.25 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -518,7 +625,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -531,7 +638,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -570,7 +677,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -583,7 +690,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.33 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.26 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -627,19 +734,6 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
   {
-   "name": "Richmond-San Rafael",
-   "state": "CA",
-   "waterway": "San Francisco Bay",
-   "lat": 37.9377058,
-   "lng": -122.4583655,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "USGS returned 503"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
    "name": "Rip Van Winkle",
    "state": "NY",
    "waterway": "Hudson River",
@@ -648,7 +742,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.15 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -662,19 +756,6 @@
    "signals": [],
    "gaps": [
     "MILL CREEK AT SANDWICH, MA: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "San Mateo-Hayward",
-   "state": "CA",
-   "waterway": "San Francisco Bay",
-   "lat": 37.5950607,
-   "lng": -122.2288275,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 6.09 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -700,7 +781,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.41 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WILLAMETTE RIVER AT PORTLAND, OR: tidal record, 3.31 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -713,20 +794,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Sunshine Skyway",
-   "state": "FL",
-   "waterway": "Tampa Bay",
-   "lat": 27.617565,
-   "lng": -82.6535188,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.05 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -765,7 +833,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.39 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "MYSTIC R AT AMELIA EARHART DAM NR SOMERVILLE, MA: tidal record, 0.34 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -835,7 +903,11 @@
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   }
  ],
- "escalated": [],
+ "escalated": [
+  "Antioch",
+  "Benicia-Martinez",
+  "Carquinez"
+ ],
  "sources": [
   {
    "name": "NTSB MIR-25-10",
@@ -851,5 +923,5 @@
   }
  ],
  "briefs": [],
- "briefGap": "0 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
+ "briefGap": "6 structures met the escalation threshold on readings alone, and this run wrote about none of them: it had no GROQ_API_KEY and MIREYE_API_TOKEN. The readings are the whole of what it produced. They were still measured, timestamped and published on schedule."
 }
