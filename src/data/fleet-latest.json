@@ -1,6 +1,6 @@
 {
- "ranAt": "2026-10-24T00:55:59.890Z",
- "durationMs": 22180,
+ "ranAt": "2026-10-24T05:17:28.541Z",
+ "durationMs": 22100,
  "watched": 59,
  "excluded": [
   {
@@ -31,7 +31,7 @@
      "headline": "Coastal Flood Warning in force",
      "detail": "Coastal Flood Warning issued October 23 at 7:33PM EDT until October 26 at 8:00PM EDT by NWS Jacksonville FL",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6748e1e2af3e58f0c38257c9f9310a6da1c03d15.002.2",
-     "at": "2026-10-24T00:55:38.557Z",
+     "at": "2026-10-24T05:17:07.949Z",
      "weight": 0.35
     },
     {
@@ -40,7 +40,7 @@
      "headline": "Coastal Flood Advisory in force",
      "detail": "Coastal Flood Advisory issued October 23 at 7:33PM EDT until October 24 at 5:00AM EDT by NWS Jacksonville FL",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6748e1e2af3e58f0c38257c9f9310a6da1c03d15.002.3",
-     "at": "2026-10-24T00:55:38.557Z",
+     "at": "2026-10-24T05:17:07.949Z",
      "weight": 0.05
     },
     {
@@ -49,7 +49,7 @@
      "headline": "Wind Advisory in force",
      "detail": "Wind Advisory issued October 23 at 7:01PM EDT until October 25 at 1:00AM EDT by NWS Jacksonville FL",
      "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c67e26cdb9c01a64bf79ebbf7681027ebf293f44.001.1",
-     "at": "2026-10-24T00:55:38.557Z",
+     "at": "2026-10-24T05:17:07.949Z",
      "weight": 0.15
     }
    ],
@@ -57,6 +57,59 @@
     "ST. JOHNS RIVER AT JACKSONVILLE, FL: tidal record, 1.59 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Coastal Flood Warning in force. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "Coronado",
+   "state": "CA",
+   "waterway": "San Diego Bay",
+   "lat": 32.6928078,
+   "lng": -117.1503137,
+   "score": 0.33,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "notable",
+     "headline": "Marine Weather Statement in force",
+     "detail": "Marine Weather Statement issued October 23 at 8:36PM PDT by NWS San Diego CA",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.da45b0534388135bdbf7ed52db23fa7c33eec6d0.001.1",
+     "at": "2026-10-24T05:17:07.013Z",
+     "weight": 0.05
+    },
+    {
+     "kind": "river",
+     "level": "notable",
+     "headline": "San Diego Bay rising 0.27 ft in 24 h",
+     "detail": "SAN DIEGO R A FASHION VALLEY AT SAN DIEGO CA: stage 3.43 ft, discharge 51 cfs, up 0.27 ft over 24 h.",
+     "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/11023000/",
+     "at": "2026-10-23T21:15:00.000-07:00",
+     "weight": 0.08
+    }
+   ],
+   "gaps": [],
+   "verdict": "San Diego Bay rising 0.27 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+  },
+  {
+   "name": "William Preston Lane Jr.",
+   "state": "MD",
+   "waterway": "Chesapeake Bay",
+   "lat": 38.9961371,
+   "lng": -76.3892615,
+   "score": 0.25,
+   "signals": [
+    {
+     "kind": "weather",
+     "level": "notable",
+     "headline": "Marine Weather Statement in force",
+     "detail": "Marine Weather Statement issued October 23 at 10:30PM EDT by NWS Baltimore MD/Washington DC",
+     "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cb300726b821bfb41a7177d7be12b77ff0d0107c.001.1",
+     "at": "2026-10-24T05:17:08.580Z",
+     "weight": 0.05
+    }
+   ],
+   "gaps": [
+    "no USGS gauge within ~13 km"
+   ],
+   "verdict": "Marine Weather Statement in force. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Huey P. Long",
@@ -69,15 +122,15 @@
     {
      "kind": "river",
      "level": "notable",
-     "headline": "Nearby gauge rising 0.29 ft in 24 h",
-     "detail": "L. Cataouatche at Whiskey Canal S of Waggaman, LA: stage 6.99 ft, up 0.29 ft over 24 h — this gauge is not on the channel the NTSB record names.",
+     "headline": "Nearby gauge rising 0.41 ft in 24 h",
+     "detail": "L. Cataouatche at Whiskey Canal S of Waggaman, LA: stage 7.05 ft, up 0.41 ft over 24 h — this gauge is not on the channel the NTSB record names.",
      "sourceUrl": "https://waterdata.usgs.gov/monitoring-location/2951190901217/",
-     "at": "2026-10-23T19:15:00.000-05:00",
+     "at": "2026-10-23T23:15:00.000-05:00",
      "weight": 0.04
     }
    ],
    "gaps": [],
-   "verdict": "Nearby gauge rising 0.29 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
+   "verdict": "Nearby gauge rising 0.41 ft in 24 h. On the NTSB list with no vessel-collision assessment on record."
   },
   {
    "name": "Antioch",
@@ -114,7 +167,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.00 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SUISUN SLOUGH NR BENICIA CA: tidal record, 4.01 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -127,7 +180,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.94 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.91 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -140,7 +193,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.94 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.91 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -218,7 +271,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 3.84 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WICKFORD TIDE GAGE NORTH KINGSTOWN, RI: tidal record, 4.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -231,20 +284,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Darby Creek near Darby, PA: tidal record, 0.02 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "Coronado",
-   "state": "CA",
-   "waterway": "San Diego Bay",
-   "lat": 32.6928078,
-   "lng": -117.1503137,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "SAN DIEGO R A FASHION VALLEY AT SAN DIEGO CA: stage steady at 3.49 ft over 24 h"
+    "Darby Creek near Darby, PA: tidal record, 0.01 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -309,7 +349,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Trenton NJ: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Delaware River at Trenton NJ: stage steady at 8.66 ft over 24 h"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -322,7 +362,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: tidal record, 0.08 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "BRONX RIVER AT NY BOTANICAL GARDEN AT BRONX NY: tidal record, 0.05 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -348,7 +388,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.10 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Airline Canal at Blind River near Gramercy, LA: tidal record, 0.11 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -361,7 +401,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Belle Chasse, LA: tidal record, 0.55 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Belle Chasse, LA: tidal record, 0.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -400,7 +440,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Mississippi River at Baton Rouge, LA: tidal record, 0.23 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Mississippi River at Baton Rouge, LA: tidal record, 0.20 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -413,7 +453,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Calcasieu River at Hwy 171 at Moss Bluff, LA: tidal record, 0.36 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -465,7 +505,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "USGS unreachable: The operation was aborted due to timeout"
+    "Ottawa River at University of Toledo, Toledo OH: tidal record, 0.11 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -504,7 +544,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.06 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "WINNICUT RIVER AT GREENLAND, NR PORTSMOUTH, NH: tidal record, 0.07 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -569,7 +609,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.91 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 6.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -582,7 +622,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "CORTE MADERA C A ROSS CA: stage steady at 4.21 ft over 24 h"
+    "CORTE MADERA C A ROSS CA: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -595,7 +635,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.04 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "KINDERHOOK CREEK AT ROSSMAN NY: tidal record, 0.05 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -621,7 +661,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 5.91 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "DELAWARE RIVER AT NEW CASTLE, DE: tidal record, 6.03 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -634,7 +674,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.21 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "SAN FRANCISCO BAY A OLD DUMBARTON BR NR NEWARK CA: tidal record, 7.36 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -673,7 +713,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 5.29 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "C AND D CANAL NR DELAWARE CITY, DE: tidal record, 5.18 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -686,7 +726,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.12 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "Panama Canal at Hwy 44 near Gonzales, LA: tidal record, 0.11 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -699,7 +739,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.45 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
+    "FROG CREEK NEAR RUBONIA FL: tidal record, 0.38 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
@@ -790,20 +830,7 @@
    "score": 0.2,
    "signals": [],
    "gaps": [
-    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.94 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
-   ],
-   "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
-  },
-  {
-   "name": "William Preston Lane Jr.",
-   "state": "MD",
-   "waterway": "Chesapeake Bay",
-   "lat": 38.9961371,
-   "lng": -76.3892615,
-   "score": 0.2,
-   "signals": [],
-   "gaps": [
-    "no USGS gauge within ~13 km"
+    "Delaware River at Penn's Landing, Philadelphia, PA: tidal record, 6.91 ft range over 24 h — a daily change here is the tide, not a trend, so no scour signal can be read from it"
    ],
    "verdict": "Nothing live against it today. On the NTSB list with no vessel-collision assessment on record."
   },
